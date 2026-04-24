@@ -1,25 +1,27 @@
-import type { Locale, NavigationItem } from "@/types/portfolio";
+import { useTranslations } from "next-intl";
+import type { Locale } from "@/types/portfolio";
 
 type SiteHeaderProps = {
-  navigation: NavigationItem[];
-  name: string;
   locale: Locale;
   onLocaleChange: (locale: Locale) => void;
 };
 
-export function SiteHeader({
-  navigation,
-  name,
-  locale,
-  onLocaleChange,
-}: SiteHeaderProps) {
+export function SiteHeader({ locale, onLocaleChange }: SiteHeaderProps) {
+  const t = useTranslations("SiteHeader");
+  const navigation = [
+    { label: t("navigation.home"), href: "#inicio" },
+    { label: t("navigation.work"), href: "#trabajo" },
+    { label: t("navigation.stack"), href: "#stack" },
+    { label: t("navigation.contact"), href: "#contacto" },
+  ];
+
   return (
     <header className="section-card sticky top-4 z-20 rounded-[1.75rem] px-5 py-4 backdrop-blur">
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <a href="#inicio" className="flex items-center gap-3">
           <span className="accent-dot" />
           <div>
-            <p className="eyebrow text-xs text-[var(--muted)]">{name}</p>
+            <p className="eyebrow text-xs text-[var(--muted)]">{t("name")}</p>
           </div>
         </a>
 

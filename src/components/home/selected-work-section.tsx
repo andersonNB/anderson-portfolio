@@ -1,26 +1,22 @@
 import { SectionTitle } from "@/components/ui/section-title";
-import type { ProjectCard, WorkContent } from "@/types/portfolio";
+import { useTranslations } from "next-intl";
+import type { ProjectCard } from "@/types/portfolio";
 
-type SelectedWorkSectionProps = {
-  content: WorkContent;
-  projects: ProjectCard[];
-};
+export function SelectedWorkSection() {
+  const t = useTranslations("SelectedWork");
+  const projects = t.raw("projects") as ProjectCard[];
 
-export function SelectedWorkSection({
-  content,
-  projects,
-}: SelectedWorkSectionProps) {
   return (
     <section className="section-card rounded-[2.2rem] px-6 py-8 md:px-10">
       <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-        <SectionTitle eyebrow={content.eyebrow} title={content.title} />
+        <SectionTitle eyebrow={t("eyebrow")} title={t("title")} />
         <a
           className="cta-secondary w-fit"
           href="https://github.com/andersonNB?tab=repositories"
           target="_blank"
           rel="noreferrer"
         >
-          {content.ctaAll}
+          {t("ctaAll")}
         </a>
       </div>
 

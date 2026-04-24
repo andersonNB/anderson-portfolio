@@ -1,20 +1,20 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import type { ProfileCardContent } from "@/types/portfolio";
 
-type ProfileCardProps = {
-  content: ProfileCardContent;
-};
+export function ProfileCard() {
+  const t = useTranslations("ProfileCard");
+  const stats = t.raw("stats") as ProfileCardContent["stats"];
 
-export function ProfileCard({ content }: ProfileCardProps) {
   return (
     <div className="collector-shell">
       <article className="collector-card">
         <div className="collector-top">
           <div>
-            <p className="collector-name">{content.name}</p>
-            <p className="collector-role">{content.subtitle}</p>
+            <p className="collector-name">{t("name")}</p>
+            <p className="collector-role">{t("subtitle")}</p>
           </div>
-          <div className="collector-pill">{content.level}</div>
+          <div className="collector-pill">{t("level")}</div>
         </div>
 
         <div className="collector-art">
@@ -30,17 +30,17 @@ export function ProfileCard({ content }: ProfileCardProps) {
 
         <div className="collector-meta">
           <div>
-            <p className="collector-label">{content.labels.mainStack}</p>
-            <p className="collector-value">{content.values.mainStack}</p>
+            <p className="collector-label">{t("labels.mainStack")}</p>
+            <p className="collector-value">{t("values.mainStack")}</p>
           </div>
           <div>
-            <p className="collector-label">{content.labels.style}</p>
-            <p className="collector-value">{content.values.style}</p>
+            <p className="collector-label">{t("labels.style")}</p>
+            <p className="collector-value">{t("values.style")}</p>
           </div>
         </div>
 
         <div className="collector-stats">
-          {content.stats.map((stat) => (
+          {stats.map((stat) => (
             <span key={stat}>{stat}</span>
           ))}
         </div>

@@ -54,6 +54,8 @@ Estas reglas definen la forma de trabajo para este repositorio.
 - Los componentes reutilizables y genericos deben vivir en `src/components/ui/`.
 - El contenido estatico del portfolio debe vivir en `src/lib/content/`.
 - Los tipos compartidos deben vivir en `src/types/`.
+- Las traducciones del proyecto deben implementarse con `next-intl`.
+- Los mensajes de traduccion deben vivir en archivos JSON dedicados y no en objetos inline dentro de componentes.
 - Si en el futuro aparecen validaciones o logica compartida mas compleja, deben agruparse en modulos equivalentes dentro de `src/lib/` o carpetas dedicadas.
 - Antes de crear carpetas nuevas, validar que realmente aporten claridad y no sobreingenieria.
 

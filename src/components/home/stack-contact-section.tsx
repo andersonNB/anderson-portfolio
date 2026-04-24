@@ -1,21 +1,15 @@
 import { SectionTitle } from "@/components/ui/section-title";
-import type { ContactContent, StackContent } from "@/types/portfolio";
+import { useTranslations } from "next-intl";
 
-type StackContactSectionProps = {
-  stackSection: StackContent;
-  stack: string[];
-  contact: ContactContent;
-};
+export function StackContactSection() {
+  const stackSection = useTranslations("StackSection");
+  const contact = useTranslations("Contact");
+  const stack = stackSection.raw("items") as string[];
 
-export function StackContactSection({
-  stackSection,
-  stack,
-  contact,
-}: StackContactSectionProps) {
   return (
     <section className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]" id="stack">
       <article className="section-card rounded-[2.2rem] px-6 py-8 md:px-10">
-        <SectionTitle eyebrow={stackSection.eyebrow} title={stackSection.title} />
+        <SectionTitle eyebrow={stackSection("eyebrow")} title={stackSection("title")} />
 
         <div className="mt-8 flex flex-wrap gap-3">
           {stack.map((item) => (
@@ -28,14 +22,16 @@ export function StackContactSection({
 
       <article className="section-card rounded-[2.2rem] px-6 py-8 md:px-10" id="contacto">
         <SectionTitle
-          eyebrow={contact.eyebrow}
-          title={contact.title}
-          description={contact.description}
+          eyebrow={contact("eyebrow")}
+          title={contact("title")}
+          description={contact("description")}
         />
 
         <div className="mt-8 grid gap-4">
           <a className="contact-card" href="mailto:navarroanderson07@gmail.com">
-            <span className="eyebrow text-xs text-[var(--muted)]">Email</span>
+            <span className="eyebrow text-xs text-[var(--muted)]">
+              {contact("emailLabel")}
+            </span>
             <span className="mt-3 text-xl font-semibold">navarroanderson07@gmail.com</span>
           </a>
 
@@ -45,7 +41,9 @@ export function StackContactSection({
             target="_blank"
             rel="noreferrer"
           >
-            <span className="eyebrow text-xs text-[var(--muted)]">GitHub</span>
+            <span className="eyebrow text-xs text-[var(--muted)]">
+              {contact("githubLabel")}
+            </span>
             <span className="mt-3 text-xl font-semibold">github.com/andersonNB</span>
           </a>
         </div>

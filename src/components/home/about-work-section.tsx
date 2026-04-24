@@ -1,28 +1,20 @@
 import { SectionTitle } from "@/components/ui/section-title";
-import type { AboutContent, CaseStudy, ExperienceItem } from "@/types/portfolio";
+import { useTranslations } from "next-intl";
+import type { CaseStudy, ExperienceItem } from "@/types/portfolio";
 
-type AboutWorkSectionProps = {
-  about: AboutContent;
-  caseStudies: CaseStudy[];
-  experience: {
-    eyebrow: string;
-    title: string;
-    items: ExperienceItem[];
-  };
-};
+export function AboutWorkSection() {
+  const about = useTranslations("About");
+  const experience = useTranslations("Experience");
+  const caseStudies = about.raw("items") as CaseStudy[];
+  const experienceItems = experience.raw("items") as ExperienceItem[];
 
-export function AboutWorkSection({
-  about,
-  caseStudies,
-  experience,
-}: AboutWorkSectionProps) {
   return (
     <section className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
       <article className="section-card rounded-[2.2rem] px-6 py-8 md:px-10" id="trabajo">
         <SectionTitle
-          eyebrow={about.eyebrow}
-          title={about.title}
-          description={about.description}
+          eyebrow={about("eyebrow")}
+          title={about("title")}
+          description={about("description")}
         />
 
         <div className="mt-8 grid gap-4">
@@ -42,9 +34,9 @@ export function AboutWorkSection({
       </article>
 
       <aside className="section-card rounded-[2.2rem] px-6 py-8 md:px-10">
-        <SectionTitle eyebrow={experience.eyebrow} title={experience.title} />
+        <SectionTitle eyebrow={experience("eyebrow")} title={experience("title")} />
         <div className="mt-6 space-y-5">
-          {experience.items.map((item) => (
+          {experienceItems.map((item) => (
             <article
               key={`${item.company}-${item.period}`}
               className="timeline-card rounded-[1.6rem] border border-[var(--line)] bg-[var(--surface-strong)] px-5 py-5"

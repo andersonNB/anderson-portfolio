@@ -1,0 +1,124 @@
+{
+  "SiteHeader": {
+    "name": "Anderson Navarro",
+    "navigation": {
+      "home": "Home",
+      "work": "Work",
+      "stack": "Stack",
+      "contact": "Contact"
+    }
+  },
+  "Hero": {
+    "eyebrow": "Portfolio 2026",
+    "title": "Frontend Developer",
+    "typedPrefix": "Specialized in",
+    "typedWords": ["React", "Next.js", "Redux", "TypeScript"],
+    "description": "I work with React and Next.js to build modern interfaces, complex forms, state management, and reusable components.",
+    "facts": ["3+ years of experience", "React / Next.js", "Product frontend"],
+    "ctaWork": "View work",
+    "ctaEmail": "Email"
+  },
+  "ProfileCard": {
+    "name": "Anderson Navarro",
+    "subtitle": "React / Next.js",
+    "level": "LV 03",
+    "labels": {
+      "mainStack": "Main stack",
+      "style": "Style"
+    },
+    "values": {
+      "mainStack": "React / Next.js",
+      "style": "Reusable UI"
+    },
+    "stats": ["Forms 92", "State 88", "UX 90"]
+  },
+  "About": {
+    "eyebrow": "About",
+    "title": "Less talk. More product.",
+    "description": "I work best on real apps: validations, workflows, reusable UI, and frontend decisions that last.",
+    "items": [
+      {
+        "label": "01",
+        "title": "Reusable UI",
+        "body": "Component migration toward a more consistent and scalable base."
+      },
+      {
+        "label": "02",
+        "title": "Forms and data",
+        "body": "Experience with validations, async states, and business-driven flows."
+      }
+    ]
+  },
+  "Experience": {
+    "eyebrow": "Experience",
+    "title": "Recent experience.",
+    "items": [
+      {
+        "period": "2024 - Present",
+        "company": "Nelumbo consultores",
+        "summary": "Next.js, React Query, forms, and business applications."
+      },
+      {
+        "period": "2022 - 2024",
+        "company": "Avanzo",
+        "summary": "Reusable UI, shared patterns, and frontend optimization."
+      },
+      {
+        "period": "2022",
+        "company": "Comfaoriente SAS",
+        "summary": "Migration from Django to React."
+      }
+    ]
+  },
+  "SelectedWork": {
+    "eyebrow": "Repos",
+    "title": "Selected work.",
+    "ctaAll": "View all",
+    "projects": [
+      {
+        "title": "UIKIT Nelumbo",
+        "href": "https://github.com/andersonNB/UIKITNelumbo",
+        "summary": "Reusable components and forms built on top of Next.js.",
+        "meta": "Next.js / React Query / RHF"
+      },
+      {
+        "title": "Nelumbo Front NextJS",
+        "href": "https://github.com/andersonNB/NelumboFrontNexJS",
+        "summary": "Application base with Ant Design and a more product-oriented structure.",
+        "meta": "Next.js / Ant Design"
+      },
+      {
+        "title": "Blizzard Page",
+        "href": "https://github.com/andersonNB/Blizzard-Page",
+        "summary": "Visual project focused on composition, hierarchy, and layout.",
+        "meta": "React / Bootstrap"
+      }
+    ]
+  },
+  "StackSection": {
+    "eyebrow": "Stack",
+    "title": "What I use.",
+    "items": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "React Query",
+      "React Hook Form",
+      "Yup",
+      "Redux",
+      "Ant Design",
+      "Sass",
+      "Styled Components",
+      "Git",
+      "GitHub"
+    ]
+  },
+  "Contact": {
+    "eyebrow": "Contact",
+    "title": "Let's talk.",
+    "description": "The next phase can already include LinkedIn, an updated CV, and deeper case studies.",
+    "emailLabel": "Email",
+    "githubLabel": "GitHub"
+  }
+}
