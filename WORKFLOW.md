@@ -57,6 +57,47 @@ Estas reglas definen la forma de trabajo para este repositorio.
   - `v0.2.1`
 - Usar incremento menor para nuevas funcionalidades e incremento patch para ajustes o fixes pequenos.
 
+## Desarrollo por fases
+
+- Cada cambio debe trabajarse por fases claras.
+- Las fases por defecto de trabajo son:
+  - planeacion
+  - planteamiento de tareas
+  - ejecucion
+  - optimizacion
+  - feedback
+- Si una tarea requiere iteracion, se puede volver a una fase anterior antes de cerrar el cambio.
+
+### Planeacion
+
+- Definir el objetivo del cambio antes de editar.
+- Confirmar alcance, restricciones y resultado esperado.
+- Identificar si el cambio afecta UI, contenido, arquitectura, rendimiento o despliegue.
+
+### Planteamiento de tareas
+
+- Descomponer el trabajo en tareas pequenas y verificables.
+- Priorizar primero lo que desbloquea el resto.
+- Evitar mezclar cambios no relacionados en una misma fase.
+
+### Ejecucion
+
+- Implementar el cambio siguiendo el alcance definido.
+- Mantener coherencia con las reglas del repositorio.
+- Validar localmente lo que se vaya completando.
+
+### Optimizacion
+
+- Revisar si el cambio puede quedar mas claro, mas ligero o mas mantenible.
+- Mejorar responsive, accesibilidad, consistencia visual o estructura cuando aplique.
+- No sobre-optimizar si no aporta valor real a la tarea.
+
+### Feedback
+
+- Revisar el resultado contra el objetivo inicial.
+- Identificar ajustes, riesgos o mejoras pendientes antes del PR.
+- Si aplica, incorporar feedback antes de fusionar hacia `main`.
+
 ## Regla de trabajo para Codex
 
 - Asumir estas reglas como el flujo por defecto para este repositorio.
