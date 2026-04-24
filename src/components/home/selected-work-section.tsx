@@ -1,23 +1,31 @@
-import { selectedWork } from "@/lib/content/portfolio-content";
 import { SectionTitle } from "@/components/ui/section-title";
+import type { ProjectCard, WorkContent } from "@/types/portfolio";
 
-export function SelectedWorkSection() {
+type SelectedWorkSectionProps = {
+  content: WorkContent;
+  projects: ProjectCard[];
+};
+
+export function SelectedWorkSection({
+  content,
+  projects,
+}: SelectedWorkSectionProps) {
   return (
     <section className="section-card rounded-[2.2rem] px-6 py-8 md:px-10">
       <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-        <SectionTitle eyebrow="Repos" title="Trabajo seleccionado." />
+        <SectionTitle eyebrow={content.eyebrow} title={content.title} />
         <a
           className="cta-secondary w-fit"
           href="https://github.com/andersonNB?tab=repositories"
           target="_blank"
           rel="noreferrer"
         >
-          Ver todos
+          {content.ctaAll}
         </a>
       </div>
 
       <div className="mt-8 grid gap-4 lg:grid-cols-3">
-        {selectedWork.map((project) => (
+        {projects.map((project) => (
           <a
             key={project.title}
             href={project.href}

@@ -2,19 +2,21 @@
 
 import { useEffect, useState } from "react";
 
-const skills = ["React", "Next.js", "Redux", "TypeScript"];
-
 const TYPING_SPEED = 85;
 const DELETING_SPEED = 45;
 const PAUSE_MS = 1200;
 
-export function TypewriterSkills() {
+type TypewriterSkillsProps = {
+  words: string[];
+};
+
+export function TypewriterSkills({ words }: TypewriterSkillsProps) {
   const [skillIndex, setSkillIndex] = useState(0);
   const [displayed, setDisplayed] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    const currentSkill = skills[skillIndex];
+    const currentSkill = words[skillIndex];
 
     if (!isDeleting && displayed === currentSkill) {
       const timeout = window.setTimeout(() => setIsDeleting(true), PAUSE_MS);
@@ -24,7 +26,7 @@ export function TypewriterSkills() {
     if (isDeleting && displayed === "") {
       const timeout = window.setTimeout(() => {
         setIsDeleting(false);
-        setSkillIndex((current) => (current + 1) % skills.length);
+        setSkillIndex((current) => (current + 1) % words.length);
       }, DELETING_SPEED);
 
       return () => window.clearTimeout(timeout);
@@ -40,7 +42,7 @@ export function TypewriterSkills() {
     );
 
     return () => window.clearTimeout(timeout);
-  }, [displayed, isDeleting, skillIndex]);
+  }, [displayed, isDeleting, skillIndex, words]);
 
   return (
     <span className="typewriter-word">

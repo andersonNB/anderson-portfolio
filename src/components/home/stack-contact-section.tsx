@@ -1,11 +1,21 @@
-import { stack } from "@/lib/content/portfolio-content";
 import { SectionTitle } from "@/components/ui/section-title";
+import type { ContactContent, StackContent } from "@/types/portfolio";
 
-export function StackContactSection() {
+type StackContactSectionProps = {
+  stackSection: StackContent;
+  stack: string[];
+  contact: ContactContent;
+};
+
+export function StackContactSection({
+  stackSection,
+  stack,
+  contact,
+}: StackContactSectionProps) {
   return (
     <section className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]" id="stack">
       <article className="section-card rounded-[2.2rem] px-6 py-8 md:px-10">
-        <SectionTitle eyebrow="Stack" title="Lo que uso." />
+        <SectionTitle eyebrow={stackSection.eyebrow} title={stackSection.title} />
 
         <div className="mt-8 flex flex-wrap gap-3">
           {stack.map((item) => (
@@ -18,9 +28,9 @@ export function StackContactSection() {
 
       <article className="section-card rounded-[2.2rem] px-6 py-8 md:px-10" id="contacto">
         <SectionTitle
-          eyebrow="Contacto"
-          title="Hablemos."
-          description="La siguiente fase puede entrar ya con LinkedIn, CV actualizado y casos de estudio mas completos."
+          eyebrow={contact.eyebrow}
+          title={contact.title}
+          description={contact.description}
         />
 
         <div className="mt-8 grid gap-4">

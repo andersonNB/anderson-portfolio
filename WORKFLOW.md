@@ -70,6 +70,18 @@ Estas reglas definen la forma de trabajo para este repositorio.
 - `src/types/`
   Tipos TypeScript compartidos.
 
+## Despliegue con Vercel
+
+- El despliegue principal del portfolio debe hacerse en Vercel.
+- Antes de desplegar, validar al menos:
+  - `npm run lint`
+  - `npm run build`
+- Para despliegues locales desde CLI, ejecutar el comando `vercel` desde la raiz del proyecto para crear o actualizar un preview deployment.
+- Para publicar a produccion desde CLI, usar `vercel --prod` desde la raiz del proyecto.
+- Si el proyecto todavia no esta enlazado a Vercel, la primera ejecucion de `vercel` debe vincular el repositorio al proyecto correcto.
+- Cuando el repositorio ya este importado en Vercel, preferir que `main` produzca despliegues consistentes y que las ramas generen previews cuando aplique.
+- Si el deploy requiere variables de entorno en el futuro, documentarlas antes de publicarlo.
+
 ## Pull Requests y releases
 
 - Cada funcionalidad terminada debe terminar en un Pull Request hacia `main`.

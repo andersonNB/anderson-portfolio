@@ -1,15 +1,20 @@
 import Image from "next/image";
+import type { ProfileCardContent } from "@/types/portfolio";
 
-export function ProfileCard() {
+type ProfileCardProps = {
+  content: ProfileCardContent;
+};
+
+export function ProfileCard({ content }: ProfileCardProps) {
   return (
     <div className="collector-shell">
       <article className="collector-card">
         <div className="collector-top">
           <div>
-            <p className="collector-name">Anderson Navarro</p>
-            <p className="collector-role">Frontend Developer</p>
+            <p className="collector-name">{content.name}</p>
+            <p className="collector-role">{content.subtitle}</p>
           </div>
-          <div className="collector-pill">LV 03</div>
+          <div className="collector-pill">{content.level}</div>
         </div>
 
         <div className="collector-art">
@@ -25,19 +30,19 @@ export function ProfileCard() {
 
         <div className="collector-meta">
           <div>
-            <p className="collector-label">Main stack</p>
-            <p className="collector-value">React / Next.js</p>
+            <p className="collector-label">{content.labels.mainStack}</p>
+            <p className="collector-value">{content.values.mainStack}</p>
           </div>
           <div>
-            <p className="collector-label">Style</p>
-            <p className="collector-value">UI reusable</p>
+            <p className="collector-label">{content.labels.style}</p>
+            <p className="collector-value">{content.values.style}</p>
           </div>
         </div>
 
         <div className="collector-stats">
-          <span>Forms 92</span>
-          <span>State 88</span>
-          <span>UX 90</span>
+          {content.stats.map((stat) => (
+            <span key={stat}>{stat}</span>
+          ))}
         </div>
       </article>
     </div>
