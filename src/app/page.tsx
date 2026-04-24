@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { TypewriterSkills } from "@/components/typewriter-skills";
 
 const navigation = [
   { label: "Inicio", href: "#inicio" },
@@ -100,13 +101,13 @@ export default function Home() {
             <p className="eyebrow text-sm text-[var(--muted)]">Portfolio 2026</p>
             <h1 className="mt-5 text-5xl font-semibold tracking-[-0.08em] md:text-7xl">
               Desarrollador Frontend
-              <br />
-              React y Next.js
             </h1>
+            <p className="mt-4 text-2xl font-semibold tracking-[-0.04em] text-[var(--foreground)] md:text-3xl">
+              Especializado en <TypewriterSkills />
+            </p>
             <p className="mt-6 max-w-xl text-lg leading-8 text-[var(--muted)]">
-              Desarrollo interfaces modernas para producto real, con experiencia en
-              React, Next.js, formularios complejos, data fetching y componentes
-              reutilizables.
+              Trabajo con React y Next.js para construir interfaces modernas,
+              formularios complejos, manejo de estado y componentes reutilizables.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -142,7 +143,7 @@ export default function Home() {
                 alt="Anderson Navarro"
                 fill
                 priority
-                className="object-contain object-center"
+                className="portrait-image"
                 sizes="(max-width: 1024px) 100vw, 40vw"
               />
             </div>

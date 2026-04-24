@@ -216,7 +216,7 @@ a {
 .portrait-frame {
   position: relative;
   overflow: hidden;
-  min-height: 31rem;
+  aspect-ratio: 1 / 1;
   border: 1px solid rgba(255, 245, 230, 0.1);
   border-radius: 2rem;
   background:
@@ -229,8 +229,29 @@ a {
   content: "";
   position: absolute;
   inset: auto 0 0 0;
-  height: 14%;
-  background: linear-gradient(to top, rgba(12, 15, 20, 0.45), transparent);
+  height: 8%;
+  background: linear-gradient(to top, rgba(12, 15, 20, 0.24), transparent);
+}
+
+.portrait-image {
+  object-fit: contain;
+  object-position: center;
+  padding: 1rem 1rem 0;
+}
+
+.typewriter-word {
+  display: inline-flex;
+  align-items: center;
+  min-width: 8ch;
+  color: var(--accent-soft);
+}
+
+.typewriter-caret {
+  margin-left: 0.12em;
+  width: 1px;
+  height: 1.1em;
+  background: currentColor;
+  animation: caret-blink 1s steps(1) infinite;
 }
 
 .terminal-dot {
@@ -289,10 +310,23 @@ a {
   }
 
   .portrait-frame {
-    min-height: 24rem;
+    max-width: 26rem;
+    margin-inline: auto;
   }
 
   .contact-card {
     min-height: auto;
+  }
+}
+
+@keyframes caret-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
   }
 }
