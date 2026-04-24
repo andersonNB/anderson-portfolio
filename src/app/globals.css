@@ -216,7 +216,7 @@ a {
 .portrait-frame {
   position: relative;
   overflow: hidden;
-  min-height: 28rem;
+  min-height: 31rem;
   border: 1px solid rgba(255, 245, 230, 0.1);
   border-radius: 2rem;
   background:
@@ -229,8 +229,8 @@ a {
   content: "";
   position: absolute;
   inset: auto 0 0 0;
-  height: 24%;
-  background: linear-gradient(to top, rgba(12, 15, 20, 0.88), transparent);
+  height: 14%;
+  background: linear-gradient(to top, rgba(12, 15, 20, 0.45), transparent);
 }
 
 .terminal-dot {
@@ -289,7 +289,7 @@ a {
   }
 
   .portrait-frame {
-    min-height: 22rem;
+    min-height: 24rem;
   }
 
   .contact-card {
