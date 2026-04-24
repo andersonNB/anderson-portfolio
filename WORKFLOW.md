@@ -49,6 +49,7 @@ Estas reglas definen la forma de trabajo para este repositorio.
 
 - Cada funcionalidad terminada debe terminar en un Pull Request hacia `main`.
 - El PR debe representar una unidad clara de cambio.
+- Una vez el cambio este validado y probado, completar el merge del PR hacia `main`.
 - Despues de dejar lista una nueva funcionalidad, crear un tag de release asociado.
 - El tag debe seguir un versionado simple y consistente. Por defecto:
   - `v0.1.0`
