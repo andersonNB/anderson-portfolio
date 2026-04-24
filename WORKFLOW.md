@@ -45,6 +45,31 @@ Estas reglas definen la forma de trabajo para este repositorio.
 - Si una decision tecnica cambia la forma de trabajar el proyecto, documentarla.
 - Usar `README.md` o este archivo para registrar reglas nuevas o ajustes relevantes.
 
+## Arquitectura del proyecto
+
+- Este portfolio debe mantener una arquitectura modular, simple y orientada a secciones.
+- La pagina principal no debe concentrar contenido, datos y UI en un solo archivo si el cambio ya amerita separacion.
+- La composicion principal debe vivir en `src/app/`.
+- Las secciones de la home deben vivir en `src/components/home/`.
+- Los componentes reutilizables y genericos deben vivir en `src/components/ui/`.
+- El contenido estatico del portfolio debe vivir en `src/lib/content/`.
+- Los tipos compartidos deben vivir en `src/types/`.
+- Si en el futuro aparecen validaciones o logica compartida mas compleja, deben agruparse en modulos equivalentes dentro de `src/lib/` o carpetas dedicadas.
+- Antes de crear carpetas nuevas, validar que realmente aporten claridad y no sobreingenieria.
+
+### Estructura base esperada
+
+- `src/app/`
+  Composicion de rutas y entrypoints.
+- `src/components/home/`
+  Secciones especificas de la home del portfolio.
+- `src/components/ui/`
+  Piezas reutilizables de interfaz.
+- `src/lib/content/`
+  Datos estaticos, textos y configuraciones del portfolio.
+- `src/types/`
+  Tipos TypeScript compartidos.
+
 ## Pull Requests y releases
 
 - Cada funcionalidad terminada debe terminar en un Pull Request hacia `main`.
