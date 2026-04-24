@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f2eadc;
-  --foreground: #201814;
-  --surface: rgba(255, 250, 241, 0.78);
-  --surface-strong: #fbf4e8;
-  --muted: #65584f;
-  --line: rgba(22, 17, 15, 0.12);
-  --accent: #bd5b37;
-  --accent-soft: #f0c86d;
-  --panel-shadow: 0 30px 90px rgba(56, 37, 23, 0.1);
+  --background: #0f1115;
+  --foreground: #f2ede3;
+  --surface: rgba(20, 24, 30, 0.86);
+  --surface-strong: #171c24;
+  --muted: #a59d90;
+  --line: rgba(255, 245, 230, 0.1);
+  --accent: #e07a4d;
+  --accent-soft: #f4c86f;
+  --panel-shadow: 0 30px 90px rgba(0, 0, 0, 0.32);
 }
 
 @theme inline {
@@ -33,10 +33,10 @@ body {
   color: var(--foreground);
   font-family: "Trebuchet MS", "Segoe UI", sans-serif;
   background-image:
-    radial-gradient(circle at top left, rgba(240, 200, 109, 0.24), transparent 30%),
-    radial-gradient(circle at top right, rgba(189, 91, 55, 0.14), transparent 24%),
-    radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.56), transparent 28%),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
+    radial-gradient(circle at top left, rgba(244, 200, 111, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(224, 122, 77, 0.12), transparent 22%),
+    radial-gradient(circle at 50% 120%, rgba(87, 107, 149, 0.12), transparent 38%),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
 }
 
 body::before {
@@ -45,8 +45,8 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(31, 20, 15, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(31, 20, 15, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(255, 245, 230, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 245, 230, 0.03) 1px, transparent 1px);
   background-size: 36px 36px;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent 92%);
 }
@@ -57,7 +57,7 @@ a {
 }
 
 ::selection {
-  background: rgba(212, 87, 46, 0.18);
+  background: rgba(224, 122, 77, 0.28);
 }
 
 .grain {
@@ -70,9 +70,9 @@ a {
   inset: 0;
   pointer-events: none;
   background-image:
-    radial-gradient(rgba(22, 17, 15, 0.08) 0.6px, transparent 0.8px);
+    radial-gradient(rgba(255, 245, 230, 0.08) 0.6px, transparent 0.8px);
   background-size: 10px 10px;
-  opacity: 0.4;
+  opacity: 0.2;
 }
 
 .section-card {
@@ -92,8 +92,8 @@ a {
 
 .lift-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(189, 91, 55, 0.24);
-  box-shadow: 0 18px 40px rgba(42, 28, 18, 0.1);
+  border-color: rgba(224, 122, 77, 0.32);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
 }
 
 .eyebrow {
@@ -103,15 +103,15 @@ a {
 }
 
 .retro-label {
-  border: 1px solid rgba(22, 17, 15, 0.16);
-  background: rgba(255, 255, 255, 0.42);
+  border: 1px solid rgba(255, 245, 230, 0.12);
+  background: rgba(255, 255, 255, 0.05);
   font-family: "Consolas", "Courier New", monospace;
 }
 
 .retro-label-dark {
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.06);
-  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.86);
   font-family: "Consolas", "Courier New", monospace;
 }
 
@@ -125,7 +125,7 @@ a {
   height: 0.75rem;
   border-radius: 999px;
   background: linear-gradient(135deg, var(--accent), var(--accent-soft));
-  box-shadow: 0 0 0 6px rgba(212, 87, 46, 0.12);
+  box-shadow: 0 0 0 6px rgba(224, 122, 77, 0.12);
 }
 
 .retro-number {
@@ -139,7 +139,7 @@ a {
 
 .retro-link:hover {
   border-color: var(--line);
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.06);
   color: var(--foreground);
 }
 
@@ -167,17 +167,17 @@ a {
 }
 
 .cta-primary {
-  background: var(--foreground);
-  color: var(--background);
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+  color: #16110e;
 }
 
 .cta-secondary {
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .cta-secondary:hover {
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .terminal-card {
@@ -191,9 +191,10 @@ a {
 .editorial-panel {
   border: 1px solid rgba(255, 255, 255, 0.1);
   background:
-    radial-gradient(circle at top right, rgba(240, 200, 109, 0.1), transparent 24%),
-    linear-gradient(160deg, #251c18, #15110f);
-  box-shadow: 0 32px 70px rgba(17, 13, 10, 0.24);
+    radial-gradient(circle at top right, rgba(244, 200, 111, 0.1), transparent 24%),
+    radial-gradient(circle at bottom left, rgba(87, 107, 149, 0.12), transparent 28%),
+    linear-gradient(160deg, #12161d, #0c0f14);
+  box-shadow: 0 32px 70px rgba(0, 0, 0, 0.32);
 }
 
 .terminal-dot {
@@ -225,14 +226,14 @@ a {
 
 .project-link:hover {
   transform: translateY(-3px);
-  border-color: rgba(189, 91, 55, 0.24);
-  background: rgba(255, 255, 255, 0.62);
+  border-color: rgba(224, 122, 77, 0.28);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .quote-panel {
-  border: 1px solid rgba(22, 17, 15, 0.12);
+  border: 1px solid rgba(255, 245, 230, 0.1);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.36));
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
 }
 
 .contact-card {
@@ -242,7 +243,7 @@ a {
   justify-content: flex-start;
   border: 1px solid var(--line);
   border-radius: 1.5rem;
-  background: rgba(255, 255, 255, 0.46);
+  background: rgba(255, 255, 255, 0.04);
   padding: 1.35rem;
 }
 
