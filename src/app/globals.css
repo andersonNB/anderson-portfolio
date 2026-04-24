@@ -197,6 +197,42 @@ a {
   box-shadow: 0 32px 70px rgba(0, 0, 0, 0.32);
 }
 
+.portrait-shell {
+  position: relative;
+  padding: 1rem;
+}
+
+.portrait-shell::before {
+  content: "";
+  position: absolute;
+  inset: 6% 4% auto auto;
+  width: 9rem;
+  height: 9rem;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(244, 200, 111, 0.28), transparent 68%);
+  filter: blur(12px);
+}
+
+.portrait-frame {
+  position: relative;
+  overflow: hidden;
+  min-height: 28rem;
+  border: 1px solid rgba(255, 245, 230, 0.1);
+  border-radius: 2rem;
+  background:
+    radial-gradient(circle at top, rgba(244, 200, 111, 0.08), transparent 26%),
+    linear-gradient(160deg, #12161d, #0d1016);
+  box-shadow: 0 34px 80px rgba(0, 0, 0, 0.28);
+}
+
+.portrait-frame::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 24%;
+  background: linear-gradient(to top, rgba(12, 15, 20, 0.88), transparent);
+}
+
 .terminal-dot {
   display: inline-block;
   height: 0.7rem;
@@ -250,6 +286,10 @@ a {
 @media (max-width: 768px) {
   body::before {
     background-size: 24px 24px;
+  }
+
+  .portrait-frame {
+    min-height: 22rem;
   }
 
   .contact-card {

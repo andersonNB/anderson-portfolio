@@ -1,83 +1,49 @@
+import Image from "next/image";
+
 const navigation = [
   { label: "Inicio", href: "#inicio" },
-  { label: "Perfil", href: "#perfil" },
-  { label: "Experiencia", href: "#experiencia" },
   { label: "Trabajo", href: "#trabajo" },
+  { label: "Stack", href: "#stack" },
   { label: "Contacto", href: "#contacto" },
 ];
 
-const highlights = [
-  "Frontend para producto real",
-  "React y Next.js",
-  "Formularios complejos",
-  "UI reusable",
-  "Data fetching",
-  "Performance",
+const quickFacts = [
+  "3+ anos de experiencia",
+  "React / Next.js",
+  "Frontend de producto",
 ];
 
-const editorialNotes = [
-  {
-    title: "Interfaces que soportan flujo real",
-    body:
-      "Me interesa que una pantalla resuelva procesos, no solo que se vea bien en una captura. Por eso trabajo comodo con validaciones, estados async, permisos y reglas de negocio.",
-  },
-  {
-    title: "Sistemas de UI antes que componentes aislados",
-    body:
-      "Una buena base de frontend no deberia depender de improvisar cada pantalla. He trabajado en migraciones y en componentes reutilizables para acelerar el producto sin degradar consistencia.",
-  },
-  {
-    title: "Visual con personalidad, pero con control",
-    body:
-      "Me gusta el detalle visual, aunque siempre subordinado a la claridad. El frontend debe tener identidad sin volverse ruidoso ni dificultar la lectura.",
-  },
-];
-
-const experience = [
-  {
-    period: "2024 - Actualidad",
-    company: "Nelumbo consultores",
-    role: "Frontend Developer",
-    description:
-      "Trabajo en aplicaciones con Next.js y React, usando formularios complejos, React Query, validaciones y componentes orientados a procesos de negocio.",
-  },
-  {
-    period: "2022 - 2024",
-    company: "Avanzo",
-    role: "Frontend Developer",
-    description:
-      "Participe en migracion hacia una libreria reusable de UI, integracion de metricas y patrones para compartir logica entre distintas zonas de la aplicacion.",
-  },
-  {
-    period: "2022",
-    company: "Comfaoriente SAS",
-    role: "Frontend Developer",
-    description:
-      "Apoye la migracion de una aplicacion desde Django hacia React, reorganizando flujos e interfaz en un contexto clinico.",
-  },
-];
-
-const projectEntries = [
+const selectedWork = [
   {
     title: "UIKIT Nelumbo",
     href: "https://github.com/andersonNB/UIKITNelumbo",
-    summary:
-      "Una base en Next.js pensada alrededor de componentes reutilizables, formularios y patrones propios de una aplicacion de producto.",
-    meta: "Next.js / React Query / React Hook Form",
+    summary: "Componentes reutilizables y formularios sobre Next.js.",
+    meta: "Next.js / React Query / RHF",
   },
   {
     title: "Nelumbo Front NextJS",
     href: "https://github.com/andersonNB/NelumboFrontNexJS",
-    summary:
-      "Sandbox tecnico con Next.js, Ant Design y styled-components para explorar estructura de app y decisiones de interfaz mas cercanas a trabajo real.",
-    meta: "Next.js / Ant Design / Styled Components",
+    summary: "Base de aplicacion con Ant Design y estructura mas cercana a producto.",
+    meta: "Next.js / Ant Design",
   },
   {
     title: "Blizzard Page",
     href: "https://github.com/andersonNB/Blizzard-Page",
-    summary:
-      "Proyecto visual hecho con React y Bootstrap que sirve como referencia de maquetacion, composicion y jerarquia en una landing mas grafica.",
-    meta: "React / Bootstrap / Visual UI",
+    summary: "Proyecto visual para composicion, jerarquia y maquetacion.",
+    meta: "React / Bootstrap",
+  },
+];
+
+const caseStudies = [
+  {
+    label: "01",
+    title: "UI reusable",
+    body: "Migracion de componentes hacia una base mas consistente y escalable.",
+  },
+  {
+    label: "02",
+    title: "Forms y data",
+    body: "Trabajo con validaciones, estados async y flujos conectados a negocio.",
   },
 ];
 
@@ -89,39 +55,16 @@ const stack = [
   "React Query",
   "React Hook Form",
   "Yup",
-  "Redux",
   "Ant Design",
-  "Material UI",
   "Sass",
   "Styled Components",
-  "AWS Cognito",
   "Git",
   "GitHub",
 ];
 
-function SectionIntro({
-  eyebrow,
-  title,
-  description,
-}: {
-  eyebrow: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="max-w-3xl">
-      <p className="eyebrow text-sm text-[var(--muted)]">{eyebrow}</p>
-      <h2 className="mt-4 text-4xl font-semibold tracking-[-0.06em] md:text-5xl">
-        {title}
-      </h2>
-      <p className="mt-5 text-base leading-8 text-[var(--muted)]">{description}</p>
-    </div>
-  );
-}
-
 export default function Home() {
   return (
-    <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-10 px-4 py-4 md:px-8 md:py-8">
+    <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-8 px-4 py-4 md:px-8 md:py-8">
       <header className="section-card sticky top-4 z-20 rounded-[1.75rem] px-5 py-4 backdrop-blur">
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <a href="#inicio" className="flex items-center gap-3">
@@ -147,28 +90,35 @@ export default function Home() {
       </header>
 
       <section
-        className="section-card grain relative overflow-hidden rounded-[2.5rem] px-6 py-8 md:px-10 md:py-12"
+        className="section-card grain relative overflow-hidden rounded-[2.5rem] px-6 py-8 md:px-10 md:py-10"
         id="inicio"
       >
-        <div className="absolute right-0 top-0 h-40 w-40 rounded-full bg-[radial-gradient(circle,var(--accent-soft),transparent_68%)] opacity-50 blur-3xl" />
-        <div className="absolute bottom-0 left-10 h-32 w-32 rounded-full bg-[radial-gradient(circle,var(--accent),transparent_70%)] opacity-15 blur-3xl" />
+        <div className="absolute right-0 top-0 h-40 w-40 rounded-full bg-[radial-gradient(circle,var(--accent-soft),transparent_68%)] opacity-30 blur-3xl" />
 
-        <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-          <div>
+        <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div className="max-w-2xl">
             <p className="eyebrow text-sm text-[var(--muted)]">Portfolio 2026</p>
-            <h1 className="mt-5 max-w-4xl text-5xl font-semibold tracking-[-0.08em] md:text-7xl">
-              Frontend con React y Next.js para interfaces que se leen bien,
-              escalan bien y responden a problemas reales.
+            <h1 className="mt-5 text-5xl font-semibold tracking-[-0.08em] md:text-7xl">
+              Frontend claro.
+              <br />
+              React first.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--muted)] md:text-xl">
-              Soy Anderson Navarro. Llevo cerca de 3 anos trabajando en frontend
-              profesional y me interesa construir producto con criterio: formularios,
-              estados, componentes reutilizables, performance y una UX clara.
+            <p className="mt-6 max-w-xl text-lg leading-8 text-[var(--muted)]">
+              Construyo interfaces con React y Next.js para producto real:
+              formularios, data fetching, componentes reutilizables y UX limpia.
             </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              {quickFacts.map((item) => (
+                <span key={item} className="retro-label rounded-full px-4 py-2 text-sm">
+                  {item}
+                </span>
+              ))}
+            </div>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a className="cta-primary" href="#trabajo">
-                Ver trabajo seleccionado
+                Ver trabajo
               </a>
               <a
                 className="cta-secondary"
@@ -184,157 +134,125 @@ export default function Home() {
             </div>
           </div>
 
-          <aside className="editorial-panel rounded-[2rem] p-5 md:p-6">
-            <div className="flex items-center justify-between border-b border-white/10 pb-4">
-              <span className="eyebrow text-xs text-white/55">About this frontend</span>
-              <span className="retro-label-dark rounded-full px-3 py-1 text-xs">
-                Available
-              </span>
+          <div className="portrait-shell">
+            <div className="portrait-frame">
+              <Image
+                src="/anderson-profile.jpg"
+                alt="Anderson Navarro"
+                fill
+                priority
+                className="object-cover object-[center_17%] scale-[1.24]"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
             </div>
-
-            <div className="mt-5 space-y-5 text-sm leading-7 text-white/78">
-              <p>
-                <span className="text-white">Focus</span>
-                {"  "}
-                aplicaciones de negocio, formularios, UI reusable y claridad de
-                producto.
-              </p>
-              <p>
-                <span className="text-white">Working stack</span>
-                {"  "}
-                Next.js, React Query, React Hook Form, Yup, Ant Design y Sass.
-              </p>
-              <p>
-                <span className="text-white">Location</span>
-                {"  "}
-                Los Patios, Norte de Santander, Colombia.
-              </p>
-              <p>
-                <span className="text-white">Current interest</span>
-                {"  "}
-                construir una presencia online mas editorial, pero sin perder foco en
-                hiring.
-              </p>
-            </div>
-          </aside>
-        </div>
-
-        <div className="mt-8 flex flex-wrap gap-3">
-          {highlights.map((item) => (
-            <span key={item} className="retro-label rounded-full px-4 py-2 text-sm">
-              {item}
-            </span>
-          ))}
-        </div>
-      </section>
-
-      <section className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]" id="perfil">
-        <article className="section-card rounded-[2.25rem] px-6 py-8 md:px-10">
-          <SectionIntro
-            eyebrow="Perfil"
-            title="No quiero que este sitio se sienta como una lista de skills."
-            description="La idea es que se lea mas como una presentacion breve de como trabajo. Menos dashboard de tecnologias, mas criterio para explicar donde aporto valor dentro de un producto frontend."
-          />
-
-          <div className="mt-8 space-y-6 text-lg leading-9 text-[var(--foreground)]">
-            <p>
-              Disfruto trabajar en el punto donde el frontend deja de ser una capa
-              visual y se convierte en parte activa del sistema. Formularios largos,
-              flujos autenticados, UI reusable, integraciones y decisiones de
-              arquitectura me resultan mas interesantes que una simple landing.
-            </p>
-            <p className="text-[var(--muted)]">
-              Por eso este portfolio no esta pensado solo para mostrar que conozco
-              React. Esta pensado para mostrar que puedo construir interfaces utiles,
-              mantenibles y coherentes con un producto real.
-            </p>
           </div>
-        </article>
-
-        <div className="space-y-4">
-          {editorialNotes.map((note) => (
-            <article
-              key={note.title}
-              className="lift-card section-card rounded-[1.75rem] bg-[var(--surface-strong)] px-5 py-5"
-            >
-              <p className="eyebrow text-xs text-[var(--muted)]">Nota</p>
-              <h3 className="mt-3 text-2xl font-semibold tracking-[-0.04em]">
-                {note.title}
-              </h3>
-              <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{note.body}</p>
-            </article>
-          ))}
         </div>
       </section>
 
-      <section className="section-card rounded-[2.25rem] px-6 py-8 md:px-10" id="experiencia">
-        <SectionIntro
-          eyebrow="Experiencia"
-          title="Mi experiencia reciente esta bastante orientada a producto."
-          description="No todo lo que he hecho puede mostrarse como caso publico, pero si se puede resumir el tipo de responsabilidad y complejidad que ya he venido trabajando."
-        />
+      <section className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+        <article className="section-card rounded-[2.2rem] px-6 py-8 md:px-10" id="trabajo">
+          <p className="eyebrow text-sm text-[var(--muted)]">Sobre mi</p>
+          <h2 className="mt-4 text-4xl font-semibold tracking-[-0.06em] md:text-5xl">
+            Menos discurso.
+            <br />
+            Mas producto.
+          </h2>
+          <p className="mt-6 max-w-xl text-base leading-8 text-[var(--muted)]">
+            Me muevo mejor en apps reales que en demos vacias: validaciones,
+            procesos, estados, UI reusable y decisiones de frontend que duren.
+          </p>
 
-        <div className="mt-10 grid gap-5 lg:grid-cols-3">
-          {experience.map((item) => (
-            <article
-              key={`${item.company}-${item.period}`}
-              className="timeline-card rounded-[1.8rem] border border-[var(--line)] bg-[var(--surface-strong)] px-5 py-5"
-            >
-              <p className="eyebrow text-xs text-[var(--muted)]">{item.period}</p>
-              <h3 className="mt-3 text-2xl font-semibold tracking-[-0.04em]">
-                {item.company}
-              </h3>
-              <p className="mt-2 text-sm uppercase tracking-[0.16em] text-[var(--muted)]">
-                {item.role}
-              </p>
-              <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
-                {item.description}
-              </p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]" id="trabajo">
-        <article className="section-card rounded-[2.25rem] px-6 py-8 md:px-10">
-          <SectionIntro
-            eyebrow="Trabajo seleccionado"
-            title="Los repos publicos todavia no cuentan toda la historia, pero ya apuntan a mi direccion."
-            description="La prioridad en siguientes iteraciones sera convertir dos de estos proyectos en mini casos de estudio con mas contexto visual y tecnico."
-          />
-
-          <div className="mt-8 space-y-4">
-            {projectEntries.map((project) => (
-              <a
-                key={project.title}
-                href={project.href}
-                target="_blank"
-                rel="noreferrer"
-                className="project-link block rounded-[1.75rem] border border-[var(--line)] bg-[var(--surface-strong)] px-5 py-5"
+          <div className="mt-8 grid gap-4">
+            {caseStudies.map((item) => (
+              <article
+                key={item.label}
+                className="lift-card rounded-[1.6rem] border border-[var(--line)] bg-[var(--surface-strong)] px-5 py-5"
               >
-                <div className="flex items-start justify-between gap-4">
-                  <h3 className="text-2xl font-semibold tracking-[-0.04em]">
-                    {project.title}
-                  </h3>
-                  <span className="eyebrow text-xs text-[var(--muted)]">GitHub</span>
-                </div>
-                <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
-                  {project.summary}
-                </p>
-                <p className="mt-4 font-mono text-sm text-[var(--foreground)]">
-                  {project.meta}
-                </p>
-              </a>
+                <p className="eyebrow text-xs text-[var(--muted)]">{item.label}</p>
+                <h3 className="mt-3 text-2xl font-semibold tracking-[-0.04em]">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{item.body}</p>
+              </article>
             ))}
           </div>
         </article>
 
-        <aside className="section-card rounded-[2.25rem] px-6 py-8 md:px-10">
-          <SectionIntro
-            eyebrow="Stack"
-            title="Tecnologias con las que ya trabajo con soltura."
-            description="Prefiero una lista corta, creible y conectada a contexto real de trabajo."
-          />
+        <aside className="section-card rounded-[2.2rem] px-6 py-8 md:px-10">
+          <p className="eyebrow text-sm text-[var(--muted)]">Experiencia</p>
+          <div className="mt-6 space-y-5">
+            <article className="timeline-card rounded-[1.6rem] border border-[var(--line)] bg-[var(--surface-strong)] px-5 py-5">
+              <p className="eyebrow text-xs text-[var(--muted)]">2024 - Actualidad</p>
+              <h3 className="mt-3 text-2xl font-semibold tracking-[-0.04em]">
+                Nelumbo consultores
+              </h3>
+              <p className="mt-2 text-sm text-[var(--muted)]">
+                Next.js, React Query, formularios y apps de negocio.
+              </p>
+            </article>
+
+            <article className="timeline-card rounded-[1.6rem] border border-[var(--line)] bg-[var(--surface-strong)] px-5 py-5">
+              <p className="eyebrow text-xs text-[var(--muted)]">2022 - 2024</p>
+              <h3 className="mt-3 text-2xl font-semibold tracking-[-0.04em]">Avanzo</h3>
+              <p className="mt-2 text-sm text-[var(--muted)]">
+                UI reusable, patrones compartidos y optimizacion frontend.
+              </p>
+            </article>
+
+            <article className="timeline-card rounded-[1.6rem] border border-[var(--line)] bg-[var(--surface-strong)] px-5 py-5">
+              <p className="eyebrow text-xs text-[var(--muted)]">2022</p>
+              <h3 className="mt-3 text-2xl font-semibold tracking-[-0.04em]">
+                Comfaoriente SAS
+              </h3>
+              <p className="mt-2 text-sm text-[var(--muted)]">
+                Migracion desde Django hacia React.
+              </p>
+            </article>
+          </div>
+        </aside>
+      </section>
+
+      <section className="section-card rounded-[2.2rem] px-6 py-8 md:px-10">
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="eyebrow text-sm text-[var(--muted)]">Repos</p>
+            <h2 className="mt-4 text-4xl font-semibold tracking-[-0.06em] md:text-5xl">
+              Trabajo seleccionado.
+            </h2>
+          </div>
+          <a
+            className="cta-secondary w-fit"
+            href="https://github.com/andersonNB?tab=repositories"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Ver todos
+          </a>
+        </div>
+
+        <div className="mt-8 grid gap-4 lg:grid-cols-3">
+          {selectedWork.map((project) => (
+            <a
+              key={project.title}
+              href={project.href}
+              target="_blank"
+              rel="noreferrer"
+              className="project-link block rounded-[1.75rem] border border-[var(--line)] bg-[var(--surface-strong)] px-5 py-5"
+            >
+              <h3 className="text-2xl font-semibold tracking-[-0.04em]">{project.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{project.summary}</p>
+              <p className="mt-4 font-mono text-sm text-[var(--foreground)]">{project.meta}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]" id="stack">
+        <article className="section-card rounded-[2.2rem] px-6 py-8 md:px-10">
+          <p className="eyebrow text-sm text-[var(--muted)]">Stack</p>
+          <h2 className="mt-4 text-4xl font-semibold tracking-[-0.06em] md:text-5xl">
+            Lo que uso.
+          </h2>
 
           <div className="mt-8 flex flex-wrap gap-3">
             {stack.map((item) => (
@@ -343,45 +261,35 @@ export default function Home() {
               </span>
             ))}
           </div>
+        </article>
 
-          <div className="quote-panel mt-8 rounded-[1.8rem] px-5 py-5">
-            <p className="eyebrow text-xs text-[var(--muted)]">Siguiente iteracion</p>
-            <p className="mt-4 text-lg leading-8">
-              Agregar LinkedIn, CV actualizado y al menos dos estudios de caso con
-              capturas, decisiones tecnicas y contexto de negocio.
-            </p>
+        <article className="section-card rounded-[2.2rem] px-6 py-8 md:px-10" id="contacto">
+          <p className="eyebrow text-sm text-[var(--muted)]">Contacto</p>
+          <h2 className="mt-4 text-4xl font-semibold tracking-[-0.06em] md:text-5xl">
+            Hablemos.
+          </h2>
+          <p className="mt-5 max-w-md text-base leading-8 text-[var(--muted)]">
+            La siguiente fase puede entrar ya con LinkedIn, CV actualizado y casos de
+            estudio mas completos.
+          </p>
+
+          <div className="mt-8 grid gap-4">
+            <a className="contact-card" href="mailto:navarroanderson07@gmail.com">
+              <span className="eyebrow text-xs text-[var(--muted)]">Email</span>
+              <span className="mt-3 text-xl font-semibold">navarroanderson07@gmail.com</span>
+            </a>
+
+            <a
+              className="contact-card"
+              href="https://github.com/andersonNB"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="eyebrow text-xs text-[var(--muted)]">GitHub</span>
+              <span className="mt-3 text-xl font-semibold">github.com/andersonNB</span>
+            </a>
           </div>
-        </aside>
-      </section>
-
-      <section
-        className="section-card relative overflow-hidden rounded-[2.4rem] px-6 py-8 md:px-10 md:py-10"
-        id="contacto"
-      >
-        <div className="absolute inset-x-0 top-0 h-1 bg-[linear-gradient(90deg,var(--accent),var(--accent-soft),var(--foreground))]" />
-
-        <SectionIntro
-          eyebrow="Contacto"
-          title="Si buscas a alguien para construir frontend de producto, aqui ya hay una base clara para conversar."
-          description="La estructura editorial ya esta lista. Lo siguiente es seguir profundizando el contenido para que el portfolio no solo se vea bien, sino que convenza."
-        />
-
-        <div className="mt-8 grid gap-4 md:grid-cols-2">
-          <a className="contact-card" href="mailto:navarroanderson07@gmail.com">
-            <span className="eyebrow text-xs text-[var(--muted)]">Email</span>
-            <span className="mt-3 text-xl font-semibold">navarroanderson07@gmail.com</span>
-          </a>
-
-          <a
-            className="contact-card"
-            href="https://github.com/andersonNB"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span className="eyebrow text-xs text-[var(--muted)]">GitHub</span>
-            <span className="mt-3 text-xl font-semibold">github.com/andersonNB</span>
-          </a>
-        </div>
+        </article>
       </section>
     </main>
   );
