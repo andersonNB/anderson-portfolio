@@ -137,7 +137,7 @@ export default function Home() {
           <div className="portrait-shell">
             <div className="portrait-frame">
               <Image
-                src="/anderson-profile.jpg"
+                src="/anderson-profile-clean.png"
                 alt="Anderson Navarro"
                 fill
                 priority
