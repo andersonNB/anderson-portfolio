@@ -255,7 +255,7 @@ export default function Home() {
           {editorialNotes.map((note) => (
             <article
               key={note.title}
-              className="lift-card section-card rounded-[1.75rem] px-5 py-5"
+              className="lift-card section-card rounded-[1.75rem] bg-[var(--surface-strong)] px-5 py-5"
             >
               <p className="eyebrow text-xs text-[var(--muted)]">Nota</p>
               <h3 className="mt-3 text-2xl font-semibold tracking-[-0.04em]">
@@ -278,7 +278,7 @@ export default function Home() {
           {experience.map((item) => (
             <article
               key={`${item.company}-${item.period}`}
-              className="timeline-card rounded-[1.8rem] border border-[var(--line)] bg-white/45 px-5 py-5"
+              className="timeline-card rounded-[1.8rem] border border-[var(--line)] bg-[var(--surface-strong)] px-5 py-5"
             >
               <p className="eyebrow text-xs text-[var(--muted)]">{item.period}</p>
               <h3 className="mt-3 text-2xl font-semibold tracking-[-0.04em]">
@@ -310,7 +310,7 @@ export default function Home() {
                 href={project.href}
                 target="_blank"
                 rel="noreferrer"
-                className="project-link block rounded-[1.75rem] border border-[var(--line)] bg-white/42 px-5 py-5"
+                className="project-link block rounded-[1.75rem] border border-[var(--line)] bg-[var(--surface-strong)] px-5 py-5"
               >
                 <div className="flex items-start justify-between gap-4">
                   <h3 className="text-2xl font-semibold tracking-[-0.04em]">
