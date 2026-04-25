@@ -1,0 +1,124 @@
+{
+  "SiteHeader": {
+    "name": "Anderson Navarro",
+    "navigation": {
+      "home": "Inicio",
+      "work": "Trabajo",
+      "stack": "Stack",
+      "contact": "Contacto"
+    }
+  },
+  "Hero": {
+    "eyebrow": "Portfolio 2026",
+    "title": "Desarrollador Frontend",
+    "typedPrefix": "Especializado en",
+    "typedWords": ["React", "Next.js", "Redux", "TypeScript"],
+    "description": "Trabajo con React y Next.js para construir interfaces modernas, formularios complejos, manejo de estado y componentes reutilizables.",
+    "facts": ["3+ anos de experiencia", "React / Next.js", "Frontend de producto"],
+    "ctaWork": "Ver trabajo",
+    "ctaEmail": "Email"
+  },
+  "ProfileCard": {
+    "name": "Anderson Navarro",
+    "subtitle": "React / Next.js",
+    "level": "LV 03",
+    "labels": {
+      "mainStack": "Main stack",
+      "style": "Style"
+    },
+    "values": {
+      "mainStack": "React / Next.js",
+      "style": "UI reusable"
+    },
+    "stats": ["Forms 92", "State 88", "UX 90"]
+  },
+  "About": {
+    "eyebrow": "Sobre mi",
+    "title": "Menos discurso. Mas producto.",
+    "description": "Me muevo mejor en apps reales: validaciones, procesos, UI reusable y decisiones de frontend que duren.",
+    "items": [
+      {
+        "label": "01",
+        "title": "UI reusable",
+        "body": "Migracion de componentes hacia una base mas consistente y escalable."
+      },
+      {
+        "label": "02",
+        "title": "Forms y data",
+        "body": "Trabajo con validaciones, estados async y flujos conectados a negocio."
+      }
+    ]
+  },
+  "Experience": {
+    "eyebrow": "Experiencia",
+    "title": "Experiencia reciente.",
+    "items": [
+      {
+        "period": "2024 - Actualidad",
+        "company": "Nelumbo consultores",
+        "summary": "Next.js, React Query, formularios y apps de negocio."
+      },
+      {
+        "period": "2022 - 2024",
+        "company": "Avanzo",
+        "summary": "UI reusable, patrones compartidos y optimizacion frontend."
+      },
+      {
+        "period": "2022",
+        "company": "Comfaoriente SAS",
+        "summary": "Migracion desde Django hacia React."
+      }
+    ]
+  },
+  "SelectedWork": {
+    "eyebrow": "Repos",
+    "title": "Trabajo seleccionado.",
+    "ctaAll": "Ver todos",
+    "projects": [
+      {
+        "title": "UIKIT Nelumbo",
+        "href": "https://github.com/andersonNB/UIKITNelumbo",
+        "summary": "Componentes reutilizables y formularios sobre Next.js.",
+        "meta": "Next.js / React Query / RHF"
+      },
+      {
+        "title": "Nelumbo Front NextJS",
+        "href": "https://github.com/andersonNB/NelumboFrontNexJS",
+        "summary": "Base de aplicacion con Ant Design y estructura mas cercana a producto.",
+        "meta": "Next.js / Ant Design"
+      },
+      {
+        "title": "Blizzard Page",
+        "href": "https://github.com/andersonNB/Blizzard-Page",
+        "summary": "Proyecto visual para composicion, jerarquia y maquetacion.",
+        "meta": "React / Bootstrap"
+      }
+    ]
+  },
+  "StackSection": {
+    "eyebrow": "Stack",
+    "title": "Lo que uso.",
+    "items": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "React Query",
+      "React Hook Form",
+      "Yup",
+      "Redux",
+      "Ant Design",
+      "Sass",
+      "Styled Components",
+      "Git",
+      "GitHub"
+    ]
+  },
+  "Contact": {
+    "eyebrow": "Contacto",
+    "title": "Hablemos.",
+    "description": "La siguiente fase puede entrar ya con LinkedIn, CV actualizado y casos de estudio mas completos.",
+    "emailLabel": "Email",
+    "githubLabel": "GitHub"
+  }
+}

@@ -143,6 +143,31 @@ a {
   color: var(--foreground);
 }
 
+.locale-switch {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.2rem;
+}
+
+.locale-switch button {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 0.45rem 0.7rem;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.locale-switch .locale-active {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--foreground);
+}
+
 .cta-primary,
 .cta-secondary,
 .contact-card {

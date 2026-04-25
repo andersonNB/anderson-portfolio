@@ -1,15 +1,20 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import type { ProfileCardContent } from "@/types/portfolio";
 
 export function ProfileCard() {
+  const t = useTranslations("ProfileCard");
+  const stats = t.raw("stats") as ProfileCardContent["stats"];
+
   return (
     <div className="collector-shell">
       <article className="collector-card">
         <div className="collector-top">
           <div>
-            <p className="collector-name">Anderson Navarro</p>
-            <p className="collector-role">Frontend Developer</p>
+            <p className="collector-name">{t("name")}</p>
+            <p className="collector-role">{t("subtitle")}</p>
           </div>
-          <div className="collector-pill">LV 03</div>
+          <div className="collector-pill">{t("level")}</div>
         </div>
 
         <div className="collector-art">
@@ -25,19 +30,19 @@ export function ProfileCard() {
 
         <div className="collector-meta">
           <div>
-            <p className="collector-label">Main stack</p>
-            <p className="collector-value">React / Next.js</p>
+            <p className="collector-label">{t("labels.mainStack")}</p>
+            <p className="collector-value">{t("values.mainStack")}</p>
           </div>
           <div>
-            <p className="collector-label">Style</p>
-            <p className="collector-value">UI reusable</p>
+            <p className="collector-label">{t("labels.style")}</p>
+            <p className="collector-value">{t("values.style")}</p>
           </div>
         </div>
 
         <div className="collector-stats">
-          <span>Forms 92</span>
-          <span>State 88</span>
-          <span>UX 90</span>
+          {stats.map((stat) => (
+            <span key={stat}>{stat}</span>
+          ))}
         </div>
       </article>
     </div>
