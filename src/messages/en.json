@@ -122,13 +122,13 @@
   },
   "Contact": {
     "eyebrow": "Contact",
-    "title": "Contact.",
+    "title": "Let's talk.",
     "description": "Available for new projects and collaborations.",
     "emailLabel": "Email",
     "githubLabel": "GitHub"
   },
   "Footer": {
-    "status": "Frontend with React and Next.js.",
-    "copyright": "Portfolio"
+    "title": "Portfolio 2026",
+    "status": "Frontend with React and Next.js."
   }
 }

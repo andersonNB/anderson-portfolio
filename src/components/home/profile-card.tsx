@@ -19,7 +19,7 @@ export function ProfileCard() {
 
         <div className="collector-art">
           <Image
-            src="/anderson-profile-clean.png"
+            src="/profileIA.png"
             alt="Anderson Navarro"
             fill
             priority
