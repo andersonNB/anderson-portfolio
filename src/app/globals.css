@@ -407,21 +407,24 @@ a {
 
 .typewriter-word {
   position: relative;
-  display: inline-flex;
+  display: inline-block;
   align-items: center;
-  justify-content: flex-start;
   color: var(--accent-soft);
+  vertical-align: baseline;
 }
 
 .typewriter-sizer {
-  position: absolute;
-  inset: auto;
-  visibility: hidden;
+  display: inline-flex;
+  align-items: center;
+  opacity: 0;
   pointer-events: none;
   white-space: nowrap;
 }
 
 .typewriter-active {
+  position: absolute;
+  left: 0;
+  top: 0;
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
