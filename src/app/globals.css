@@ -507,12 +507,36 @@ a {
 }
 
 .footer-shell {
-  background: rgba(17, 20, 26, 0.9);
+  background:
+    linear-gradient(180deg, rgba(17, 20, 26, 0.96), rgba(17, 20, 26, 0.88)),
+    radial-gradient(circle at top right, rgba(87, 107, 149, 0.1), transparent 30%);
+}
+
+.footer-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.4rem;
+  height: 4.4rem;
+  flex: 0 0 auto;
+  border: 1px solid rgba(255, 245, 230, 0.12);
+  border-radius: 1.4rem;
+  background:
+    radial-gradient(circle at top, rgba(244, 200, 111, 0.18), transparent 48%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.footer-mark span {
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 1.25rem;
+  letter-spacing: 0.12em;
+  color: var(--foreground);
 }
 
 .footer-icon-link {
-  width: 2.3rem;
-  height: 2.3rem;
+  width: 2.7rem;
+  height: 2.7rem;
   transition:
     transform 180ms ease,
     border-color 180ms ease,
@@ -523,6 +547,32 @@ a {
   transform: translateY(-2px);
   border-color: rgba(244, 200, 111, 0.25);
   background: rgba(255, 255, 255, 0.08);
+}
+
+.footer-text-link {
+  position: relative;
+  transition: color 180ms ease;
+}
+
+.footer-text-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.2rem;
+  width: 100%;
+  height: 1px;
+  background: rgba(244, 200, 111, 0.42);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+}
+
+.footer-text-link:hover {
+  color: var(--foreground);
+}
+
+.footer-text-link:hover::after {
+  transform: scaleX(1);
 }
 
 @media (max-width: 768px) {
@@ -541,6 +591,11 @@ a {
 
   .collector-image {
     padding-inline: 0.2rem;
+  }
+
+  .footer-mark {
+    width: 3.8rem;
+    height: 3.8rem;
   }
 }
 

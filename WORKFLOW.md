@@ -94,6 +94,14 @@ Estas reglas definen la forma de trabajo para este repositorio.
 - El PR debe representar una unidad clara de cambio.
 - Al cerrar una fase, detenerse en el PR y esperar revision manual antes de continuar con la siguiente fase.
 - Una vez el cambio este validado y probado, completar el merge del PR hacia `main`.
+- Codex puede aprobar y mergear un PR sin pedir confirmacion extra si cumple todos estos minimos:
+  - el alcance del PR es claro y acotado
+  - `lint` pasa
+  - `build` pasa cuando el cambio afecta la app
+  - no hay errores conocidos sin declarar
+  - no hay dudas funcionales abiertas que cambien el alcance
+  - no hay cambios ajenos a la tarea mezclados en el PR
+- Si alguno de esos minimos no se cumple, el PR debe quedarse abierto hasta revision manual.
 - Despues de dejar lista una nueva funcionalidad, crear un tag de release asociado.
 - El tag debe seguir un versionado simple y consistente. Por defecto:
   - `v0.1.0`
