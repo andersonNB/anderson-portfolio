@@ -14,8 +14,7 @@ export function SiteFooter() {
           </div>
 
           <div className="max-w-xl">
-            <p className="eyebrow text-xs text-[var(--muted)]">{t("label")}</p>
-            <p className="mt-2 text-base font-semibold tracking-[-0.03em]">{t("status")}</p>
+            <p className="text-base font-semibold tracking-[-0.03em]">{t("status")}</p>
             <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
               {t("copyright")} {year}
             </p>

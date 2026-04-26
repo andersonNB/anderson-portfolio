@@ -155,6 +155,12 @@ a {
   color: var(--foreground);
 }
 
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
 .mobile-menu {
   animation: mobile-menu-enter 160ms ease-out;
 }
