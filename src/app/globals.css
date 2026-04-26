@@ -144,7 +144,7 @@ a {
 }
 
 .menu-toggle {
-  display: inline-flex;
+  display: none;
   align-items: center;
   justify-content: center;
   border: 1px solid var(--line);
@@ -155,9 +155,9 @@ a {
   color: var(--foreground);
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767px) {
   .menu-toggle {
-    display: none;
+    display: inline-flex;
   }
 }
 
@@ -364,9 +364,9 @@ a {
 }
 
 .collector-image {
-  object-fit: contain;
-  object-position: center bottom;
-  padding: 0.35rem 0.35rem 0;
+  object-fit: cover;
+  object-position: center center;
+  transform: scale(1.16);
 }
 
 .collector-meta {
@@ -567,10 +567,6 @@ a {
 
   .collector-art {
     aspect-ratio: 0.95 / 1.08;
-  }
-
-  .collector-image {
-    padding-inline: 0.2rem;
   }
 
   .footer-mark {

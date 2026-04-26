@@ -3,7 +3,6 @@ import { useTranslations } from "next-intl";
 
 export function SiteFooter() {
   const t = useTranslations("Footer");
-  const year = new Date().getFullYear();
 
   return (
     <footer className="section-card footer-shell rounded-[1.9rem] px-5 py-6 md:px-7 md:py-7">
@@ -14,9 +13,9 @@ export function SiteFooter() {
           </div>
 
           <div className="max-w-xl">
-            <p className="text-base font-semibold tracking-[-0.03em]">{t("status")}</p>
+            <p className="text-base font-semibold tracking-[-0.03em]">{t("title")}</p>
             <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
-              {t("copyright")} {year}
+              {t("status")}
             </p>
           </div>
         </div>
