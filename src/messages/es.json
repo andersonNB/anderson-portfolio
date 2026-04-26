@@ -122,13 +122,13 @@
   },
   "Contact": {
     "eyebrow": "Contacto",
-    "title": "Hablemos.",
-    "description": "Si buscas a alguien para construir interfaces con React y Next.js, podemos conversar.",
+    "title": "Contacto.",
+    "description": "Disponible para nuevos proyectos y colaboraciones.",
     "emailLabel": "Email",
     "githubLabel": "GitHub"
   },
   "Footer": {
-    "status": "Disponible para frontend con React y Next.js.",
-    "copyright": "Hecho por Anderson Navarro."
+    "status": "Frontend con React y Next.js.",
+    "copyright": "Portfolio"
   }
 }

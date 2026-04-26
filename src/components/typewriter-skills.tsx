@@ -50,8 +50,9 @@ export function TypewriterSkills({ words }: TypewriterSkillsProps) {
 
   return (
     <span className="typewriter-word">
-      <span className="typewriter-sizer" aria-hidden="true">
+      <span aria-hidden="true" className="typewriter-sizer">
         {widestWord}
+        <span className="typewriter-caret" />
       </span>
       <span className="typewriter-active">
         {displayed}
