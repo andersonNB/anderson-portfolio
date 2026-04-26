@@ -1,6 +1,8 @@
 {
   "SiteHeader": {
     "name": "Anderson Navarro",
+    "menu": "Menu",
+    "close": "Close",
     "navigation": {
       "home": "Home",
       "work": "Work",
@@ -30,7 +32,7 @@
       "mainStack": "React / Next.js",
       "style": "Reusable UI"
     },
-    "stats": ["Forms 92", "State 88", "UX 90"]
+    "stats": ["Complex forms", "Async state", "Reusable UI"]
   },
   "About": {
     "eyebrow": "About",
@@ -120,5 +122,9 @@
     "description": "The next phase can already include LinkedIn, an updated CV, and deeper case studies.",
     "emailLabel": "Email",
     "githubLabel": "GitHub"
+  },
+  "Footer": {
+    "status": "Available for frontend work with React and Next.js.",
+    "copyright": "Built by Anderson Navarro."
   }
 }

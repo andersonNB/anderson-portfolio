@@ -5,6 +5,7 @@ import { useState } from "react";
 import { AboutWorkSection } from "@/components/home/about-work-section";
 import { HeroSection } from "@/components/home/hero-section";
 import { SelectedWorkSection } from "@/components/home/selected-work-section";
+import { SiteFooter } from "@/components/home/site-footer";
 import { SiteHeader } from "@/components/home/site-header";
 import { StackContactSection } from "@/components/home/stack-contact-section";
 import type { Locale } from "@/types/portfolio";
@@ -22,6 +23,7 @@ export function HomePage() {
       <AboutWorkSection />
       <SelectedWorkSection />
       <StackContactSection />
+      <SiteFooter />
     </NextIntlClientProvider>
   );
 }

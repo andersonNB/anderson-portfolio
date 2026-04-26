@@ -1,4 +1,5 @@
 import { SectionTitle } from "@/components/ui/section-title";
+import { GitHubIcon, MailIcon } from "@/components/ui/icons";
 import { useTranslations } from "next-intl";
 
 export function StackContactSection() {
@@ -29,10 +30,17 @@ export function StackContactSection() {
 
         <div className="mt-8 grid gap-4">
           <a className="contact-card" href="mailto:navarroanderson07@gmail.com">
-            <span className="eyebrow text-xs text-[var(--muted)]">
-              {contact("emailLabel")}
+            <span className="contact-icon-shell">
+              <MailIcon className="h-4 w-4" />
             </span>
-            <span className="mt-3 text-xl font-semibold">navarroanderson07@gmail.com</span>
+            <span>
+              <span className="eyebrow text-xs text-[var(--muted)]">
+                {contact("emailLabel")}
+              </span>
+              <span className="mt-1 block text-base font-semibold md:text-lg">
+                navarroanderson07@gmail.com
+              </span>
+            </span>
           </a>
 
           <a
@@ -41,10 +49,17 @@ export function StackContactSection() {
             target="_blank"
             rel="noreferrer"
           >
-            <span className="eyebrow text-xs text-[var(--muted)]">
-              {contact("githubLabel")}
+            <span className="contact-icon-shell">
+              <GitHubIcon className="h-4 w-4" />
             </span>
-            <span className="mt-3 text-xl font-semibold">github.com/andersonNB</span>
+            <span>
+              <span className="eyebrow text-xs text-[var(--muted)]">
+                {contact("githubLabel")}
+              </span>
+              <span className="mt-1 block text-base font-semibold md:text-lg">
+                github.com/andersonNB
+              </span>
+            </span>
           </a>
         </div>
       </article>

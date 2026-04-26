@@ -143,6 +143,22 @@ a {
   color: var(--foreground);
 }
 
+.menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  width: 2.75rem;
+  height: 2.75rem;
+  color: var(--foreground);
+}
+
+.mobile-menu {
+  animation: mobile-menu-enter 160ms ease-out;
+}
+
 .locale-switch {
   display: inline-flex;
   align-items: center;
@@ -330,7 +346,7 @@ a {
 
 .collector-art {
   position: relative;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 0.92 / 1;
   margin-inline: 1rem;
   overflow: hidden;
   border: 1px solid rgba(255, 245, 230, 0.12);
@@ -343,8 +359,8 @@ a {
 
 .collector-image {
   object-fit: contain;
-  object-position: center;
-  padding: 0.6rem 0.8rem 0;
+  object-position: center bottom;
+  padding: 0.35rem 0.35rem 0;
 }
 
 .collector-meta {
@@ -383,15 +399,33 @@ a {
   border: 1px solid rgba(255, 245, 230, 0.12);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.05);
-  padding: 0.42rem 0.7rem;
+  padding: 0.48rem 0.76rem;
   font-family: "Consolas", "Courier New", monospace;
-  font-size: 0.78rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
 }
 
 .typewriter-word {
+  display: inline-grid;
+  align-items: center;
+  color: var(--accent-soft);
+}
+
+.typewriter-sizer,
+.typewriter-active {
+  grid-area: 1 / 1;
+}
+
+.typewriter-sizer {
+  visibility: hidden;
+  pointer-events: none;
+  white-space: pre;
+}
+
+.typewriter-active {
   display: inline-flex;
   align-items: center;
-  min-width: 8ch;
+  white-space: nowrap;
   color: var(--accent-soft);
 }
 
@@ -443,14 +477,50 @@ a {
 }
 
 .contact-card {
-  min-height: 10rem;
-  flex-direction: column;
-  align-items: flex-start;
+  width: 100%;
+  min-height: 0;
   justify-content: flex-start;
+  gap: 0.95rem;
   border: 1px solid var(--line);
-  border-radius: 1.5rem;
+  border-radius: 1.3rem;
   background: rgba(255, 255, 255, 0.04);
-  padding: 1.35rem;
+  padding: 1rem 1.05rem;
+}
+
+.contact-icon-shell,
+.footer-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 245, 230, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--foreground);
+}
+
+.contact-icon-shell {
+  width: 2.4rem;
+  height: 2.4rem;
+  flex: 0 0 auto;
+}
+
+.footer-shell {
+  background: rgba(17, 20, 26, 0.9);
+}
+
+.footer-icon-link {
+  width: 2.3rem;
+  height: 2.3rem;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.footer-icon-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(244, 200, 111, 0.25);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 @media (max-width: 768px) {
@@ -463,8 +533,12 @@ a {
     margin-inline: auto;
   }
 
-  .contact-card {
-    min-height: auto;
+  .collector-art {
+    aspect-ratio: 0.95 / 1.08;
+  }
+
+  .collector-image {
+    padding-inline: 0.2rem;
   }
 }
 
@@ -499,5 +573,17 @@ a {
   100% {
     transform: translateX(70%) rotate(12deg);
     opacity: 0;
+  }
+}
+
+@keyframes mobile-menu-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

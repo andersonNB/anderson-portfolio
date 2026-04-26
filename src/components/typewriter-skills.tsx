@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const TYPING_SPEED = 85;
 const DELETING_SPEED = 45;
@@ -14,6 +14,10 @@ export function TypewriterSkills({ words }: TypewriterSkillsProps) {
   const [skillIndex, setSkillIndex] = useState(0);
   const [displayed, setDisplayed] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+  const widestWord = useMemo(
+    () => words.reduce((widest, current) => (current.length > widest.length ? current : widest), ""),
+    [words],
+  );
 
   useEffect(() => {
     const currentSkill = words[skillIndex];
@@ -46,8 +50,13 @@ export function TypewriterSkills({ words }: TypewriterSkillsProps) {
 
   return (
     <span className="typewriter-word">
-      {displayed}
-      <span className="typewriter-caret" aria-hidden="true" />
+      <span className="typewriter-sizer" aria-hidden="true">
+        {widestWord}
+      </span>
+      <span className="typewriter-active">
+        {displayed}
+        <span className="typewriter-caret" aria-hidden="true" />
+      </span>
     </span>
   );
 }
