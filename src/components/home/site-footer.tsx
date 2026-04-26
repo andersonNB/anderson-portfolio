@@ -6,10 +6,19 @@ export function SiteFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="section-card footer-shell rounded-[1.9rem] px-5 py-5 md:px-7">
-      <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-        <div>
-          <p className="text-sm text-[var(--muted)]">{t("status")}</p>
+    <footer className="section-card footer-shell rounded-[1.9rem] px-5 py-6 md:px-7 md:py-7">
+      <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
+        <div className="flex items-start gap-4">
+          <div className="footer-mark">
+            <span>AN</span>
+          </div>
+
+          <div className="max-w-xl">
+            <p className="text-base font-semibold tracking-[-0.03em]">{t("status")}</p>
+            <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
+              {t("copyright")} {year}
+            </p>
+          </div>
         </div>
 
         <div className="flex items-center gap-3">
@@ -30,10 +39,6 @@ export function SiteFooter() {
             <MailIcon className="h-4 w-4" />
           </a>
         </div>
-      </div>
-
-      <div className="mt-4 border-t border-[var(--line)] pt-4 text-sm text-[var(--muted)]">
-        <p>{t("copyright")} {year}</p>
       </div>
     </footer>
   );
