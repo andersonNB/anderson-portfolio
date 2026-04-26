@@ -406,10 +406,19 @@ a {
 }
 
 .typewriter-word {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
   color: var(--accent-soft);
+}
+
+.typewriter-sizer {
+  position: absolute;
+  inset: auto;
+  visibility: hidden;
+  pointer-events: none;
+  white-space: nowrap;
 }
 
 .typewriter-active {

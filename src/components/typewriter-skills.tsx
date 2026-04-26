@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 
 const TYPING_SPEED = 85;
 const DELETING_SPEED = 45;
@@ -14,10 +14,20 @@ export function TypewriterSkills({ words }: TypewriterSkillsProps) {
   const [skillIndex, setSkillIndex] = useState(0);
   const [displayed, setDisplayed] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+  const [wordWidth, setWordWidth] = useState<number>();
+  const sizerRef = useRef<HTMLSpanElement>(null);
   const widestWord = useMemo(
     () => words.reduce((widest, current) => (current.length > widest.length ? current : widest), ""),
     [words],
   );
+
+  useLayoutEffect(() => {
+    if (!sizerRef.current) {
+      return;
+    }
+
+    setWordWidth(Math.ceil(sizerRef.current.getBoundingClientRect().width) + 2);
+  }, [widestWord]);
 
   useEffect(() => {
     const currentSkill = words[skillIndex];
@@ -49,7 +59,10 @@ export function TypewriterSkills({ words }: TypewriterSkillsProps) {
   }, [displayed, isDeleting, skillIndex, words]);
 
   return (
-    <span className="typewriter-word" style={{ width: `${widestWord.length + 1}ch` }}>
+    <span className="typewriter-word" style={wordWidth ? { width: `${wordWidth}px` } : undefined}>
+      <span ref={sizerRef} aria-hidden="true" className="typewriter-sizer">
+        {widestWord}
+      </span>
       <span className="typewriter-active">
         {displayed}
         <span className="typewriter-caret" aria-hidden="true" />
