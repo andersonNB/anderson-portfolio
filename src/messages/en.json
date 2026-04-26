@@ -15,8 +15,8 @@
     "title": "Frontend Developer",
     "typedPrefix": "Specialized in",
     "typedWords": ["React", "Next.js", "Redux", "TypeScript"],
-    "description": "I work with React and Next.js to build modern interfaces, complex forms, state management, and reusable components.",
-    "facts": ["3+ years of experience", "React / Next.js", "Product frontend"],
+    "description": "Proactive, self-taught frontend developer passionate about technology, logic, architecture, and the small details that make interfaces work well.",
+    "facts": ["3+ years of experience", "React / Next.js"],
     "ctaWork": "View work",
     "ctaEmail": "Email"
   },
@@ -36,18 +36,18 @@
   },
   "About": {
     "eyebrow": "About",
-    "title": "Less talk. More product.",
-    "description": "I work best on real apps: validations, workflows, reusable UI, and frontend decisions that last.",
+    "title": "Steady growth.",
+    "description": "I stay motivated by personal and professional growth, and I enjoy understanding the logic behind algorithms, design patterns, programming languages, and architectures.",
     "items": [
       {
         "label": "01",
-        "title": "Reusable UI",
-        "body": "Component migration toward a more consistent and scalable base."
+        "title": "Solid technical base",
+        "body": "I work with a focus on logic, maintainability, and frontend decisions that can scale over time."
       },
       {
         "label": "02",
-        "title": "Forms and data",
-        "body": "Experience with validations, async states, and business-driven flows."
+        "title": "Real product work",
+        "body": "I am comfortable building real applications with forms, business-driven flows, and reusable UI."
       }
     ]
   },
@@ -58,17 +58,17 @@
       {
         "period": "2024 - Present",
         "company": "Nelumbo consultores",
-        "summary": "Next.js, React Query, forms, and business applications."
+        "summary": "I build web applications with Next.js and React, using React Query, Yup, React Hook Form, Material UI, Sass, and AWS Cognito for dynamic interfaces, form validation, and secure authentication."
       },
       {
         "period": "2022 - 2024",
         "company": "Avanzo",
-        "summary": "Reusable UI, shared patterns, and frontend optimization."
+        "summary": "I led component migration into a reusable UI library, implemented state models decoupled from the UI, built complex HOCs, and integrated metrics libraries to improve load time and performance."
       },
       {
         "period": "2022",
         "company": "Comfaoriente SAS",
-        "summary": "Migration from Django to React."
+        "summary": "Migration of a Django application to React, improving performance and modernizing clinical workflow flows with a more current architecture."
       }
     ]
   },
@@ -109,9 +109,13 @@
       "React Hook Form",
       "Yup",
       "Redux",
+      "Angular",
       "Ant Design",
+      "Material UI",
       "Sass",
       "Styled Components",
+      "PHP",
+      "Java",
       "Git",
       "GitHub"
     ]
@@ -119,7 +123,7 @@
   "Contact": {
     "eyebrow": "Contact",
     "title": "Let's talk.",
-    "description": "The next phase can already include LinkedIn, an updated CV, and deeper case studies.",
+    "description": "If you are looking for someone to build interfaces with React and Next.js, we can talk.",
     "emailLabel": "Email",
     "githubLabel": "GitHub"
   },
