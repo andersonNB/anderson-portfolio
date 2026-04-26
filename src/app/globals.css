@@ -406,20 +406,10 @@ a {
 }
 
 .typewriter-word {
-  display: inline-grid;
+  display: inline-flex;
   align-items: center;
+  justify-content: flex-start;
   color: var(--accent-soft);
-}
-
-.typewriter-sizer,
-.typewriter-active {
-  grid-area: 1 / 1;
-}
-
-.typewriter-sizer {
-  visibility: hidden;
-  pointer-events: none;
-  white-space: pre;
 }
 
 .typewriter-active {
