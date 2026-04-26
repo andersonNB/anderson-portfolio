@@ -9,8 +9,7 @@ export function SiteFooter() {
     <footer className="section-card footer-shell rounded-[1.9rem] px-5 py-5 md:px-7">
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div>
-          <p className="text-lg font-semibold tracking-[-0.04em]">Anderson Navarro</p>
-          <p className="mt-1 text-sm text-[var(--muted)]">{t("status")}</p>
+          <p className="text-sm text-[var(--muted)]">{t("status")}</p>
         </div>
 
         <div className="flex items-center gap-3">
