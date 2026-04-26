@@ -130,13 +130,6 @@
   "Footer": {
     "label": "Portfolio 2026",
     "status": "Frontend with React and Next.js.",
-    "legal": "Personal interface and development.",
-    "links": {
-      "home": "Home",
-      "work": "Work",
-      "stack": "Stack",
-      "contact": "Contact"
-    },
     "copyright": "Portfolio"
   }
 }
