@@ -1,6 +1,8 @@
 {
   "SiteHeader": {
     "name": "Anderson Navarro",
+    "menu": "Menu",
+    "close": "Cerrar",
     "navigation": {
       "home": "Inicio",
       "work": "Trabajo",
@@ -14,7 +16,7 @@
     "typedPrefix": "Especializado en",
     "typedWords": ["React", "Next.js", "Redux", "TypeScript"],
     "description": "Trabajo con React y Next.js para construir interfaces modernas, formularios complejos, manejo de estado y componentes reutilizables.",
-    "facts": ["3+ anos de experiencia", "React / Next.js", "Frontend de producto"],
+    "facts": ["3+ años de experiencia", "React / Next.js"],
     "ctaWork": "Ver trabajo",
     "ctaEmail": "Email"
   },
@@ -30,7 +32,7 @@
       "mainStack": "React / Next.js",
       "style": "UI reusable"
     },
-    "stats": ["Forms 92", "State 88", "UX 90"]
+    "stats": ["Forms complejos", "Estado async", "UI reusable"]
   },
   "About": {
     "eyebrow": "Sobre mi",
@@ -120,5 +122,9 @@
     "description": "La siguiente fase puede entrar ya con LinkedIn, CV actualizado y casos de estudio mas completos.",
     "emailLabel": "Email",
     "githubLabel": "GitHub"
+  },
+  "Footer": {
+    "status": "Disponible para frontend con React y Next.js.",
+    "copyright": "Hecho por Anderson Navarro."
   }
 }
