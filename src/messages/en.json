@@ -12,7 +12,7 @@
   },
   "Hero": {
     "eyebrow": "Portfolio 2026",
-    "title": "Product-focused frontend.",
+    "title": "Frontend developer",
     "typedPrefix": "Specialized in",
     "typedWords": ["React", "Next.js", "Redux", "TypeScript"],
     "description": "I build interfaces for real product needs: complex forms, authentication, async state, and clear user experiences that stay maintainable as they grow.",
@@ -21,7 +21,6 @@
   "ProfileCard": {
     "name": "Anderson Navarro",
     "subtitle": "React / Next.js",
-    "level": "LV ∞",
     "labels": {
       "mainStack": "Main stack",
       "style": "Style"
