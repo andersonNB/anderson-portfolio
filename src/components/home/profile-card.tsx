@@ -14,7 +14,6 @@ export function ProfileCard() {
             <p className="collector-name">{t("name")}</p>
             <p className="collector-role">{t("subtitle")}</p>
           </div>
-          <div className="collector-pill">{t("level")}</div>
         </div>
 
         <div className="collector-art">

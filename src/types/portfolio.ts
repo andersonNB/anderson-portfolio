@@ -12,6 +12,8 @@ export type ProjectCard = {
   meta: string;
   image: string;
   imageAlt: string;
+  impact: string;
+  tags: string[];
 };
 
 export type CaseStudy = {
@@ -33,8 +35,6 @@ export type HeroContent = {
   typedWords: string[];
   description: string;
   facts: string[];
-  ctaWork: string;
-  ctaEmail: string;
 };
 
 export type AboutContent = {
@@ -58,6 +58,10 @@ export type ContactContent = {
   eyebrow: string;
   title: string;
   description: string;
+  emailLabel: string;
+  githubLabel: string;
+  linkedinLabel: string;
+  cvLabel: string;
 };
 
 export type ProfileCardContent = {

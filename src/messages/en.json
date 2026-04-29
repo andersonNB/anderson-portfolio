@@ -12,18 +12,16 @@
   },
   "Hero": {
     "eyebrow": "Portfolio 2026",
-    "title": "Frontend Developer",
+    "title": "Product-focused frontend.",
     "typedPrefix": "Specialized in",
     "typedWords": ["React", "Next.js", "Redux", "TypeScript"],
-    "description": "Proactive, self-taught frontend developer passionate about technology, logic, architecture, and the small details that make interfaces work well.",
-    "facts": ["3+ years of experience", "React / Next.js"],
-    "ctaWork": "View work",
-    "ctaEmail": "Email"
+    "description": "I build interfaces for real product needs: complex forms, authentication, async state, and clear user experiences that stay maintainable as they grow.",
+    "facts": ["3+ years of experience", "React / Next.js", "Reusable UI"]
   },
   "ProfileCard": {
     "name": "Anderson Navarro",
     "subtitle": "React / Next.js",
-    "level": "LV 03",
+    "level": "LV ∞",
     "labels": {
       "mainStack": "Main stack",
       "style": "Style"
@@ -75,7 +73,9 @@
   "SelectedWork": {
     "eyebrow": "Repos",
     "title": "My work.",
+    "description": "Three projects that show product thinking, interface quality, and technical decisions closer to real work.",
     "ctaAll": "View all",
+    "ctaProject": "View repository",
     "projects": [
       {
         "title": "TesloShop",
@@ -83,7 +83,9 @@
         "summary": "Frontend ecommerce with catalog, product detail, PayPal checkout, and state management with Zustand.",
         "meta": "Next.js / Prisma / NextAuth / PayPal",
         "image": "/project-tesloshop-cover.svg",
-        "imageAlt": "Preview of the TesloShop project"
+        "imageAlt": "Preview of the TesloShop project",
+        "impact": "Includes authentication, purchase flow, and a base closer to a real ecommerce product.",
+        "tags": ["Ecommerce", "Auth", "PayPal"]
       },
       {
         "title": "AdminTodo",
@@ -91,7 +93,9 @@
         "summary": "Admin dashboard for task management, states, and visual organization with components aimed at real product use.",
         "meta": "React / TypeScript / Dashboard UI",
         "image": "/project-admin-todo-cover.svg",
-        "imageAlt": "Concept preview of the AdminTodo project"
+        "imageAlt": "Concept preview of the AdminTodo project",
+        "impact": "Focused on dashboard structure, visual hierarchy, and organizing internal product flows.",
+        "tags": ["Dashboard", "Tasks", "UI"]
       },
       {
         "title": "Blizzard Page",
@@ -99,7 +103,9 @@
         "summary": "Visual landing page inspired by Blizzard, focused on composition, hierarchy, navigation, and graphic presence.",
         "meta": "React / Bootstrap / Landing page",
         "image": "/project-blizzard-cover.webp",
-        "imageAlt": "Preview of the Blizzard Page project"
+        "imageAlt": "Preview of the Blizzard Page project",
+        "impact": "Built to show composition, visual direction, and the ability to recreate a strong reference.",
+        "tags": ["Landing", "Visual", "Layout"]
       }
     ]
   },
@@ -131,7 +137,9 @@
     "title": "Let's talk.",
     "description": "Available for new projects and collaborations.",
     "emailLabel": "Email",
-    "githubLabel": "GitHub"
+    "githubLabel": "GitHub",
+    "linkedinLabel": "LinkedIn",
+    "cvLabel": "CV"
   },
   "Footer": {
     "title": "Portfolio 2026",
