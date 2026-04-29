@@ -35,23 +35,6 @@ export function HeroSection() {
               </span>
             ))}
           </div>
-
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a className="cta-primary" href="#trabajo">
-              {t("ctaWork")}
-            </a>
-            <a
-              className="cta-secondary"
-              href="https://github.com/andersonNB"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
-            <a className="cta-secondary" href="mailto:navarroanderson07@gmail.com">
-              {t("ctaEmail")}
-            </a>
-          </div>
         </div>
 
         <ProfileCard />

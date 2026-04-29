@@ -12,18 +12,16 @@
   },
   "Hero": {
     "eyebrow": "Portfolio 2026",
-    "title": "Desarrollador Frontend",
+    "title": "Desarrollador frontend",
     "typedPrefix": "Especializado en",
     "typedWords": ["React", "Next.js", "Redux", "TypeScript"],
-    "description": "Desarrollador proactivo, autodidacta y apasionado por la tecnología, la lógica, las arquitecturas y los detalles que hacen que una interfaz funcione bien.",
-    "facts": ["3+ años de experiencia", "React / Next.js"],
-    "ctaWork": "Ver trabajo",
-    "ctaEmail": "Email"
+    "description": "Construyo interfaces pensadas para producto real: formularios complejos, autenticacion, estado async y experiencias claras que puedan mantenerse y escalar sin perder consistencia.",
+    "facts": ["3+ años de experiencia", "React / Next.js", "UI reusable"]
   },
   "ProfileCard": {
     "name": "Anderson Navarro",
     "subtitle": "React / Next.js",
-    "level": "LV 03",
+    "level": "LV ∞",
     "labels": {
       "mainStack": "Main stack",
       "style": "Style"
@@ -37,17 +35,17 @@
   "About": {
     "eyebrow": "Sobre mi",
     "title": "Crecimiento constante.",
-    "description": "Me motiva el crecimiento personal y profesional. Disfruto entender la lógica detrás de los algoritmos, los patrones de diseño, los lenguajes de programación y las arquitecturas.",
+    "description": "Me motiva el crecimiento personal y profesional. Disfruto entender la logica detras de los algoritmos, los patrones de diseno, los lenguajes de programacion y las arquitecturas.",
     "items": [
       {
         "label": "01",
-        "title": "Base técnica sólida",
-        "body": "Trabajo con enfoque en lógica, mantenibilidad y decisiones de frontend que puedan escalar."
+        "title": "Base tecnica solida",
+        "body": "Trabajo con enfoque en logica, mantenibilidad y decisiones de frontend que puedan escalar."
       },
       {
         "label": "02",
         "title": "Producto real",
-        "body": "Me siento cómodo en aplicaciones reales con formularios, flujos conectados a negocio y UI reusable."
+        "body": "Me siento comodo en aplicaciones reales con formularios, flujos conectados a negocio y UI reusable."
       }
     ]
   },
@@ -58,24 +56,26 @@
       {
         "period": "2024 - Actualidad",
         "company": "Nelumbo consultores",
-        "summary": "Desarrollo aplicaciones web con Next.js y React, usando React Query, Yup, React Hook Form, Material UI, Sass y AWS Cognito para interfaces dinámicas, validación de formularios y autenticación segura."
+        "summary": "Desarrollo aplicaciones web con Next.js y React, usando React Query, Yup, React Hook Form, Material UI, Sass y AWS Cognito para interfaces dinamicas, validacion de formularios y autenticacion segura."
       },
       {
         "period": "2022 - 2024",
         "company": "Avanzo",
-        "summary": "Lideré la migración de componentes a una librería de UI reusable, implementé modelos de estado desacoplados del UI, desarrollé HOCs complejos e integré librerías de métricas para optimizar carga y rendimiento."
+        "summary": "Lidere la migracion de componentes a una libreria de UI reusable, implemente modelos de estado desacoplados del UI, desarrolle HOCs complejos e integre librerias de metricas para optimizar carga y rendimiento."
       },
       {
         "period": "2022",
         "company": "Comfaoriente SAS",
-        "summary": "Migración de una aplicación en Django a React, mejorando rendimiento y modernizando los flujos de historia clínica con una arquitectura más actual."
+        "summary": "Migracion de una aplicacion en Django a React, mejorando rendimiento y modernizando los flujos de historia clinica con una arquitectura mas actual."
       }
     ]
   },
   "SelectedWork": {
     "eyebrow": "Repos",
     "title": "Mi trabajo.",
+    "description": "Tres proyectos que muestran producto, interfaz y decisiones tecnicas mas cercanas a trabajo real.",
     "ctaAll": "Ver todos",
+    "ctaProject": "Ver repositorio",
     "projects": [
       {
         "title": "TesloShop",
@@ -83,7 +83,9 @@
         "summary": "Ecommerce frontend con catalogo, detalle de producto, pasarela PayPal y manejo de estado con Zustand.",
         "meta": "Next.js / Prisma / NextAuth / PayPal",
         "image": "/project-tesloshop-cover.svg",
-        "imageAlt": "Vista previa del proyecto TesloShop"
+        "imageAlt": "Vista previa del proyecto TesloShop",
+        "impact": "Incluye autenticacion, flujo de compra y una base mas cercana a ecommerce real.",
+        "tags": ["Ecommerce", "Auth", "PayPal"]
       },
       {
         "title": "AdminTodo",
@@ -91,7 +93,9 @@
         "summary": "Dashboard administrativo para gestionar tareas, estados y organizacion visual con componentes pensados para producto real.",
         "meta": "React / TypeScript / Dashboard UI",
         "image": "/project-admin-todo-cover.svg",
-        "imageAlt": "Vista previa conceptual del proyecto AdminTodo"
+        "imageAlt": "Vista previa conceptual del proyecto AdminTodo",
+        "impact": "Enfocado en estructura de panel, jerarquia visual y organizacion de flujos internos.",
+        "tags": ["Dashboard", "Tasks", "UI"]
       },
       {
         "title": "Blizzard Page",
@@ -99,7 +103,9 @@
         "summary": "Landing visual inspirada en Blizzard, centrada en composicion, jerarquia, navegacion y presencia grafica.",
         "meta": "React / Bootstrap / Landing page",
         "image": "/project-blizzard-cover.webp",
-        "imageAlt": "Vista previa del proyecto Blizzard Page"
+        "imageAlt": "Vista previa del proyecto Blizzard Page",
+        "impact": "Pensado para demostrar composicion, direccion visual y capacidad de replicar una referencia fuerte.",
+        "tags": ["Landing", "Visual", "Layout"]
       }
     ]
   },
@@ -131,7 +137,9 @@
     "title": "Hablemos.",
     "description": "Disponible para nuevos proyectos y colaboraciones.",
     "emailLabel": "Email",
-    "githubLabel": "GitHub"
+    "githubLabel": "GitHub",
+    "linkedinLabel": "LinkedIn",
+    "cvLabel": "CV"
   },
   "Footer": {
     "title": "Portfolio 2026",

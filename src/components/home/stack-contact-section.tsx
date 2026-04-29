@@ -1,5 +1,5 @@
 import { SectionTitle } from "@/components/ui/section-title";
-import { GitHubIcon, MailIcon } from "@/components/ui/icons";
+import { FileIcon, GitHubIcon, LinkedInIcon, MailIcon } from "@/components/ui/icons";
 import { useTranslations } from "next-intl";
 
 export function StackContactSection() {
@@ -58,6 +58,44 @@ export function StackContactSection() {
               </span>
               <span className="mt-1 block text-base font-semibold md:text-lg">
                 github.com/andersonNB
+              </span>
+            </span>
+          </a>
+
+          <a
+            className="contact-card"
+            href="https://www.linkedin.com/in/anderson-navarro-313a9717b/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="contact-icon-shell">
+              <LinkedInIcon className="h-4 w-4" />
+            </span>
+            <span>
+              <span className="eyebrow text-xs text-[var(--muted)]">
+                {contact("linkedinLabel")}
+              </span>
+              <span className="mt-1 block text-base font-semibold md:text-lg">
+                linkedin.com/in/anderson-navarro-313a9717b
+              </span>
+            </span>
+          </a>
+
+          <a
+            className="contact-card"
+            href="/anderson-navarro-cv-2025.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="contact-icon-shell">
+              <FileIcon className="h-4 w-4" />
+            </span>
+            <span>
+              <span className="eyebrow text-xs text-[var(--muted)]">
+                {contact("cvLabel")}
+              </span>
+              <span className="mt-1 block text-base font-semibold md:text-lg">
+                Anderson Navarro CV 2025
               </span>
             </span>
           </a>
