@@ -67,7 +67,6 @@ export type ContactContent = {
 export type ProfileCardContent = {
   name: string;
   subtitle: string;
-  level: string;
   labels: {
     mainStack: string;
     style: string;
