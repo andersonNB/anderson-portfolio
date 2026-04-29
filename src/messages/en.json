@@ -74,26 +74,32 @@
   },
   "SelectedWork": {
     "eyebrow": "Repos",
-    "title": "Selected work.",
+    "title": "My work.",
     "ctaAll": "View all",
     "projects": [
       {
-        "title": "UIKIT Nelumbo",
-        "href": "https://github.com/andersonNB/UIKITNelumbo",
-        "summary": "Reusable components and forms built on top of Next.js.",
-        "meta": "Next.js / React Query / RHF"
+        "title": "TesloShop",
+        "href": "https://github.com/andersonNB/TesloShop",
+        "summary": "Frontend ecommerce with catalog, product detail, PayPal checkout, and state management with Zustand.",
+        "meta": "Next.js / Prisma / NextAuth / PayPal",
+        "image": "/project-tesloshop-cover.svg",
+        "imageAlt": "Preview of the TesloShop project"
       },
       {
-        "title": "Nelumbo Front NextJS",
-        "href": "https://github.com/andersonNB/NelumboFrontNexJS",
-        "summary": "Application base with Ant Design and a more product-oriented structure.",
-        "meta": "Next.js / Ant Design"
+        "title": "AdminTodo",
+        "href": "https://github.com/andersonNB/admin-todo",
+        "summary": "Admin dashboard for task management, states, and visual organization with components aimed at real product use.",
+        "meta": "React / TypeScript / Dashboard UI",
+        "image": "/project-admin-todo-cover.svg",
+        "imageAlt": "Concept preview of the AdminTodo project"
       },
       {
         "title": "Blizzard Page",
         "href": "https://github.com/andersonNB/Blizzard-Page",
-        "summary": "Visual project focused on composition, hierarchy, and layout.",
-        "meta": "React / Bootstrap"
+        "summary": "Visual landing page inspired by Blizzard, focused on composition, hierarchy, navigation, and graphic presence.",
+        "meta": "React / Bootstrap / Landing page",
+        "image": "/project-blizzard-cover.webp",
+        "imageAlt": "Preview of the Blizzard Page project"
       }
     ]
   },

@@ -10,6 +10,8 @@ export type ProjectCard = {
   href: string;
   summary: string;
   meta: string;
+  image: string;
+  imageAlt: string;
 };
 
 export type CaseStudy = {
