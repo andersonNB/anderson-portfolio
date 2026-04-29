@@ -1,0 +1,39 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#F3F1ED"/>
+  <rect y="0" width="1600" height="120" fill="#FAF8F5"/>
+  <line x1="0" y1="119.5" x2="1600" y2="119.5" stroke="#D9D2C8"/>
+  <text x="56" y="74" fill="#111111" font-family="Arial, sans-serif" font-size="46" font-weight="700">Teslo</text>
+  <text x="190" y="74" fill="#444444" font-family="Arial, sans-serif" font-size="42">| Shop</text>
+  <text x="690" y="74" fill="#222222" font-family="Arial, sans-serif" font-size="34">Hombres</text>
+  <text x="850" y="74" fill="#222222" font-family="Arial, sans-serif" font-size="34">Mujeres</text>
+  <text x="1015" y="74" fill="#222222" font-family="Arial, sans-serif" font-size="34">Niños</text>
+  <circle cx="1460" cy="60" r="18" stroke="#111111" stroke-width="5"/>
+  <path d="M1473 73L1490 90" stroke="#111111" stroke-width="5" stroke-linecap="round"/>
+  <path d="M1520 40H1552L1562 78H1528L1520 40Z" stroke="#111111" stroke-width="5" stroke-linejoin="round"/>
+  <text x="48" y="242" fill="#111111" font-family="Arial, sans-serif" font-size="82" font-weight="700">Tienda</text>
+  <text x="48" y="370" fill="#222222" font-family="Arial, sans-serif" font-size="48">Artículos para hombres</text>
+  <rect x="48" y="430" width="475" height="470" rx="22" fill="#F7F5F2"/>
+  <rect x="562" y="430" width="475" height="470" rx="22" fill="#F7F5F2"/>
+  <rect x="1076" y="430" width="475" height="470" rx="22" fill="#E9E4DE"/>
+  <path d="M184 665C184 587 250 524 328 524C406 524 472 587 472 665V802H184V665Z" fill="#161616"/>
+  <rect x="220" y="566" width="216" height="228" rx="32" fill="#141414"/>
+  <rect x="270" y="623" width="115" height="53" rx="8" stroke="#CFCFCF" stroke-width="3"/>
+  <line x1="287" y1="633.5" x2="287" y2="675.5" stroke="#B9B9B9"/>
+  <line x1="307" y1="633.5" x2="307" y2="675.5" stroke="#B9B9B9"/>
+  <line x1="327" y1="633.5" x2="327" y2="675.5" stroke="#B9B9B9"/>
+  <line x1="347" y1="633.5" x2="347" y2="675.5" stroke="#B9B9B9"/>
+  <line x1="367" y1="633.5" x2="367" y2="675.5" stroke="#B9B9B9"/>
+  <path d="M700 658C700 585 761 526 834 526C907 526 968 585 968 658V800H700V658Z" fill="#D3D3CF"/>
+  <rect x="744" y="574" width="180" height="220" rx="28" fill="#D6D6D2"/>
+  <text x="790" y="648" fill="#4D4D4D" font-family="Arial, sans-serif" font-size="26" letter-spacing="8">TESLA</text>
+  <rect x="1120" y="464" width="387" height="402" rx="0" fill="url(#teslo-fabric)"/>
+  <g opacity="0.7">
+    <text x="1320" y="742" transform="rotate(-34 1320 742)" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="36" letter-spacing="16">TESLO</text>
+  </g>
+  <defs>
+    <linearGradient id="teslo-fabric" x1="1120" y1="464" x2="1507" y2="866" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D8D3D0"/>
+      <stop offset="1" stop-color="#EFEAE4"/>
+    </linearGradient>
+  </defs>
+</svg>

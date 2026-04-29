@@ -1,0 +1,48 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#121722"/>
+  <rect x="36" y="36" width="1528" height="928" rx="32" fill="#171E2B" stroke="#2A3447" stroke-width="2"/>
+  <rect x="76" y="76" width="280" height="848" rx="24" fill="#101620"/>
+  <text x="116" y="146" fill="#EEF3FF" font-family="Arial, sans-serif" font-size="40" font-weight="700">AdminTodo</text>
+  <rect x="116" y="200" width="200" height="16" rx="8" fill="#2F3A50"/>
+  <rect x="116" y="258" width="168" height="52" rx="18" fill="#E07A4D"/>
+  <text x="148" y="292" fill="#15110F" font-family="Arial, sans-serif" font-size="24" font-weight="700">Overview</text>
+  <rect x="116" y="348" width="200" height="16" rx="8" fill="#2F3A50"/>
+  <rect x="116" y="396" width="200" height="16" rx="8" fill="#2F3A50"/>
+  <rect x="116" y="444" width="200" height="16" rx="8" fill="#2F3A50"/>
+  <rect x="408" y="92" width="1108" height="92" rx="24" fill="#1E2737"/>
+  <text x="454" y="148" fill="#F4C86F" font-family="Arial, sans-serif" font-size="28">Tasks dashboard</text>
+  <rect x="408" y="220" width="330" height="178" rx="28" fill="#1F2A3B"/>
+  <rect x="450" y="262" width="122" height="20" rx="10" fill="#8F99AA"/>
+  <text x="450" y="336" fill="#F4F0E8" font-family="Arial, sans-serif" font-size="58" font-weight="700">128</text>
+  <text x="450" y="374" fill="#9CA7BA" font-family="Arial, sans-serif" font-size="24">Open tasks</text>
+  <rect x="796" y="220" width="330" height="178" rx="28" fill="#1F2A3B"/>
+  <rect x="838" y="262" width="122" height="20" rx="10" fill="#8F99AA"/>
+  <text x="838" y="336" fill="#F4F0E8" font-family="Arial, sans-serif" font-size="58" font-weight="700">34</text>
+  <text x="838" y="374" fill="#9CA7BA" font-family="Arial, sans-serif" font-size="24">In progress</text>
+  <rect x="1184" y="220" width="290" height="178" rx="28" fill="#1F2A3B"/>
+  <rect x="1226" y="262" width="122" height="20" rx="10" fill="#8F99AA"/>
+  <text x="1226" y="336" fill="#F4F0E8" font-family="Arial, sans-serif" font-size="58" font-weight="700">89%</text>
+  <text x="1226" y="374" fill="#9CA7BA" font-family="Arial, sans-serif" font-size="24">Completion</text>
+  <rect x="408" y="442" width="698" height="446" rx="28" fill="#1B2432"/>
+  <text x="452" y="500" fill="#EEF3FF" font-family="Arial, sans-serif" font-size="30" font-weight="700">Task board</text>
+  <rect x="452" y="544" width="610" height="84" rx="22" fill="#243146"/>
+  <rect x="484" y="573" width="166" height="20" rx="10" fill="#F4F0E8"/>
+  <rect x="900" y="568" width="114" height="30" rx="15" fill="#E07A4D"/>
+  <rect x="452" y="654" width="610" height="84" rx="22" fill="#243146"/>
+  <rect x="484" y="683" width="240" height="20" rx="10" fill="#F4F0E8"/>
+  <rect x="900" y="678" width="114" height="30" rx="15" fill="#7F99FF"/>
+  <rect x="452" y="764" width="610" height="84" rx="22" fill="#243146"/>
+  <rect x="484" y="793" width="206" height="20" rx="10" fill="#F4F0E8"/>
+  <rect x="900" y="788" width="114" height="30" rx="15" fill="#52C48D"/>
+  <rect x="1136" y="442" width="338" height="446" rx="28" fill="#1B2432"/>
+  <text x="1178" y="500" fill="#EEF3FF" font-family="Arial, sans-serif" font-size="30" font-weight="700">Activity</text>
+  <circle cx="1202" cy="568" r="18" fill="#E07A4D"/>
+  <rect x="1236" y="554" width="174" height="18" rx="9" fill="#F4F0E8"/>
+  <rect x="1236" y="584" width="132" height="14" rx="7" fill="#8F99AA"/>
+  <circle cx="1202" cy="664" r="18" fill="#7F99FF"/>
+  <rect x="1236" y="650" width="198" height="18" rx="9" fill="#F4F0E8"/>
+  <rect x="1236" y="680" width="148" height="14" rx="7" fill="#8F99AA"/>
+  <circle cx="1202" cy="760" r="18" fill="#52C48D"/>
+  <rect x="1236" y="746" width="156" height="18" rx="9" fill="#F4F0E8"/>
+  <rect x="1236" y="776" width="124" height="14" rx="7" fill="#8F99AA"/>
+</svg>
