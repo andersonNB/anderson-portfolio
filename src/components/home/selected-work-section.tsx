@@ -31,7 +31,7 @@ export function SelectedWorkSection() {
             key={project.title}
             className="project-link overflow-hidden rounded-[1.75rem] border border-[var(--line)] bg-[var(--surface-strong)]"
           >
-            <div className="project-media relative aspect-[16/10] border-b border-[var(--line)] bg-[#0f141d]">
+            <div className="project-media relative aspect-[16/10] border-b border-[var(--line)] bg-[#0d1318]">
               <Image
                 src={project.image}
                 alt={project.imageAlt}

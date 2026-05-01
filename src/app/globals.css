@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0f1115;
-  --foreground: #f2ede3;
-  --surface: rgba(20, 24, 30, 0.86);
-  --surface-strong: #171c24;
-  --muted: #a59d90;
-  --line: rgba(255, 245, 230, 0.1);
-  --accent: #e07a4d;
-  --accent-soft: #f4c86f;
-  --panel-shadow: 0 30px 90px rgba(0, 0, 0, 0.32);
+  --background: #090909;
+  --foreground: #e5e7eb;
+  --surface: rgba(12, 15, 18, 0.82);
+  --surface-strong: #11161b;
+  --muted: #9ca3af;
+  --line: rgba(255, 255, 255, 0.1);
+  --accent: #12b7a6;
+  --accent-soft: #7ef7ea;
+  --panel-shadow: 0 30px 90px rgba(0, 0, 0, 0.42);
 }
 
 @theme inline {
@@ -29,14 +29,14 @@ html {
 
 body {
   min-height: 100vh;
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
   font-family: "Trebuchet MS", "Segoe UI", sans-serif;
   background-image:
-    radial-gradient(circle at top left, rgba(244, 200, 111, 0.12), transparent 28%),
-    radial-gradient(circle at top right, rgba(224, 122, 77, 0.12), transparent 22%),
-    radial-gradient(circle at 50% 120%, rgba(87, 107, 149, 0.12), transparent 38%),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+    radial-gradient(circle at 14% 0%, rgba(18, 183, 166, 0.1), transparent 30%),
+    radial-gradient(circle at 86% 10%, rgba(126, 247, 234, 0.06), transparent 22%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0) 42%);
+  background-repeat: no-repeat;
 }
 
 body::before {
@@ -45,10 +45,20 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(255, 245, 230, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 245, 230, 0.03) 1px, transparent 1px);
-  background-size: 36px 36px;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent 92%);
+    linear-gradient(rgba(255, 255, 255, 0.014) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.014) 1px, transparent 1px);
+  background-size:
+    36px 36px,
+    36px 36px;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.52) 0%,
+    rgba(0, 0, 0, 0.4) 28%,
+    rgba(0, 0, 0, 0.18) 48%,
+    rgba(0, 0, 0, 0.06) 58%,
+    transparent 72%
+  );
+  opacity: 0.5;
 }
 
 a {
@@ -57,7 +67,7 @@ a {
 }
 
 ::selection {
-  background: rgba(224, 122, 77, 0.28);
+  background: rgba(18, 183, 166, 0.32);
 }
 
 .grain {
@@ -70,7 +80,7 @@ a {
   inset: 0;
   pointer-events: none;
   background-image:
-    radial-gradient(rgba(255, 245, 230, 0.08) 0.6px, transparent 0.8px);
+    radial-gradient(rgba(255, 255, 255, 0.08) 0.6px, transparent 0.8px);
   background-size: 10px 10px;
   opacity: 0.2;
 }
@@ -92,7 +102,7 @@ a {
 
 .lift-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(224, 122, 77, 0.32);
+  border-color: rgba(18, 183, 166, 0.32);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
 }
 
@@ -103,8 +113,8 @@ a {
 }
 
 .retro-label {
-  border: 1px solid rgba(255, 245, 230, 0.12);
-  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
   font-family: "Consolas", "Courier New", monospace;
 }
 
@@ -121,11 +131,24 @@ a {
 
 .accent-dot {
   display: inline-block;
+  position: relative;
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 999px;
   background: linear-gradient(135deg, var(--accent), var(--accent-soft));
-  box-shadow: 0 0 0 6px rgba(224, 122, 77, 0.12);
+  box-shadow: 0 0 0 6px rgba(18, 183, 166, 0.12);
+  animation: accent-dot-breathe 3.2s ease-in-out infinite;
+}
+
+.accent-dot::after {
+  content: "";
+  position: absolute;
+  inset: -0.42rem;
+  border-radius: 999px;
+  border: 1px solid rgba(18, 183, 166, 0.22);
+  opacity: 0;
+  transform: scale(0.8);
+  animation: accent-dot-pulse 3.2s ease-in-out infinite;
 }
 
 .retro-number {
@@ -230,17 +253,17 @@ a {
 .terminal-card {
   border: 1px solid rgba(255, 255, 255, 0.12);
   background:
-    radial-gradient(circle at top right, rgba(239, 196, 109, 0.12), transparent 24%),
-    linear-gradient(135deg, #241a15, #17120f);
-  box-shadow: 0 28px 60px rgba(19, 14, 11, 0.28);
+    radial-gradient(circle at top right, rgba(18, 183, 166, 0.16), transparent 24%),
+    linear-gradient(135deg, #0d1418, #0a0d11);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.34);
 }
 
 .editorial-panel {
   border: 1px solid rgba(255, 255, 255, 0.1);
   background:
-    radial-gradient(circle at top right, rgba(244, 200, 111, 0.1), transparent 24%),
-    radial-gradient(circle at bottom left, rgba(87, 107, 149, 0.12), transparent 28%),
-    linear-gradient(160deg, #12161d, #0c0f14);
+    radial-gradient(circle at top right, rgba(18, 183, 166, 0.14), transparent 24%),
+    radial-gradient(circle at bottom left, rgba(58, 87, 105, 0.22), transparent 28%),
+    linear-gradient(160deg, #0e1318, #090b0e);
   box-shadow: 0 32px 70px rgba(0, 0, 0, 0.32);
 }
 
@@ -256,19 +279,19 @@ a {
   width: 10rem;
   height: 10rem;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(244, 200, 111, 0.2), transparent 68%);
+  background: radial-gradient(circle, rgba(18, 183, 166, 0.22), transparent 68%);
   filter: blur(18px);
 }
 
 .collector-card {
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(255, 245, 230, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 2rem;
   background:
-    radial-gradient(circle at top right, rgba(244, 200, 111, 0.18), transparent 26%),
-    radial-gradient(circle at bottom left, rgba(224, 122, 77, 0.14), transparent 30%),
-    linear-gradient(180deg, #2b2535 0%, #201b28 24%, #161a22 100%);
+    radial-gradient(circle at top right, rgba(126, 247, 234, 0.12), transparent 24%),
+    radial-gradient(circle at bottom left, rgba(18, 183, 166, 0.18), transparent 32%),
+    linear-gradient(180deg, #151b20 0%, #11161b 30%, #0b0f13 100%);
   box-shadow:
     0 24px 50px rgba(0, 0, 0, 0.34),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
@@ -289,7 +312,7 @@ a {
     transparent 20%,
     rgba(255, 255, 255, 0.02) 32%,
     rgba(255, 255, 255, 0.28) 42%,
-    rgba(244, 200, 111, 0.16) 48%,
+    rgba(18, 183, 166, 0.14) 48%,
     transparent 60%
   );
   transform: translateX(-55%) rotate(12deg);
@@ -304,7 +327,7 @@ a {
   pointer-events: none;
   background:
     radial-gradient(circle at 18% 16%, rgba(255, 255, 255, 0.16), transparent 18%),
-    radial-gradient(circle at 82% 18%, rgba(244, 200, 111, 0.12), transparent 22%),
+    radial-gradient(circle at 82% 18%, rgba(126, 247, 234, 0.12), transparent 22%),
     linear-gradient(135deg, rgba(255, 255, 255, 0.05), transparent 38%, rgba(255, 255, 255, 0.02) 58%, transparent 100%);
   mix-blend-mode: screen;
   opacity: 0.55;
@@ -313,7 +336,7 @@ a {
 
 .collector-card:hover {
   transform: translateY(-3px) rotateX(1deg) rotateY(-1deg);
-  border-color: rgba(244, 200, 111, 0.3);
+  border-color: rgba(18, 183, 166, 0.3);
   box-shadow:
     0 30px 70px rgba(0, 0, 0, 0.42),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -347,11 +370,11 @@ a {
   aspect-ratio: 0.92 / 1;
   margin-inline: 1rem;
   overflow: hidden;
-  border: 1px solid rgba(255, 245, 230, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 1.4rem;
   background:
     radial-gradient(circle at top, rgba(255, 255, 255, 0.06), transparent 30%),
-    linear-gradient(180deg, #1c2028, #12161d);
+    linear-gradient(180deg, #151c22, #0e1318);
   z-index: 2;
 }
 
@@ -394,7 +417,7 @@ a {
 }
 
 .collector-stats span {
-  border: 1px solid rgba(255, 245, 230, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.05);
   padding: 0.48rem 0.76rem;
@@ -454,7 +477,7 @@ a {
   position: absolute;
   inset: 0 auto 0 0;
   width: 3px;
-  background: linear-gradient(var(--accent), rgba(239, 196, 109, 0.4));
+  background: linear-gradient(var(--accent), rgba(126, 247, 234, 0.45));
 }
 
 .project-link {
@@ -467,7 +490,7 @@ a {
 
 .project-link:hover {
   transform: translateY(-3px);
-  border-color: rgba(224, 122, 77, 0.28);
+  border-color: rgba(18, 183, 166, 0.28);
   background: rgba(255, 255, 255, 0.08);
   box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
 }
@@ -490,13 +513,13 @@ a {
   pointer-events: none;
   background:
     linear-gradient(to top, rgba(7, 8, 11, 0.78), rgba(7, 8, 11, 0.06) 52%, rgba(7, 8, 11, 0)),
-    linear-gradient(135deg, rgba(224, 122, 77, 0.1), transparent 40%);
+    linear-gradient(135deg, rgba(18, 183, 166, 0.16), transparent 40%);
 }
 
 .project-chip {
   display: inline-flex;
   align-items: center;
-  border: 1px solid rgba(255, 245, 230, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 999px;
   background: rgba(12, 14, 18, 0.72);
   padding: 0.42rem 0.72rem;
@@ -507,7 +530,7 @@ a {
 }
 
 .quote-panel {
-  border: 1px solid rgba(255, 245, 230, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
 }
@@ -528,7 +551,7 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 245, 230, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.05);
   color: var(--foreground);
@@ -542,8 +565,8 @@ a {
 
 .footer-shell {
   background:
-    linear-gradient(180deg, rgba(17, 20, 26, 0.96), rgba(17, 20, 26, 0.88)),
-    radial-gradient(circle at top right, rgba(87, 107, 149, 0.1), transparent 30%);
+    linear-gradient(180deg, rgba(11, 14, 17, 0.96), rgba(11, 14, 17, 0.88)),
+    radial-gradient(circle at top right, rgba(18, 183, 166, 0.12), transparent 30%);
 }
 
 .footer-mark {
@@ -553,10 +576,10 @@ a {
   width: 4.4rem;
   height: 4.4rem;
   flex: 0 0 auto;
-  border: 1px solid rgba(255, 245, 230, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 1.4rem;
   background:
-    radial-gradient(circle at top, rgba(244, 200, 111, 0.18), transparent 48%),
+    radial-gradient(circle at top, rgba(18, 183, 166, 0.2), transparent 48%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
@@ -579,13 +602,16 @@ a {
 
 .footer-icon-link:hover {
   transform: translateY(-2px);
-  border-color: rgba(244, 200, 111, 0.25);
+  border-color: rgba(18, 183, 166, 0.25);
   background: rgba(255, 255, 255, 0.08);
 }
 
 @media (max-width: 768px) {
   body::before {
-    background-size: 24px 24px;
+    background-size:
+      24px 24px,
+      24px 24px;
+    opacity: 0.38;
   }
 
   .collector-card {
@@ -646,5 +672,40 @@ a {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes accent-dot-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(18, 183, 166, 0.1);
+    filter: saturate(0.96);
+  }
+
+  50% {
+    transform: scale(1.08);
+    box-shadow:
+      0 0 0 8px rgba(18, 183, 166, 0.14),
+      0 0 16px rgba(126, 247, 234, 0.18);
+    filter: saturate(1.08);
+  }
+}
+
+@keyframes accent-dot-pulse {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.82);
+  }
+
+  45% {
+    opacity: 0.32;
+    transform: scale(1.22);
+  }
+
+  70% {
+    opacity: 0;
+    transform: scale(1.34);
   }
 }
