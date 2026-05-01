@@ -1,14 +1,21 @@
 import { useState } from "react";
-import { CloseIcon, MenuIcon } from "@/components/ui/icons";
+import { CloseIcon, MenuIcon, MoonIcon, SunIcon } from "@/components/ui/icons";
 import { useTranslations } from "next-intl";
 import type { Locale } from "@/types/portfolio";
 
 type SiteHeaderProps = {
   locale: Locale;
   onLocaleChange: (locale: Locale) => void;
+  theme: "dark" | "light";
+  onThemeChange: (theme: "dark" | "light") => void;
 };
 
-export function SiteHeader({ locale, onLocaleChange }: SiteHeaderProps) {
+export function SiteHeader({
+  locale,
+  onLocaleChange,
+  theme,
+  onThemeChange,
+}: SiteHeaderProps) {
   const t = useTranslations("SiteHeader");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigation = [
@@ -17,9 +24,13 @@ export function SiteHeader({ locale, onLocaleChange }: SiteHeaderProps) {
     { label: t("navigation.stack"), href: "#stack" },
     { label: t("navigation.contact"), href: "#contacto" },
   ];
+  const themeLabels =
+    locale === "es"
+      ? { dark: "Activar tema oscuro", light: "Activar tema claro" }
+      : { dark: "Activate dark theme", light: "Activate light theme" };
 
   return (
-    <header className="section-card sticky top-4 z-20 rounded-[1.75rem] px-5 py-4 backdrop-blur">
+    <header className="section-card header-shell sticky top-4 z-20 rounded-[1.75rem] px-5 py-4 backdrop-blur">
       <div className="flex items-center justify-between gap-4">
         <a href="#inicio" className="flex items-center gap-3">
           <span className="accent-dot" />
@@ -67,6 +78,25 @@ export function SiteHeader({ locale, onLocaleChange }: SiteHeaderProps) {
               EN
             </button>
           </div>
+
+          <div className="theme-switch" role="group" aria-label="Theme switch">
+            <button
+              type="button"
+              aria-label={themeLabels.dark}
+              className={theme === "dark" ? "theme-active" : ""}
+              onClick={() => onThemeChange("dark")}
+            >
+              <MoonIcon className="h-3.5 w-3.5" />
+            </button>
+            <button
+              type="button"
+              aria-label={themeLabels.light}
+              className={theme === "light" ? "theme-active" : ""}
+              onClick={() => onThemeChange("light")}
+            >
+              <SunIcon className="h-3.5 w-3.5" />
+            </button>
+          </div>
         </div>
       </div>
 
@@ -86,27 +116,54 @@ export function SiteHeader({ locale, onLocaleChange }: SiteHeaderProps) {
           </nav>
 
           <div className="mt-4">
-            <div className="locale-switch">
-              <button
-                type="button"
-                className={locale === "es" ? "locale-active" : ""}
-                onClick={() => {
-                  onLocaleChange("es");
-                  setIsMenuOpen(false);
-                }}
-              >
-                ES
-              </button>
-              <button
-                type="button"
-                className={locale === "en" ? "locale-active" : ""}
-                onClick={() => {
-                  onLocaleChange("en");
-                  setIsMenuOpen(false);
-                }}
-              >
-                EN
-              </button>
+            <div className="flex items-center gap-3">
+              <div className="locale-switch">
+                <button
+                  type="button"
+                  className={locale === "es" ? "locale-active" : ""}
+                  onClick={() => {
+                    onLocaleChange("es");
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  ES
+                </button>
+                <button
+                  type="button"
+                  className={locale === "en" ? "locale-active" : ""}
+                  onClick={() => {
+                    onLocaleChange("en");
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  EN
+                </button>
+              </div>
+
+              <div className="theme-switch" role="group" aria-label="Theme switch">
+                <button
+                  type="button"
+                  aria-label={themeLabels.dark}
+                  className={theme === "dark" ? "theme-active" : ""}
+                  onClick={() => {
+                    onThemeChange("dark");
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  <MoonIcon className="h-3.5 w-3.5" />
+                </button>
+                <button
+                  type="button"
+                  aria-label={themeLabels.light}
+                  className={theme === "light" ? "theme-active" : ""}
+                  onClick={() => {
+                    onThemeChange("light");
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  <SunIcon className="h-3.5 w-3.5" />
+                </button>
+              </div>
             </div>
           </div>
         </div>

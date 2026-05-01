@@ -31,7 +31,7 @@ export function SelectedWorkSection() {
             key={project.title}
             className="project-link overflow-hidden rounded-[1.75rem] border border-[var(--line)] bg-[var(--surface-strong)]"
           >
-            <div className="project-media relative aspect-[16/10] border-b border-[var(--line)] bg-[#0d1318]">
+            <div className="project-media relative aspect-[16/10] border-b border-[var(--line)] bg-[var(--surface-contrast)]">
               <Image
                 src={project.image}
                 alt={project.imageAlt}
@@ -62,7 +62,7 @@ export function SelectedWorkSection() {
                 </span>
               </div>
               <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{project.summary}</p>
-              <p className="mt-4 rounded-[1rem] border border-[var(--line)] bg-[rgba(255,255,255,0.04)] px-4 py-3 text-sm text-[var(--foreground)]">
+              <p className="mt-4 rounded-[1rem] border border-[var(--line)] bg-[var(--surface-soft)] px-4 py-3 text-sm text-[var(--foreground)]">
                 {project.impact}
               </p>
               <div className="mt-5">

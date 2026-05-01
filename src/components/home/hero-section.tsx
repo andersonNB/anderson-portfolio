@@ -10,7 +10,7 @@ export function HeroSection() {
 
   return (
     <section
-      className="section-card grain relative overflow-hidden rounded-[2.5rem] px-6 py-8 md:px-10 md:py-10"
+      className="section-card hero-shell grain relative overflow-hidden rounded-[2.5rem] px-6 py-8 md:px-10 md:py-10"
       id="inicio"
     >
       <div className="absolute right-0 top-0 h-40 w-40 rounded-full bg-[radial-gradient(circle,var(--accent-soft),transparent_68%)] opacity-30 blur-3xl" />
