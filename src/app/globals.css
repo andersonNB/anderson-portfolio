@@ -167,6 +167,18 @@ a {
   font-family: "Consolas", "Courier New", monospace;
 }
 
+.stack-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.stack-icon {
+  flex: 0 0 auto;
+  color: var(--accent);
+  opacity: 0.88;
+}
+
 .soft-divider {
   border-color: var(--line);
 }

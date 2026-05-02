@@ -2,6 +2,10 @@ type IconProps = {
   className?: string;
 };
 
+type StackIconProps = IconProps & {
+  title?: string;
+};
+
 export function MailIcon({ className }: IconProps) {
   return (
     <svg
@@ -167,6 +171,269 @@ export function MoonIcon({ className }: IconProps) {
     >
       <path
         d="M19.25 14.79A7.75 7.75 0 0 1 9.21 4.75a8.25 8.25 0 1 0 10.04 10.04Z"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.6"
+      />
+    </svg>
+  );
+}
+
+export function ReactStackIcon({ className, title }: StackIconProps) {
+  return (
+    <svg
+      aria-hidden={title ? undefined : "true"}
+      aria-label={title}
+      className={className}
+      fill="none"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="12" cy="12" r="1.8" fill="currentColor" />
+      <ellipse cx="12" cy="12" rx="8.2" ry="3.3" stroke="currentColor" strokeWidth="1.4" />
+      <ellipse
+        cx="12"
+        cy="12"
+        rx="8.2"
+        ry="3.3"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        transform="rotate(60 12 12)"
+      />
+      <ellipse
+        cx="12"
+        cy="12"
+        rx="8.2"
+        ry="3.3"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        transform="rotate(120 12 12)"
+      />
+    </svg>
+  );
+}
+
+export function NextStackIcon({ className, title }: StackIconProps) {
+  return (
+    <svg
+      aria-hidden={title ? undefined : "true"}
+      aria-label={title}
+      className={className}
+      fill="none"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.4" />
+      <path
+        d="M8.25 15.9V8.1l7.5 7.8V8.1"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.6"
+      />
+    </svg>
+  );
+}
+
+export function TypeScriptStackIcon({ className, title }: StackIconProps) {
+  return (
+    <svg
+      aria-hidden={title ? undefined : "true"}
+      aria-label={title}
+      className={className}
+      fill="none"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" strokeWidth="1.4" />
+      <path
+        d="M8 9.25h8M12 9.25v7M13.9 16.25c.5.5 1.2.75 2.05.75 1.15 0 1.95-.63 1.95-1.58 0-2.14-3.45-1.13-3.45-2.8 0-.6.48-1.05 1.28-1.05.62 0 1.14.2 1.6.63"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
+      />
+    </svg>
+  );
+}
+
+export function JavaScriptStackIcon({ className, title }: StackIconProps) {
+  return (
+    <svg
+      aria-hidden={title ? undefined : "true"}
+      aria-label={title}
+      className={className}
+      fill="none"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" strokeWidth="1.4" />
+      <path
+        d="M10.1 9.5v5.1c0 1.15-.58 1.9-1.72 1.9-.78 0-1.3-.28-1.88-.85M13.75 15.9c.45.52 1.08.8 1.9.8 1.18 0 2.03-.64 2.03-1.62 0-2.2-3.65-1.16-3.65-2.92 0-.64.52-1.12 1.37-1.12.68 0 1.25.23 1.73.72"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
+      />
+    </svg>
+  );
+}
+
+export function QueryStackIcon({ className, title }: StackIconProps) {
+  return (
+    <svg
+      aria-hidden={title ? undefined : "true"}
+      aria-label={title}
+      className={className}
+      fill="none"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="11" cy="11" r="6.25" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="m15.5 15.5 3.5 3.5M8.75 11h4.5M11 8.75v4.5"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeWidth="1.5"
+      />
+    </svg>
+  );
+}
+
+export function FormStackIcon({ className, title }: StackIconProps) {
+  return (
+    <svg
+      aria-hidden={title ? undefined : "true"}
+      aria-label={title}
+      className={className}
+      fill="none"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect x="4.5" y="5" width="15" height="14" rx="2.5" stroke="currentColor" strokeWidth="1.4" />
+      <path
+        d="M8 9h8M8 12h5M8 15h3"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeWidth="1.5"
+      />
+      <path
+        d="m15.25 14.85 1.3 1.3 2.45-2.8"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
+      />
+    </svg>
+  );
+}
+
+export function ReduxStackIcon({ className, title }: StackIconProps) {
+  return (
+    <svg
+      aria-hidden={title ? undefined : "true"}
+      aria-label={title}
+      className={className}
+      fill="none"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M13.8 7.05c1.82-.96 3.55-.78 4.46.3 1 1.2.67 3.2-.86 5.02M10.3 15.7c-1.78 1.04-3.56.94-4.5-.12-1.03-1.15-.8-3.15.62-5.04M9.9 8.2c.98-1.74 2.42-2.7 3.8-2.43 1.55.3 2.63 2.08 2.8 4.56.13 1.95-.34 3.78-1.18 5.1-.9 1.4-2.08 2.13-3.28 1.9-1.44-.28-2.5-1.93-2.75-4.2-.2-1.88.2-3.7 1.08-4.93Z"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.35"
+      />
+      <circle cx="14.1" cy="6.9" r="1.1" fill="currentColor" />
+      <circle cx="9.8" cy="16.15" r="1.1" fill="currentColor" />
+      <circle cx="18.1" cy="12.7" r="1.1" fill="currentColor" />
+    </svg>
+  );
+}
+
+export function AngularStackIcon({ className, title }: StackIconProps) {
+  return (
+    <svg
+      aria-hidden={title ? undefined : "true"}
+      aria-label={title}
+      className={className}
+      fill="none"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="m12 3.7 7 2.5-1.07 9.17L12 20.3l-5.93-4.93L5 6.2l7-2.5Z"
+        stroke="currentColor"
+        strokeLinejoin="round"
+        strokeWidth="1.4"
+      />
+      <path
+        d="M12 7.8 8.75 15h1.78l.67-1.72h2.53L14.4 15h1.85L13 7.8h-1Zm.47 4.15h-1.04L12 10.58l.47 1.37Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+export function PaletteStackIcon({ className, title }: StackIconProps) {
+  return (
+    <svg
+      aria-hidden={title ? undefined : "true"}
+      aria-label={title}
+      className={className}
+      fill="none"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 4.25c-4.56 0-8.25 3.36-8.25 7.5 0 4.01 3.46 7 7.43 7h1.31c1 0 1.76-.77 1.76-1.73 0-.5-.2-.95-.56-1.28-.41-.37-.63-.85-.63-1.38 0-1.04.82-1.86 1.91-1.86h1.56c2.03 0 3.72-1.57 3.72-3.61 0-2.58-3.58-4.64-8.25-4.64Z"
+        stroke="currentColor"
+        strokeLinejoin="round"
+        strokeWidth="1.4"
+      />
+      <circle cx="8.15" cy="10.1" r="1.1" fill="currentColor" />
+      <circle cx="11.15" cy="8.3" r="1.1" fill="currentColor" />
+      <circle cx="14.45" cy="8.55" r="1.1" fill="currentColor" />
+      <circle cx="16.1" cy="11.55" r="1.1" fill="currentColor" />
+    </svg>
+  );
+}
+
+export function SassStackIcon({ className, title }: StackIconProps) {
+  return (
+    <svg
+      aria-hidden={title ? undefined : "true"}
+      aria-label={title}
+      className={className}
+      fill="none"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M16.9 8.1c0-1.7-1.7-2.7-4.2-2.7-3.5 0-6.67 1.8-6.67 4.38 0 1.57.95 2.46 2.3 3.05-.52 1.7-.32 3.34.7 4.3.44.41 1 .62 1.62.62 1.28 0 2.12-.94 2.12-2.06 0-1.1-.8-1.84-2.3-1.84-.32 0-.63.02-.92.08.16-.56.41-1.11.73-1.62 1.34.4 2.92.63 4.36.63 3.24 0 5.28-1.71 5.28-3.84Zm-6.1 8.24c0 .42-.28.76-.8.76-.26 0-.48-.1-.67-.28-.48-.46-.6-1.35-.35-2.38.25-.07.56-.1.89-.1.65 0 .93.27.93.72Z"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.35"
+      />
+    </svg>
+  );
+}
+
+export function CodeStackIcon({ className, title }: StackIconProps) {
+  return (
+    <svg
+      aria-hidden={title ? undefined : "true"}
+      aria-label={title}
+      className={className}
+      fill="none"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="m9 8-4 4 4 4M15 8l4 4-4 4M13.25 6.5 10.75 17.5"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"

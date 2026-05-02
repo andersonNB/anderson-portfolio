@@ -1,6 +1,43 @@
 import { SectionTitle } from "@/components/ui/section-title";
-import { FileIcon, GitHubIcon, LinkedInIcon, MailIcon } from "@/components/ui/icons";
+import {
+  AngularStackIcon,
+  CodeStackIcon,
+  FileIcon,
+  FormStackIcon,
+  GitHubIcon,
+  GitHubIcon as GitHubStackIcon,
+  JavaScriptStackIcon,
+  LinkedInIcon,
+  MailIcon,
+  NextStackIcon,
+  PaletteStackIcon,
+  QueryStackIcon,
+  ReactStackIcon,
+  ReduxStackIcon,
+  SassStackIcon,
+  TypeScriptStackIcon,
+} from "@/components/ui/icons";
 import { useTranslations } from "next-intl";
+
+const stackIconMap = {
+  React: ReactStackIcon,
+  "Next.js": NextStackIcon,
+  TypeScript: TypeScriptStackIcon,
+  JavaScript: JavaScriptStackIcon,
+  "React Query": QueryStackIcon,
+  "React Hook Form": FormStackIcon,
+  Yup: FormStackIcon,
+  Redux: ReduxStackIcon,
+  Angular: AngularStackIcon,
+  "Ant Design": PaletteStackIcon,
+  "Material UI": PaletteStackIcon,
+  Sass: SassStackIcon,
+  "Styled Components": CodeStackIcon,
+  PHP: CodeStackIcon,
+  Java: CodeStackIcon,
+  Git: CodeStackIcon,
+  GitHub: GitHubStackIcon,
+} as const;
 
 export function StackContactSection() {
   const stackSection = useTranslations("StackSection");
@@ -13,11 +50,16 @@ export function StackContactSection() {
         <SectionTitle eyebrow={stackSection("eyebrow")} title={stackSection("title")} />
 
         <div className="mt-8 flex flex-wrap gap-3">
-          {stack.map((item) => (
-            <span key={item} className="retro-label rounded-full px-4 py-2 text-sm">
-              {item}
-            </span>
-          ))}
+          {stack.map((item) => {
+            const Icon = stackIconMap[item as keyof typeof stackIconMap] ?? CodeStackIcon;
+
+            return (
+              <span key={item} className="retro-label stack-pill rounded-full px-4 py-2 text-sm">
+                <Icon className="stack-icon h-4 w-4" title={item} />
+                <span>{item}</span>
+              </span>
+            );
+          })}
         </div>
       </article>
 
