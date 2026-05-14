@@ -13,6 +13,7 @@ import enMessages from "@/messages/en.json";
 import esMessages from "@/messages/es.json";
 
 export type Theme = "dark" | "light";
+const PORTFOLIO_TIME_ZONE = "America/Bogota";
 
 export function HomePage() {
   const [locale, setLocale] = useState<Locale>("es");
@@ -37,7 +38,7 @@ export function HomePage() {
   }, [theme]);
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
+    <NextIntlClientProvider locale={locale} messages={messages} timeZone={PORTFOLIO_TIME_ZONE}>
       <SiteHeader
         locale={locale}
         onLocaleChange={setLocale}
