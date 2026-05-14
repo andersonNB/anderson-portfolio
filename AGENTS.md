@@ -9,3 +9,8 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - For this repository, always use the personal Git identity associated with GitHub user `andersonNB`.
 - Required email for commits in this repo: `andersonaugustonb@ufps.edu.co`.
 - Do not use company identities such as `AndersonnbNE` or `a.navarro@nelumbo.com.co` when creating or rewriting commits in this project.
+
+<!-- SPECKIT START -->
+For additional context about technologies to be used, project structure,
+shell commands, and other important information, read the current plan
+<!-- SPECKIT END -->
