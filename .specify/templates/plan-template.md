@@ -40,7 +40,16 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- Relevant Next.js 16 documentation under `node_modules/next/dist/docs/` was reviewed for
+  any framework-level behavior being changed.
+- The feature clearly improves the portfolio narrative or professional positioning, rather
+  than adding generic UI complexity.
+- Localization impact is defined, including whether `src/messages/es.json` and
+  `src/messages/en.json` require synchronized updates.
+- Accessibility and performance risks for the landing experience are identified with a
+  concrete mitigation or validation note.
+- Verification includes `npm run lint`, `npm run build`, and a manual UI check of the
+  impacted flow.
 
 ## Project Structure
 

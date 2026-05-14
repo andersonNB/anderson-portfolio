@@ -25,6 +25,16 @@ Open [http://localhost:3000](http://localhost:3000).
 - TypeScript
 - Tailwind CSS v4
 
+## Development Notes
+
+- Este proyecto usa App Router en `src/app`.
+- Antes de cambiar comportamiento propio de Next.js, revisa la documentacion local en
+  `node_modules/next/dist/docs/`.
+- El contenido visible del portfolio debe mantenerse consistente entre
+  `src/messages/es.json` y `src/messages/en.json` cuando aplique.
+- Antes de cerrar cambios de UI, valida `npm run lint`, `npm run build` y una revision
+  manual del flujo afectado en desktop y mobile.
+
 ## Next steps
 
 - agregar proyectos reales con screenshots y links

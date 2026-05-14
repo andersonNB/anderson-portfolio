@@ -77,6 +77,8 @@
 
 - What happens when [boundary condition]?
 - How does system handle [error scenario]?
+- What happens if localized content is updated in one locale but missing in the other?
+- How does the experience behave on mobile and keyboard-only navigation for this feature?
 
 ## Requirements *(mandatory)*
 
@@ -92,6 +94,10 @@
 - **FR-003**: Users MUST be able to [key interaction, e.g., "reset their password"]
 - **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
 - **FR-005**: System MUST [behavior, e.g., "log all security events"]
+- **FR-XXX**: Any user-facing copy change MUST specify whether both Spanish and English
+  content need updates.
+- **FR-XXX**: Any UI change MUST preserve responsive behavior, semantic structure, and
+  keyboard accessibility for the affected experience.
 
 *Example of marking unclear requirements:*
 
@@ -129,3 +135,5 @@
 - [Assumption about scope boundaries, e.g., "Mobile support is out of scope for v1"]
 - [Assumption about data/environment, e.g., "Existing authentication system will be reused"]
 - [Dependency on existing system/service, e.g., "Requires access to the existing user profile API"]
+- [Assumption about localization parity, e.g., "Spanish and English content stay aligned
+  unless the feature explicitly launches in one locale first"]

@@ -52,6 +52,7 @@ description: "Task list template for feature implementation"
 - [ ] T001 Create project structure per implementation plan
 - [ ] T002 Initialize [language] project with [framework] dependencies
 - [ ] T003 [P] Configure linting and formatting tools
+- [ ] T00X Review relevant Next.js documentation for any framework behavior touched by the feature
 
 ---
 
@@ -95,6 +96,8 @@ Examples of foundational tasks (adjust based on your project):
 - [ ] T015 [US1] Implement [endpoint/feature] in src/[location]/[file].py
 - [ ] T016 [US1] Add validation and error handling
 - [ ] T017 [US1] Add logging for user story 1 operations
+- [ ] T01X [US1] Update localized copy/assets required for the story in the exact affected files
+- [ ] T01Y [US1] Verify keyboard, mobile, and visual behavior for the impacted UI flow
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
@@ -156,6 +159,8 @@ Examples of foundational tasks (adjust based on your project):
 - [ ] TXXX Performance optimization across all stories
 - [ ] TXXX [P] Additional unit tests (if requested) in tests/unit/
 - [ ] TXXX Security hardening
+- [ ] TXXX Run `npm run lint`
+- [ ] TXXX Run `npm run build`
 - [ ] TXXX Run quickstart.md validation
 
 ---
