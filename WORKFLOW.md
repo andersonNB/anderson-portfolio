@@ -92,6 +92,12 @@ Estas reglas definen la forma de trabajo para este repositorio.
 
 - Cada funcionalidad terminada debe terminar en un Pull Request hacia `main`.
 - El PR debe representar una unidad clara de cambio.
+- Regla obligatoria de cierre de fase:
+  - si una fase de `plan`, `tasks`, `implement` o `checklist` ya termino
+  - y los entregables de esa fase quedaron actualizados
+  - y el checklist aplicable ya fue revisado o completado para ese punto
+  entonces se debe hacer `commit`, `push` y abrir PR para revision manual antes de seguir con la siguiente fase.
+- No se debe continuar con una fase posterior si los cambios de la fase actual aun no fueron subidos y convertidos en PR, salvo que se documente explicitamente por que se rompe esa regla.
 - Al cerrar una fase, detenerse en el PR y esperar revision manual antes de continuar con la siguiente fase.
 - Una vez el cambio este validado y probado, completar el merge del PR hacia `main`.
 - Codex puede aprobar y mergear un PR sin pedir confirmacion extra si cumple todos estos minimos:
@@ -129,18 +135,21 @@ Estas reglas definen la forma de trabajo para este repositorio.
 - Confirmar alcance, restricciones y resultado esperado.
 - Identificar si el cambio afecta UI, contenido, arquitectura, rendimiento o despliegue.
 - Si el cambio lo amerita, crear una spec breve en `docs/specs/`.
+- Si la fase de planeacion deja artefactos listos para revision, cerrar la fase con `commit`, `push` y PR antes de pasar a tareas o implementacion.
 
 ### Planteamiento de tareas
 
 - Descomponer el trabajo en tareas pequenas y verificables.
 - Priorizar primero lo que desbloquea el resto.
 - Evitar mezclar cambios no relacionados en una misma fase.
+- Si el planteamiento de tareas ya quedo listo y revisable, subir los cambios y abrir PR antes de continuar con ejecucion.
 
 ### Ejecucion
 
 - Implementar el cambio siguiendo el alcance definido.
 - Mantener coherencia con las reglas del repositorio.
 - Validar localmente lo que se vaya completando.
+- Si la ejecucion completa una unidad clara y el checklist correspondiente ya fue cubierto, cerrar esa fase con `commit`, `push` y PR antes de continuar con optimizacion o feedback.
 
 ### Optimizacion
 
@@ -154,6 +163,7 @@ Estas reglas definen la forma de trabajo para este repositorio.
 - Identificar ajustes, riesgos o mejoras pendientes antes del PR.
 - Si aplica, incorporar feedback antes de fusionar hacia `main`.
 - Usar el PR como punto de cierre de fase, no como punto de paso invisible.
+- El flujo esperado es: fase terminada -> checklist revisado -> commit -> push -> PR -> revision manual -> siguiente fase.
 
 ## Regla de trabajo para Codex
 

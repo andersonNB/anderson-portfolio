@@ -32,9 +32,9 @@ testing of each story.
 
 **Purpose**: Establish the feature documentation workspace and baseline references
 
-- [ ] T001 Confirm active feature path in `.specify/feature.json`
-- [ ] T002 Review baseline source references in `README.md`, `AGENTS.md`, and `package.json`
-- [ ] T003 [P] Review relevant Next.js guidance note in `node_modules/next/dist/docs/index.md`
+- [x] T001 Confirm active feature path in `.specify/feature.json`
+- [x] T002 Review baseline source references in `README.md`, `AGENTS.md`, and `package.json`
+- [x] T003 [P] Review relevant Next.js guidance note in `node_modules/next/dist/docs/index.md`
 
 ---
 
@@ -44,11 +44,11 @@ testing of each story.
 
 **CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T004 Consolidate baseline scope decisions in `specs/001-portfolio-baseline/research.md`
-- [ ] T005 [P] Define baseline public entities in `specs/001-portfolio-baseline/data-model.md`
-- [ ] T006 [P] Define visitor and maintainer guarantees in `specs/001-portfolio-baseline/contracts/public-experience-contract.md`
-- [ ] T007 Document validation flow in `specs/001-portfolio-baseline/quickstart.md`
-- [ ] T008 Link the active feature plan from `AGENTS.md`
+- [x] T004 Consolidate baseline scope decisions in `specs/001-portfolio-baseline/research.md`
+- [x] T005 [P] Define baseline public entities in `specs/001-portfolio-baseline/data-model.md`
+- [x] T006 [P] Define visitor and maintainer guarantees in `specs/001-portfolio-baseline/contracts/public-experience-contract.md`
+- [x] T007 Document validation flow in `specs/001-portfolio-baseline/quickstart.md`
+- [x] T008 Link the active feature plan from `AGENTS.md`
 
 **Checkpoint**: Shared baseline artifacts are complete and future story work can proceed independently
 
@@ -65,11 +65,11 @@ clearly without authentication
 
 ### Validation for User Story 1
 
-- [ ] T009 [US1] Review profile narrative requirements in `specs/001-portfolio-baseline/spec.md`
-- [ ] T010 [P] [US1] Cross-check hero and profile presentation against `src/components/home/hero-section.tsx`
-- [ ] T011 [P] [US1] Cross-check profile card and supporting identity content against `src/components/home/profile-card.tsx`
-- [ ] T012 [US1] Align plan summary and technical context in `specs/001-portfolio-baseline/plan.md` with the profile-focused baseline
-- [ ] T013 [US1] Verify bilingual narrative coverage against `src/messages/es.json` and `src/messages/en.json`
+- [x] T009 [US1] Review profile narrative requirements in `specs/001-portfolio-baseline/spec.md`
+- [x] T010 [P] [US1] Cross-check hero and profile presentation against `src/components/home/hero-section.tsx`
+- [x] T011 [P] [US1] Cross-check profile card and supporting identity content against `src/components/home/profile-card.tsx`
+- [x] T012 [US1] Align plan summary and technical context in `specs/001-portfolio-baseline/plan.md` with the profile-focused baseline
+- [x] T013 [US1] Verify bilingual narrative coverage against `src/messages/es.json` and `src/messages/en.json`
 
 **Checkpoint**: User Story 1 is fully documented and independently verifiable as a public professional presentation
 
@@ -84,11 +84,11 @@ the spec to the existing project cards and public destinations
 
 ### Validation for User Story 2
 
-- [ ] T014 [US2] Review work and public-link requirements in `specs/001-portfolio-baseline/spec.md`
-- [ ] T015 [P] [US2] Cross-check featured project expectations against `src/components/home/selected-work-section.tsx`
-- [ ] T016 [P] [US2] Cross-check contact resource expectations against `src/components/home/stack-contact-section.tsx`
-- [ ] T017 [P] [US2] Confirm project and contact copy parity in `src/messages/es.json` and `src/messages/en.json`
-- [ ] T018 [US2] Validate public-action guarantees in `specs/001-portfolio-baseline/contracts/public-experience-contract.md`
+- [x] T014 [US2] Review work and public-link requirements in `specs/001-portfolio-baseline/spec.md`
+- [x] T015 [P] [US2] Cross-check featured project expectations against `src/components/home/selected-work-section.tsx`
+- [x] T016 [P] [US2] Cross-check contact resource expectations against `src/components/home/stack-contact-section.tsx`
+- [x] T017 [P] [US2] Confirm project and contact copy parity in `src/messages/es.json` and `src/messages/en.json`
+- [x] T018 [US2] Validate public-action guarantees in `specs/001-portfolio-baseline/contracts/public-experience-contract.md`
 
 **Checkpoint**: User Story 2 is fully documented and independently verifiable as proof-of-work plus public follow-up access
 
@@ -103,11 +103,11 @@ login, persistent user data, and required third-party integrations are outside t
 
 ### Validation for User Story 3
 
-- [ ] T019 [US3] Review static-first boundary requirements in `specs/001-portfolio-baseline/spec.md`
-- [ ] T020 [P] [US3] Align scope-boundary decisions in `specs/001-portfolio-baseline/research.md`
-- [ ] T021 [P] [US3] Verify non-goals and maintainer rules in `specs/001-portfolio-baseline/contracts/public-experience-contract.md`
-- [ ] T022 [US3] Confirm baseline entity boundaries in `specs/001-portfolio-baseline/data-model.md`
-- [ ] T023 [US3] Confirm validation guidance for future maintainers in `specs/001-portfolio-baseline/quickstart.md`
+- [x] T019 [US3] Review static-first boundary requirements in `specs/001-portfolio-baseline/spec.md`
+- [x] T020 [P] [US3] Align scope-boundary decisions in `specs/001-portfolio-baseline/research.md`
+- [x] T021 [P] [US3] Verify non-goals and maintainer rules in `specs/001-portfolio-baseline/contracts/public-experience-contract.md`
+- [x] T022 [US3] Confirm baseline entity boundaries in `specs/001-portfolio-baseline/data-model.md`
+- [x] T023 [US3] Confirm validation guidance for future maintainers in `specs/001-portfolio-baseline/quickstart.md`
 
 **Checkpoint**: User Story 3 is fully documented and independently verifiable as a governance boundary for future work
 
@@ -117,11 +117,11 @@ login, persistent user data, and required third-party integrations are outside t
 
 **Purpose**: Final consistency review across all baseline artifacts
 
-- [ ] T024 [P] Review internal links and references across `specs/001-portfolio-baseline/`
-- [ ] T025 Ensure `README.md` and `AGENTS.md` point to the same baseline expectations
-- [ ] T026 Run `npm run lint`
-- [ ] T027 Run `npm run build`
-- [ ] T028 Perform manual portfolio review using `specs/001-portfolio-baseline/quickstart.md`
+- [x] T024 [P] Review internal links and references across `specs/001-portfolio-baseline/`
+- [x] T025 Ensure `README.md` and `AGENTS.md` point to the same baseline expectations
+- [x] T026 Run `npm run lint`
+- [x] T027 Run `npm run build`
+- [x] T028 Perform manual portfolio review using `specs/001-portfolio-baseline/quickstart.md`
 
 ---
 
