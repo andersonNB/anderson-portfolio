@@ -10,34 +10,34 @@ consistent, and review-ready before implementation and PR evaluation.
 ## Requirement Completeness
 
 - [ ] CHK001 Are the allowed guide variants bounded enough to prevent open-ended visual exploration from changing scope? [Completeness, Spec §FR-008]
-- [ ] CHK002 Does the spec define all user-visible guide outputs beyond “short friendly message” with enough coverage for review? [Gap, Spec §FR-005]
+- [ ] CHK002 Does the spec define all user-visible guide outputs beyond "short friendly message" with enough coverage for review? [Gap, Spec §FR-005]
 - [ ] CHK003 Are the required interaction triggers fully specified across pointer, keyboard, and touch contexts? [Completeness, Spec §FR-004]
-- [ ] CHK004 Are the responsive behavior requirements complete enough to define what “remain usable on desktop and mobile” means in practice? [Clarity, Spec §FR-010]
+- [ ] CHK004 Are the responsive behavior requirements complete enough to define what "remain usable on desktop and mobile" means in practice? [Clarity, Spec §FR-010]
 
 ## Requirement Clarity
 
-- [ ] CHK005 Is “visually intentional and compatible with the portfolio's retro-modern presentation style” specific enough for two reviewers to judge consistently? [Ambiguity, Spec §FR-002]
-- [ ] CHK006 Is “secondary to the portfolio's main content” measurable enough to evaluate layout tradeoffs objectively? [Clarity, Spec §FR-003]
-- [ ] CHK007 Is “lightweight interaction” defined clearly enough to exclude richer assistant-like behavior without relying on subjective interpretation? [Clarity, Spec §User Story 3]
-- [ ] CHK008 Is “non-intrusive” defined with enough precision to evaluate prompt visibility, timing, and screen occupation? [Ambiguity, Spec §SC-002]
+- [ ] CHK005 Is "visually intentional and compatible with the portfolio's retro-modern presentation style" specific enough for two reviewers to judge consistently? [Ambiguity, Spec §FR-002]
+- [ ] CHK006 Is "secondary to the portfolio's main content" measurable enough to evaluate layout tradeoffs objectively? [Clarity, Spec §FR-003]
+- [ ] CHK007 Is "lightweight interaction" defined clearly enough to exclude richer assistant-like behavior without relying on subjective interpretation? [Clarity, Spec §User Story 3]
+- [ ] CHK008 Is "non-intrusive" defined with enough precision to evaluate prompt visibility, timing, and screen occupation? [Ambiguity, Spec §SC-002]
 
 ## Requirement Consistency
 
-- [ ] CHK009 Do the functional requirements for interaction remain consistent with the non-goal that the guide is not a chatbot or assistant platform? [Consistency, Spec §FR-004, Spec §FR-007]
-- [ ] CHK010 Do the assumptions about hover alternatives align with the mobile usability requirement? [Consistency, Spec §Assumptions, Spec §FR-010]
-- [ ] CHK011 Do the success criteria reinforce the same “branded but secondary” positioning stated in the user stories and requirements? [Consistency, Spec §SC-001, Spec §SC-004]
+- [x] CHK009 Do the functional requirements for interaction remain consistent with the non-goal that the guide is not a chatbot or assistant platform? [Consistency, Spec §FR-004, Spec §FR-007]
+- [x] CHK010 Do the assumptions about hover alternatives align with the mobile usability requirement? [Consistency, Spec §Assumptions, Spec §FR-010]
+- [x] CHK011 Do the success criteria reinforce the same "branded but secondary" positioning stated in the user stories and requirements? [Consistency, Spec §SC-001, Spec §SC-004]
 
 ## Acceptance Criteria Quality
 
-- [ ] CHK012 Can “notice the animated guide within the first screen view” be reviewed with a repeatable acceptance method? [Measurability, Spec §SC-001]
-- [ ] CHK013 Is “remains readable and non-intrusive on supported viewport sizes” measurable enough for PR review decisions? [Clarity, Spec §SC-002]
-- [ ] CHK014 Can reviewers objectively determine whether the guide has become the “dominant visual element” without additional criteria? [Measurability, Spec §SC-004]
+- [ ] CHK012 Can "notice the animated guide within the first screen view" be reviewed with a repeatable acceptance method? [Measurability, Spec §SC-001]
+- [ ] CHK013 Is "remains readable and non-intrusive on supported viewport sizes" measurable enough for PR review decisions? [Clarity, Spec §SC-002]
+- [ ] CHK014 Can reviewers objectively determine whether the guide has become the "dominant visual element" without additional criteria? [Measurability, Spec §SC-004]
 
 ## Scenario Coverage
 
 - [ ] CHK015 Are requirements defined for idle, hover, focus, tap, and click scenarios with sufficient separation? [Coverage, Data Model §Guide Interaction State]
-- [ ] CHK016 Are non-interaction scenarios covered clearly enough for users who ignore the guide completely? [Coverage, Edge Case]
-- [ ] CHK017 Are localization review scenarios covered for cases where guide copy length differs across languages? [Coverage, Spec §Edge Cases]
+- [x] CHK016 Are non-interaction scenarios covered clearly enough for users who ignore the guide completely? [Coverage, Edge Case]
+- [x] CHK017 Are localization review scenarios covered for cases where guide copy length differs across languages? [Coverage, Spec §Edge Cases]
 
 ## Edge Case Coverage
 
@@ -48,19 +48,19 @@ consistent, and review-ready before implementation and PR evaluation.
 ## Non-Functional Requirements
 
 - [ ] CHK021 Are accessibility expectations complete enough to cover focus visibility, keyboard access, and touch equivalence? [Completeness, Gap]
-- [ ] CHK022 Are performance expectations concrete enough to assess whether the feature stays “lightweight” on the landing experience? [Clarity, Plan §Performance Goals]
-- [ ] CHK023 Do the requirements define enough constraints to prevent the feature from introducing a heavy animation or dependency footprint? [Consistency, Plan §Constraints]
+- [ ] CHK022 Are performance expectations concrete enough to assess whether the feature stays "lightweight" on the landing experience? [Clarity, Plan §Performance Goals]
+- [x] CHK023 Do the requirements define enough constraints to prevent the feature from introducing a heavy animation or dependency footprint? [Consistency, Plan §Constraints]
 
 ## Dependencies & Assumptions
 
-- [ ] CHK024 Are localization dependencies documented strongly enough to ensure new guide copy is maintained in both `es` and `en`? [Dependency, Spec §FR-009]
+- [x] CHK024 Are localization dependencies documented strongly enough to ensure new guide copy is maintained in both `es` and `en`? [Dependency, Spec §FR-009]
 - [ ] CHK025 Is the assumption that the final visual concept can evolve still bounded enough to keep review scope under control? [Assumption, Spec §Assumptions]
-- [ ] CHK026 Are maintainers given explicit enough requirements to distinguish visual polish from scope expansion? [Traceability, Spec §User Story 3]
+- [x] CHK026 Are maintainers given explicit enough requirements to distinguish visual polish from scope expansion? [Traceability, Spec §User Story 3]
 
 ## Ambiguities & Conflicts
 
-- [ ] CHK027 Is there any ambiguity between allowing “any kind of subject” and requiring the final result to read as a branded portfolio element? [Ambiguity, Spec §FR-008]
-- [ ] CHK028 Do the requirements clearly separate a contact-oriented prompt from a required navigation or conversion path? [Clarity, Contract §Visitor Contract]
+- [ ] CHK027 Is there any ambiguity between allowing "any kind of subject" and requiring the final result to read as a branded portfolio element? [Ambiguity, Spec §FR-008]
+- [x] CHK028 Do the requirements clearly separate a contact-oriented prompt from a required navigation or conversion path? [Clarity, Contract §Visitor Contract]
 - [ ] CHK029 Is there any conflict between motion richness and reduced-motion safety that should be resolved explicitly in the requirements? [Conflict, Spec §FR-011, Plan §Constraints]
 
 ## Notes

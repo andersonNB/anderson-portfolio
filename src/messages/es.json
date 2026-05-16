@@ -31,6 +31,39 @@
     },
     "stats": ["Forms complejos", "Estado async", "UI reusable"]
   },
+  "AnimatedGuide": {
+    "ariaLabel": "Abrir guia de contacto animada",
+    "assistantName": "cmd://anderson",
+    "statusLabel": "Siempre listo para hablar de producto y frontend.",
+    "hintLabel": "Hover o clic para una pista rapida.",
+    "ctaLabel": "Ir a contacto",
+    "ctaHref": "#contacto",
+    "variant": "terminal",
+    "anchorCorner": "bottom-right",
+    "sizeMode": "compact",
+    "visualPriority": "supporting",
+    "motionProfile": "ambient",
+    "messages": [
+      {
+        "id": "hover",
+        "trigger": "hover",
+        "text": "Si tienes una idea o una vacante, hablemos.",
+        "ctaIntent": "contact"
+      },
+      {
+        "id": "focus",
+        "trigger": "focus",
+        "text": "Tambien respondo bien desde teclado.",
+        "ctaIntent": "contact"
+      },
+      {
+        "id": "tap",
+        "trigger": "tap",
+        "text": "Te dejo un atajo directo a mi zona de contacto.",
+        "ctaIntent": "contact"
+      }
+    ]
+  },
   "About": {
     "eyebrow": "Sobre mi",
     "title": "Crecimiento constante.",

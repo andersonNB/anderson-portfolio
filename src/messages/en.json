@@ -31,6 +31,39 @@
     },
     "stats": ["Complex forms", "Async state", "Reusable UI"]
   },
+  "AnimatedGuide": {
+    "ariaLabel": "Open animated contact guide",
+    "assistantName": "cmd://anderson",
+    "statusLabel": "Always ready to talk about product and frontend work.",
+    "hintLabel": "Hover or click for a quick prompt.",
+    "ctaLabel": "Jump to contact",
+    "ctaHref": "#contacto",
+    "variant": "terminal",
+    "anchorCorner": "bottom-right",
+    "sizeMode": "compact",
+    "visualPriority": "supporting",
+    "motionProfile": "ambient",
+    "messages": [
+      {
+        "id": "hover",
+        "trigger": "hover",
+        "text": "If you have an idea or an open role, let's talk.",
+        "ctaIntent": "contact"
+      },
+      {
+        "id": "focus",
+        "trigger": "focus",
+        "text": "I also play nicely with keyboard navigation.",
+        "ctaIntent": "contact"
+      },
+      {
+        "id": "tap",
+        "trigger": "tap",
+        "text": "Here's a direct shortcut to my contact section.",
+        "ctaIntent": "contact"
+      }
+    ]
+  },
   "About": {
     "eyebrow": "About",
     "title": "Steady growth.",
