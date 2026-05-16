@@ -635,6 +635,237 @@ a {
   padding: 1rem 1.05rem;
 }
 
+.animated-guide-shell {
+  position: fixed;
+  right: clamp(0.9rem, 2vw, 1.75rem);
+  bottom: clamp(0.9rem, 2vw, 1.5rem);
+  z-index: 18;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.8rem;
+  pointer-events: none;
+}
+
+.animated-guide-shell > * {
+  pointer-events: auto;
+}
+
+.animated-guide-bubble {
+  width: min(18rem, calc(100vw - 2rem));
+  border: 1px solid rgba(18, 183, 166, 0.26);
+  border-radius: 1.3rem;
+  background:
+    radial-gradient(circle at top right, rgba(126, 247, 234, 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(10, 15, 18, 0.96), rgba(11, 16, 20, 0.94));
+  box-shadow:
+    0 24px 48px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  padding: 0.95rem 1rem 1rem;
+  backdrop-filter: blur(14px);
+  animation: guide-bubble-enter 180ms ease-out;
+}
+
+.animated-guide-bubble p {
+  color: var(--foreground);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.animated-guide-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+  border: 1px solid rgba(18, 183, 166, 0.2);
+  border-radius: 999px;
+  background: rgba(18, 183, 166, 0.1);
+  padding: 0.55rem 0.8rem;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  color: var(--accent-soft);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.animated-guide-cta:hover {
+  transform: translateY(-1px);
+  border-color: rgba(126, 247, 234, 0.3);
+  background: rgba(18, 183, 166, 0.16);
+}
+
+.animated-guide-button {
+  width: min(15rem, calc(100vw - 2rem));
+  border: 0;
+  background: transparent;
+  padding: 0;
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+}
+
+.animated-guide-button:focus-visible .animated-guide-panel {
+  outline: 2px solid rgba(126, 247, 234, 0.76);
+  outline-offset: 4px;
+}
+
+.animated-guide-panel {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border: 1px solid rgba(18, 183, 166, 0.22);
+  border-radius: 1.55rem;
+  background:
+    radial-gradient(circle at top right, rgba(126, 247, 234, 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(11, 18, 22, 0.96), rgba(8, 11, 14, 0.98));
+  box-shadow:
+    0 20px 46px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.animated-guide-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 32%),
+    radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.08), transparent 18%);
+}
+
+.animated-guide-shell[data-open="true"] .animated-guide-panel,
+.animated-guide-button:hover .animated-guide-panel {
+  transform: translateY(-3px);
+  border-color: rgba(126, 247, 234, 0.3);
+  box-shadow:
+    0 24px 54px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.animated-guide-topbar {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border-bottom: 1px solid rgba(18, 183, 166, 0.14);
+  padding: 0.72rem 0.9rem 0.68rem;
+}
+
+.animated-guide-lights {
+  display: inline-flex;
+  gap: 0.32rem;
+}
+
+.animated-guide-lights span {
+  display: inline-block;
+  width: 0.52rem;
+  height: 0.52rem;
+  border-radius: 999px;
+}
+
+.animated-guide-lights span:nth-child(1) {
+  background: #ff7c6d;
+}
+
+.animated-guide-lights span:nth-child(2) {
+  background: #f1c25d;
+}
+
+.animated-guide-lights span:nth-child(3) {
+  background: #54d087;
+}
+
+.animated-guide-title {
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.animated-guide-screen {
+  display: grid;
+  gap: 0.95rem;
+  padding: 0.95rem 0.95rem 1rem;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.animated-guide-face {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  border: 1px solid rgba(126, 247, 234, 0.16);
+  border-radius: 1.2rem;
+  background:
+    radial-gradient(circle at top, rgba(126, 247, 234, 0.1), transparent 42%),
+    linear-gradient(180deg, rgba(8, 26, 24, 0.92), rgba(8, 12, 14, 0.98));
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.03),
+    0 0 24px rgba(18, 183, 166, 0.12);
+  grid-template-columns: repeat(2, auto);
+  column-gap: 0.62rem;
+}
+
+.animated-guide-eye {
+  width: 0.6rem;
+  height: 0.72rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  box-shadow: 0 0 10px rgba(126, 247, 234, 0.26);
+  animation: guide-eye-blink 4.4s ease-in-out infinite;
+}
+
+.animated-guide-mouth {
+  position: absolute;
+  bottom: 1.05rem;
+  left: 50%;
+  width: 1.45rem;
+  height: 0.55rem;
+  border-bottom: 2px solid rgba(126, 247, 234, 0.88);
+  border-radius: 0 0 999px 999px;
+  transform: translateX(-50%);
+}
+
+.animated-guide-copy {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.animated-guide-status {
+  font-size: 0.83rem;
+  line-height: 1.45;
+  color: var(--foreground);
+}
+
+.animated-guide-hint {
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.animated-guide-shell[data-motion="ambient"] .animated-guide-panel {
+  animation: guide-float 4.8s ease-in-out infinite;
+}
+
+.animated-guide-shell[data-motion="ambient"] .animated-guide-face::after {
+  content: "";
+  position: absolute;
+  inset: 0.42rem;
+  border-radius: 0.95rem;
+  border: 1px solid rgba(126, 247, 234, 0.08);
+  animation: guide-scan 2.8s linear infinite;
+}
+
 .contact-icon-shell,
 .footer-icon-link {
   display: inline-flex;
@@ -850,6 +1081,37 @@ html[data-theme="light"] .quote-panel {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(238, 243, 241, 0.88));
 }
 
+html[data-theme="light"] .animated-guide-bubble,
+html[data-theme="light"] .animated-guide-panel {
+  border-color: rgba(15, 23, 42, 0.1);
+  background:
+    radial-gradient(circle at top right, rgba(18, 183, 166, 0.08), transparent 28%),
+    linear-gradient(180deg, rgba(252, 255, 254, 0.96), rgba(237, 244, 241, 0.98));
+  box-shadow:
+    0 18px 42px rgba(15, 23, 42, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.82);
+}
+
+html[data-theme="light"] .animated-guide-topbar {
+  border-bottom-color: rgba(15, 23, 42, 0.08);
+}
+
+html[data-theme="light"] .animated-guide-face {
+  border-color: rgba(18, 183, 166, 0.14);
+  background:
+    radial-gradient(circle at top, rgba(18, 183, 166, 0.08), transparent 42%),
+    linear-gradient(180deg, rgba(225, 242, 238, 0.96), rgba(206, 225, 220, 0.98));
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5),
+    0 0 18px rgba(18, 183, 166, 0.1);
+}
+
+html[data-theme="light"] .animated-guide-cta {
+  border-color: rgba(18, 183, 166, 0.16);
+  background: rgba(18, 183, 166, 0.1);
+  color: #0f7669;
+}
+
 html[data-theme="light"] .project-overlay {
   background:
     linear-gradient(to top, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.14) 52%, rgba(255, 255, 255, 0)),
@@ -910,6 +1172,67 @@ html[data-theme="light"] .accent-dot::after {
     width: 3.8rem;
     height: 3.8rem;
   }
+
+  .animated-guide-shell {
+    right: 0.75rem;
+    bottom: 0.75rem;
+  }
+
+  .animated-guide-bubble,
+  .animated-guide-button {
+    width: min(10.75rem, calc(100vw - 1.5rem));
+  }
+
+  .animated-guide-screen {
+    grid-template-columns: 2.8rem 1fr;
+    gap: 0.7rem;
+    padding: 0.72rem 0.75rem 0.8rem;
+  }
+
+  .animated-guide-face {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 0.95rem;
+    column-gap: 0.45rem;
+  }
+
+  .animated-guide-topbar {
+    gap: 0.55rem;
+    padding: 0.58rem 0.75rem 0.54rem;
+  }
+
+  .animated-guide-status {
+    font-size: 0.74rem;
+    line-height: 1.35;
+  }
+
+  .animated-guide-hint {
+    font-size: 0.62rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .accent-dot,
+  .accent-dot::after,
+  .typewriter-caret,
+  .animated-guide-panel,
+  .animated-guide-eye,
+  .animated-guide-face::after {
+    animation: none !important;
+  }
+
+  .animated-guide-panel,
+  .animated-guide-bubble,
+  .animated-guide-cta,
+  .contact-card,
+  .project-link,
+  .lift-card {
+    transition-duration: 0ms !important;
+  }
 }
 
 @keyframes caret-blink {
@@ -955,6 +1278,59 @@ html[data-theme="light"] .accent-dot::after {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes guide-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes guide-scan {
+  0% {
+    clip-path: inset(0 0 92% 0);
+    opacity: 0.1;
+  }
+
+  50% {
+    clip-path: inset(46% 0 36% 0);
+    opacity: 0.3;
+  }
+
+  100% {
+    clip-path: inset(88% 0 0 0);
+    opacity: 0.08;
+  }
+}
+
+@keyframes guide-eye-blink {
+  0%,
+  42%,
+  46%,
+  100% {
+    transform: scaleY(1);
+  }
+
+  44% {
+    transform: scaleY(0.18);
+  }
+}
+
+@keyframes guide-bubble-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 

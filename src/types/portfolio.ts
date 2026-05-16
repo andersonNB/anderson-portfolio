@@ -5,6 +5,51 @@ export type NavigationItem = {
 
 export type Locale = "es" | "en";
 
+export type GuideMessageTrigger = "idle" | "hover" | "focus" | "tap" | "click";
+
+export type GuideCtaIntent = "contact" | "explore";
+
+export type AnimatedGuideVariant = "terminal";
+
+export type GuideAnchorCorner = "bottom-right";
+
+export type GuideSizeMode = "compact";
+
+export type GuideVisualPriority = "supporting";
+
+export type GuideMotionProfile = "ambient" | "reduced";
+
+export type GuideMessage = {
+  id: string;
+  text: string;
+  trigger: GuideMessageTrigger;
+  ctaIntent: GuideCtaIntent;
+};
+
+export type AnimatedGuideContent = {
+  ariaLabel: string;
+  assistantName: string;
+  statusLabel: string;
+  hintLabel: string;
+  ctaLabel: string;
+  ctaHref: string;
+  variant: AnimatedGuideVariant;
+  anchorCorner: GuideAnchorCorner;
+  sizeMode: GuideSizeMode;
+  visualPriority: GuideVisualPriority;
+  motionProfile: GuideMotionProfile;
+  messages: GuideMessage[];
+};
+
+export type AnimatedGuideInteractionState = {
+  idle: boolean;
+  hovered: boolean;
+  focused: boolean;
+  pressed: boolean;
+  messageVisible: boolean;
+  reducedMotion: boolean;
+};
+
 export type ProjectCard = {
   title: string;
   href: string;
@@ -82,6 +127,7 @@ export type PortfolioTranslation = {
   navigation: NavigationItem[];
   headerName: string;
   hero: HeroContent;
+  animatedGuide: AnimatedGuideContent;
   about: AboutContent;
   caseStudies: CaseStudy[];
   experience: {

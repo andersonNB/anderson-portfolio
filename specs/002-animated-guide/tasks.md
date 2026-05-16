@@ -35,10 +35,10 @@ testing of each story.
 
 **Purpose**: Prepare the feature workspace and confirm the current homepage integration points
 
-- [ ] T001 Confirm active feature path in `.specify/feature.json`
-- [ ] T002 Review homepage integration points in `src/components/home/home-page.tsx` and `src/app/page.tsx`
-- [ ] T003 [P] Review current visual language tokens and motion patterns in `src/app/globals.css`
-- [ ] T004 [P] Review relevant Next.js guidance note in `node_modules/next/dist/docs/index.md`
+- [x] T001 Confirm active feature path in `.specify/feature.json`
+- [x] T002 Review homepage integration points in `src/components/home/home-page.tsx` and `src/app/page.tsx`
+- [x] T003 [P] Review current visual language tokens and motion patterns in `src/app/globals.css`
+- [x] T004 [P] Review relevant Next.js guidance note in `node_modules/next/dist/docs/index.md`
 
 ---
 
@@ -48,12 +48,12 @@ testing of each story.
 
 **CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T005 Define animated-guide content and state types in `src/types/portfolio.ts`
-- [ ] T006 [P] Add localized guide content entries in `src/messages/es.json`
-- [ ] T007 [P] Add localized guide content entries in `src/messages/en.json`
-- [ ] T008 Create the base animated guide component shell in `src/components/home/animated-corner-guide.tsx`
-- [ ] T009 Add base guide layout and non-blocking positioning rules in `src/app/globals.css`
-- [ ] T010 Mount the guide in the homepage composition from `src/components/home/home-page.tsx`
+- [x] T005 Define animated-guide content and state types in `src/types/portfolio.ts`
+- [x] T006 [P] Add localized guide content entries in `src/messages/es.json`
+- [x] T007 [P] Add localized guide content entries in `src/messages/en.json`
+- [x] T008 Create the base animated guide component shell in `src/components/home/animated-corner-guide.tsx`
+- [x] T009 Add base guide layout and non-blocking positioning rules in `src/app/globals.css`
+- [x] T010 Mount the guide in the homepage composition from `src/components/home/home-page.tsx`
 
 **Checkpoint**: The guide exists as a mounted, typed, localized UI shell and future story work can build on it
 
@@ -68,10 +68,10 @@ losing access to hero, work, stack, or contact content
 
 ### Implementation for User Story 1
 
-- [ ] T011 [US1] Implement the chosen visual guide structure in `src/components/home/animated-corner-guide.tsx`
-- [ ] T012 [P] [US1] Add visual styling, idle animation, and corner placement in `src/app/globals.css`
-- [ ] T013 [P] [US1] Tune responsive size and spacing rules for the guide in `src/app/globals.css`
-- [ ] T014 [US1] Verify the homepage composition still reads cleanly with the guide in `src/components/home/home-page.tsx`
+- [x] T011 [US1] Implement the chosen visual guide structure in `src/components/home/animated-corner-guide.tsx`
+- [x] T012 [P] [US1] Add visual styling, idle animation, and corner placement in `src/app/globals.css`
+- [x] T013 [P] [US1] Tune responsive size and spacing rules for the guide in `src/app/globals.css`
+- [x] T014 [US1] Verify the homepage composition still reads cleanly with the guide in `src/components/home/home-page.tsx`
 
 **Checkpoint**: The guide is visibly present and memorable without dominating the page
 
@@ -86,10 +86,10 @@ friendly prompt that feels aligned with the portfolio tone
 
 ### Implementation for User Story 2
 
-- [ ] T015 [US2] Implement guide interaction state and message reveal behavior in `src/components/home/animated-corner-guide.tsx`
-- [ ] T016 [P] [US2] Add prompt bubble or message panel styling in `src/app/globals.css`
-- [ ] T017 [P] [US2] Refine localized guide prompts in `src/messages/es.json` and `src/messages/en.json`
-- [ ] T018 [US2] Ensure prompt behavior remains optional and non-blocking in `src/components/home/animated-corner-guide.tsx`
+- [x] T015 [US2] Implement guide interaction state and message reveal behavior in `src/components/home/animated-corner-guide.tsx`
+- [x] T016 [P] [US2] Add prompt bubble or message panel styling in `src/app/globals.css`
+- [x] T017 [P] [US2] Refine localized guide prompts in `src/messages/es.json` and `src/messages/en.json`
+- [x] T018 [US2] Ensure prompt behavior remains optional and non-blocking in `src/components/home/animated-corner-guide.tsx`
 
 **Checkpoint**: The guide can deliver a friendly contact-oriented prompt without feeling intrusive
 
@@ -103,10 +103,10 @@ friendly prompt that feels aligned with the portfolio tone
 
 ### Implementation for User Story 3
 
-- [ ] T019 [US3] Add reduced-motion behavior handling in `src/components/home/animated-corner-guide.tsx`
-- [ ] T020 [P] [US3] Add reduced-motion and accessibility-safe animation rules in `src/app/globals.css`
-- [ ] T021 [P] [US3] Ensure keyboard focus and touch-friendly interaction states in `src/components/home/animated-corner-guide.tsx`
-- [ ] T022 [US3] Review final guide behavior against the static-first contract in `specs/002-animated-guide/contracts/animated-guide-contract.md`
+- [x] T019 [US3] Add reduced-motion behavior handling in `src/components/home/animated-corner-guide.tsx`
+- [x] T020 [P] [US3] Add reduced-motion and accessibility-safe animation rules in `src/app/globals.css`
+- [x] T021 [P] [US3] Ensure keyboard focus and touch-friendly interaction states in `src/components/home/animated-corner-guide.tsx`
+- [x] T022 [US3] Review final guide behavior against the static-first contract in `specs/002-animated-guide/contracts/animated-guide-contract.md`
 
 **Checkpoint**: The feature remains lightweight, accessible, and aligned with portfolio constraints
 
@@ -116,12 +116,12 @@ friendly prompt that feels aligned with the portfolio tone
 
 **Purpose**: Final consistency, quality, and validation across the feature
 
-- [ ] T023 [P] Review internal references across `specs/002-animated-guide/`
-- [ ] T024 Ensure `AGENTS.md` points to `specs/002-animated-guide/plan.md`
-- [ ] T025 Run `npm run lint`
-- [ ] T026 Run `npm run build`
-- [ ] T027 Perform manual desktop review using `specs/002-animated-guide/quickstart.md`
-- [ ] T028 Perform manual mobile and reduced-motion review using `specs/002-animated-guide/quickstart.md`
+- [x] T023 [P] Review internal references across `specs/002-animated-guide/`
+- [x] T024 Ensure `AGENTS.md` points to `specs/002-animated-guide/plan.md`
+- [x] T025 Run `npm run lint`
+- [x] T026 Run `npm run build`
+- [x] T027 Perform manual desktop review using `specs/002-animated-guide/quickstart.md`
+- [x] T028 Perform manual mobile and reduced-motion review using `specs/002-animated-guide/quickstart.md`
 
 ---
 

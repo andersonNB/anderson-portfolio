@@ -3,6 +3,7 @@
 import { NextIntlClientProvider } from "next-intl";
 import { useEffect, useState } from "react";
 import { AboutWorkSection } from "@/components/home/about-work-section";
+import { AnimatedCornerGuide } from "@/components/home/animated-corner-guide";
 import { HeroSection } from "@/components/home/hero-section";
 import { SelectedWorkSection } from "@/components/home/selected-work-section";
 import { SiteFooter } from "@/components/home/site-footer";
@@ -50,6 +51,7 @@ export function HomePage() {
       <SelectedWorkSection />
       <StackContactSection />
       <SiteFooter />
+      <AnimatedCornerGuide />
     </NextIntlClientProvider>
   );
 }
