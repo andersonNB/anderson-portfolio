@@ -14,6 +14,9 @@ Estas reglas definen la forma de trabajo para este repositorio.
 - No fusionar cambios directamente a `main` sin pasar por PR.
 - Para este proyecto no se requiere una rama `develop` por defecto.
 - La regla base es `feature/fix/chore -> PR -> main`.
+- Antes de empezar una fase nueva, sincronizar la rama local con el remoto correspondiente.
+- Si la fase parte desde `main`, usar `git checkout main` y `git pull --ff-only origin main` antes de crear o reutilizar una rama de trabajo.
+- Si la fase continua sobre una rama existente, bajar primero sus cambios remotos antes de editar.
 
 ## Commits
 
@@ -23,6 +26,13 @@ Estas reglas definen la forma de trabajo para este repositorio.
   - `feat: add project showcase section`
   - `fix: adjust mobile spacing in hero`
   - `chore: update portfolio content`
+- El tipo del commit debe corresponder al cambio real:
+  - `feat` para funcionalidad nueva o cambios visibles de producto
+  - `fix` para correcciones
+  - `docs` para specs, planes, tareas, checklist o documentacion
+  - `chore` para mantenimiento o ajustes operativos
+  - `refactor` solo si el cambio es realmente una reorganizacion interna sin cambio funcional
+- No cerrar una fase con mensajes vagos como `update`, `changes` o `wip`.
 
 ## Validacion antes de push
 
@@ -30,6 +40,7 @@ Estas reglas definen la forma de trabajo para este repositorio.
 - Ejecutar `build` antes de subir cambios cuando el cambio afecte la app.
 - No dejar errores conocidos sin mencionar.
 - Antes de cerrar una tarea, dejar la rama lista para PR.
+- Antes de hacer `push`, revisar que el commit de la fase use el tipo correcto (`feat`, `fix`, `docs`, `chore`, etc.) segun el alcance real.
 
 ## Edicion de codigo
 
@@ -92,11 +103,19 @@ Estas reglas definen la forma de trabajo para este repositorio.
 
 - Cada funcionalidad terminada debe terminar en un Pull Request hacia `main`.
 - El PR debe representar una unidad clara de cambio.
+- Cada fase terminada debe dejar una rama publicada en remoto antes de pasar a la siguiente.
+- Si una fase genera artefactos revisables, el flujo obligatorio es:
+  - bajar cambios relevantes primero
+  - actualizar archivos de la fase
+  - hacer `commit` con nombre en ingles y tipo Conventional Commit correcto
+  - hacer `push`
+  - abrir o actualizar PR hacia `main`
+  - esperar revision manual o merge antes de seguir con la fase siguiente
 - Regla obligatoria de cierre de fase:
   - si una fase de `plan`, `tasks`, `implement` o `checklist` ya termino
   - y los entregables de esa fase quedaron actualizados
   - y el checklist aplicable ya fue revisado o completado para ese punto
-  entonces se debe hacer `commit`, `push` y abrir PR para revision manual antes de seguir con la siguiente fase.
+  entonces se debe bajar cambios si aplica, hacer `commit` con el tipo correcto, hacer `push` y abrir PR para revision manual antes de seguir con la siguiente fase.
 - No se debe continuar con una fase posterior si los cambios de la fase actual aun no fueron subidos y convertidos en PR, salvo que se documente explicitamente por que se rompe esa regla.
 - Al cerrar una fase, detenerse en el PR y esperar revision manual antes de continuar con la siguiente fase.
 - Una vez el cambio este validado y probado, completar el merge del PR hacia `main`.
@@ -136,6 +155,7 @@ Estas reglas definen la forma de trabajo para este repositorio.
 - Identificar si el cambio afecta UI, contenido, arquitectura, rendimiento o despliegue.
 - Si el cambio lo amerita, crear una spec breve en `docs/specs/`.
 - Si la fase de planeacion deja artefactos listos para revision, cerrar la fase con `commit`, `push` y PR antes de pasar a tareas o implementacion.
+- Para artefactos de planeacion, el commit normalmente debe usar `docs:`.
 
 ### Planteamiento de tareas
 
@@ -143,6 +163,7 @@ Estas reglas definen la forma de trabajo para este repositorio.
 - Priorizar primero lo que desbloquea el resto.
 - Evitar mezclar cambios no relacionados en una misma fase.
 - Si el planteamiento de tareas ya quedo listo y revisable, subir los cambios y abrir PR antes de continuar con ejecucion.
+- Para artefactos de tareas, el commit normalmente debe usar `docs:`.
 
 ### Ejecucion
 
@@ -150,6 +171,7 @@ Estas reglas definen la forma de trabajo para este repositorio.
 - Mantener coherencia con las reglas del repositorio.
 - Validar localmente lo que se vaya completando.
 - Si la ejecucion completa una unidad clara y el checklist correspondiente ya fue cubierto, cerrar esa fase con `commit`, `push` y PR antes de continuar con optimizacion o feedback.
+- Para cambios de producto o interfaz en ejecucion, el commit normalmente debe usar `feat:` o `fix:` segun corresponda.
 
 ### Optimizacion
 
@@ -163,7 +185,7 @@ Estas reglas definen la forma de trabajo para este repositorio.
 - Identificar ajustes, riesgos o mejoras pendientes antes del PR.
 - Si aplica, incorporar feedback antes de fusionar hacia `main`.
 - Usar el PR como punto de cierre de fase, no como punto de paso invisible.
-- El flujo esperado es: fase terminada -> checklist revisado -> commit -> push -> PR -> revision manual -> siguiente fase.
+- El flujo esperado es: sync -> fase terminada -> checklist revisado -> commit con tipo correcto -> push -> PR -> revision manual -> siguiente fase.
 
 ## Regla de trabajo para Codex
 
