@@ -36,6 +36,7 @@
     "assistantName": "cmd://anderson",
     "statusLabel": "Always ready to talk about product and frontend work.",
     "hintLabel": "Hover or click for a quick prompt.",
+    "greetingLabel": "Light greeting active.",
     "ctaLabel": "Jump to contact",
     "ctaHref": "#contacto",
     "variant": "terminal",
@@ -43,11 +44,37 @@
     "sizeMode": "compact",
     "visualPriority": "supporting",
     "motionProfile": "ambient",
+    "bodyParts": [
+      {
+        "id": "left-arm",
+        "role": "arm",
+        "side": "left",
+        "pose": "rest"
+      },
+      {
+        "id": "right-arm",
+        "role": "arm",
+        "side": "right",
+        "pose": "wave"
+      },
+      {
+        "id": "left-leg",
+        "role": "leg",
+        "side": "left",
+        "pose": "stance"
+      },
+      {
+        "id": "right-leg",
+        "role": "leg",
+        "side": "right",
+        "pose": "stance"
+      }
+    ],
     "messages": [
       {
         "id": "hover",
         "trigger": "hover",
-        "text": "If you have an idea or an open role, let's talk.",
+        "text": "If you have an idea or an open role, let's talk. I'll do the signaling.",
         "ctaIntent": "contact"
       },
       {
