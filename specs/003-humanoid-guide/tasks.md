@@ -35,10 +35,10 @@ testing of each story.
 
 **Purpose**: Confirm the active feature context and current avatar integration points
 
-- [ ] T001 Confirm active feature path in `.specify/feature.json`
-- [ ] T002 Review current guide implementation in `src/components/home/animated-corner-guide.tsx`
-- [ ] T003 [P] Review homepage mounting context in `src/components/home/home-page.tsx`
-- [ ] T004 [P] Review relevant Next.js guidance in `node_modules/next/dist/docs/01-app/03-api-reference/01-directives/use-client.md` and `node_modules/next/dist/docs/01-app/01-getting-started/11-css.md`
+- [x] T001 Confirm active feature path in `.specify/feature.json`
+- [x] T002 Review current guide implementation in `src/components/home/animated-corner-guide.tsx`
+- [x] T003 [P] Review homepage mounting context in `src/components/home/home-page.tsx`
+- [x] T004 [P] Review relevant Next.js guidance in `node_modules/next/dist/docs/01-app/03-api-reference/01-directives/use-client.md` and `node_modules/next/dist/docs/01-app/01-getting-started/11-css.md`
 
 ---
 
@@ -48,12 +48,12 @@ testing of each story.
 
 **CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T005 Extend humanoid guide types and state contracts in `src/types/portfolio.ts`
-- [ ] T006 [P] Add humanoid guide content entries in `src/messages/es.json`
-- [ ] T007 [P] Add humanoid guide content entries in `src/messages/en.json`
-- [ ] T008 Refactor the guide component structure for body parts and gesture state in `src/components/home/animated-corner-guide.tsx`
-- [ ] T009 Add base humanoid guide layout hooks and theme-aware style tokens in `src/app/globals.css`
-- [ ] T010 Verify `src/components/home/home-page.tsx` still mounts the guide without changing page flow
+- [x] T005 Extend humanoid guide types and state contracts in `src/types/portfolio.ts`
+- [x] T006 [P] Add humanoid guide content entries in `src/messages/es.json`
+- [x] T007 [P] Add humanoid guide content entries in `src/messages/en.json`
+- [x] T008 Refactor the guide component structure for body parts and gesture state in `src/components/home/animated-corner-guide.tsx`
+- [x] T009 Add base humanoid guide layout hooks and theme-aware style tokens in `src/app/globals.css`
+- [x] T010 Verify `src/components/home/home-page.tsx` still mounts the guide without changing page flow
 
 **Checkpoint**: The humanoid guide has typed content, localized copy, and a reusable component shell ready for visual story work
 
@@ -67,10 +67,10 @@ testing of each story.
 
 ### Implementation for User Story 1
 
-- [ ] T011 [US1] Implement CMD-preserving humanoid body structure in `src/components/home/animated-corner-guide.tsx`
-- [ ] T012 [P] [US1] Add torso, arm, hand, leg, and foot styling in `src/app/globals.css`
-- [ ] T013 [P] [US1] Tune responsive body proportions and silhouette fit in `src/app/globals.css`
-- [ ] T014 [US1] Verify the redesigned guide remains secondary and recognizable in `src/components/home/home-page.tsx`
+- [x] T011 [US1] Implement CMD-preserving humanoid body structure in `src/components/home/animated-corner-guide.tsx`
+- [x] T012 [P] [US1] Add torso, arm, hand, leg, and foot styling in `src/app/globals.css`
+- [x] T013 [P] [US1] Tune responsive body proportions and silhouette fit in `src/app/globals.css`
+- [x] T014 [US1] Verify the redesigned guide remains secondary and recognizable in `src/components/home/home-page.tsx`
 
 **Checkpoint**: The guide appears more human-like while still reading as the current CMD mascot
 
@@ -84,10 +84,10 @@ testing of each story.
 
 ### Implementation for User Story 2
 
-- [ ] T015 [US2] Implement greeting gesture state and wave behavior in `src/components/home/animated-corner-guide.tsx`
-- [ ] T016 [P] [US2] Add wave animation and prompt-friendly pose states in `src/app/globals.css`
-- [ ] T017 [P] [US2] Refine guide prompt copy for the humanoid tone in `src/messages/es.json` and `src/messages/en.json`
-- [ ] T018 [US2] Ensure prompt reveal behavior remains unchanged in role and scope inside `src/components/home/animated-corner-guide.tsx`
+- [x] T015 [US2] Implement greeting gesture state and wave behavior in `src/components/home/animated-corner-guide.tsx`
+- [x] T016 [P] [US2] Add wave animation and prompt-friendly pose states in `src/app/globals.css`
+- [x] T017 [P] [US2] Refine guide prompt copy for the humanoid tone in `src/messages/es.json` and `src/messages/en.json`
+- [x] T018 [US2] Ensure prompt reveal behavior remains unchanged in role and scope inside `src/components/home/animated-corner-guide.tsx`
 
 **Checkpoint**: The guide greets visitors more warmly without acting like a richer assistant
 
@@ -101,10 +101,10 @@ testing of each story.
 
 ### Implementation for User Story 3
 
-- [ ] T019 [US3] Add theme-sensitive body-part and contrast handling in `src/app/globals.css`
-- [ ] T020 [P] [US3] Add reduced-motion-safe gesture fallbacks in `src/app/globals.css`
-- [ ] T021 [P] [US3] Ensure keyboard, touch, and motion preference handling stays coherent in `src/components/home/animated-corner-guide.tsx`
-- [ ] T022 [US3] Review final behavior against `specs/003-humanoid-guide/contracts/humanoid-guide-contract.md`
+- [x] T019 [US3] Add theme-sensitive body-part and contrast handling in `src/app/globals.css`
+- [x] T020 [P] [US3] Add reduced-motion-safe gesture fallbacks in `src/app/globals.css`
+- [x] T021 [P] [US3] Ensure keyboard, touch, and motion preference handling stays coherent in `src/components/home/animated-corner-guide.tsx`
+- [x] T022 [US3] Review final behavior against `specs/003-humanoid-guide/contracts/humanoid-guide-contract.md`
 
 **Checkpoint**: The redesigned guide remains usable and visually coherent across themes, viewports, and motion preferences
 
@@ -114,12 +114,12 @@ testing of each story.
 
 **Purpose**: Final consistency, validation, and implementation closeout
 
-- [ ] T023 [P] Review internal references across `specs/003-humanoid-guide/`
-- [ ] T024 Ensure `AGENTS.md` points to `specs/003-humanoid-guide/plan.md`
-- [ ] T025 Run `npm run lint`
-- [ ] T026 Run `npm run build`
-- [ ] T027 Perform manual desktop and theme-switch review using `specs/003-humanoid-guide/quickstart.md`
-- [ ] T028 Perform manual mobile and reduced-motion review using `specs/003-humanoid-guide/quickstart.md`
+- [x] T023 [P] Review internal references across `specs/003-humanoid-guide/`
+- [x] T024 Ensure `AGENTS.md` points to `specs/003-humanoid-guide/plan.md`
+- [x] T025 Run `npm run lint`
+- [x] T026 Run `npm run build`
+- [x] T027 Perform manual desktop and theme-switch review using `specs/003-humanoid-guide/quickstart.md`
+- [x] T028 Perform manual mobile and reduced-motion review using `specs/003-humanoid-guide/quickstart.md`
 
 ---
 

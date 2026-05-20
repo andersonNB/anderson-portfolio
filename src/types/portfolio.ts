@@ -19,6 +19,12 @@ export type GuideVisualPriority = "supporting";
 
 export type GuideMotionProfile = "ambient" | "reduced";
 
+export type GuideBodyPartRole = "arm" | "hand" | "leg" | "foot";
+
+export type GuideBodyPartSide = "left" | "right";
+
+export type GuideBodyPartPose = "rest" | "wave" | "stance";
+
 export type GuideMessage = {
   id: string;
   text: string;
@@ -26,11 +32,19 @@ export type GuideMessage = {
   ctaIntent: GuideCtaIntent;
 };
 
+export type GuideBodyPart = {
+  id: string;
+  role: GuideBodyPartRole;
+  side: GuideBodyPartSide;
+  pose: GuideBodyPartPose;
+};
+
 export type AnimatedGuideContent = {
   ariaLabel: string;
   assistantName: string;
   statusLabel: string;
   hintLabel: string;
+  greetingLabel: string;
   ctaLabel: string;
   ctaHref: string;
   variant: AnimatedGuideVariant;
@@ -38,6 +52,7 @@ export type AnimatedGuideContent = {
   sizeMode: GuideSizeMode;
   visualPriority: GuideVisualPriority;
   motionProfile: GuideMotionProfile;
+  bodyParts: GuideBodyPart[];
   messages: GuideMessage[];
 };
 

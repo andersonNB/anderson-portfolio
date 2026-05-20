@@ -36,6 +36,7 @@
     "assistantName": "cmd://anderson",
     "statusLabel": "Siempre listo para hablar de producto y frontend.",
     "hintLabel": "Hover o clic para una pista rapida.",
+    "greetingLabel": "Saludo ligero activo.",
     "ctaLabel": "Ir a contacto",
     "ctaHref": "#contacto",
     "variant": "terminal",
@@ -43,11 +44,37 @@
     "sizeMode": "compact",
     "visualPriority": "supporting",
     "motionProfile": "ambient",
+    "bodyParts": [
+      {
+        "id": "left-arm",
+        "role": "arm",
+        "side": "left",
+        "pose": "rest"
+      },
+      {
+        "id": "right-arm",
+        "role": "arm",
+        "side": "right",
+        "pose": "wave"
+      },
+      {
+        "id": "left-leg",
+        "role": "leg",
+        "side": "left",
+        "pose": "stance"
+      },
+      {
+        "id": "right-leg",
+        "role": "leg",
+        "side": "right",
+        "pose": "stance"
+      }
+    ],
     "messages": [
       {
         "id": "hover",
         "trigger": "hover",
-        "text": "Si tienes una idea o una vacante, hablemos.",
+        "text": "Si tienes una idea o una vacante, hablemos. Yo te hago la seña.",
         "ctaIntent": "contact"
       },
       {

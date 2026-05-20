@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Lottie, { type LottieRefCurrentProps } from "lottie-react";
 import { MailIcon } from "@/components/ui/icons";
 import { useTranslations } from "next-intl";
+import guideAnimation from "@/assets/lottie/ufo.json";
 import type {
   AnimatedGuideContent,
   AnimatedGuideInteractionState,
@@ -27,6 +29,7 @@ export function AnimatedCornerGuide() {
     assistantName: t("assistantName"),
     statusLabel: t("statusLabel"),
     hintLabel: t("hintLabel"),
+    greetingLabel: t("greetingLabel"),
     ctaLabel: t("ctaLabel"),
     ctaHref: t("ctaHref"),
     variant: t("variant"),
@@ -37,6 +40,7 @@ export function AnimatedCornerGuide() {
     messages: t.raw("messages"),
   } as AnimatedGuideContent;
   const hideTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const lottieRef = useRef<LottieRefCurrentProps | null>(null);
   const [activeTrigger, setActiveTrigger] = useState<GuideMessageTrigger>("idle");
   const [isMessageVisible, setIsMessageVisible] = useState(false);
   const [isPressed, setIsPressed] = useState(false);
@@ -63,6 +67,20 @@ export function AnimatedCornerGuide() {
       }
     };
   }, []);
+
+  useEffect(() => {
+    if (!lottieRef.current) {
+      return;
+    }
+
+    if (prefersReducedMotion) {
+      lottieRef.current.goToAndStop(0, true);
+      return;
+    }
+
+    lottieRef.current.setSpeed(isMessageVisible ? 1.05 : 0.88);
+    lottieRef.current.play();
+  }, [isMessageVisible, prefersReducedMotion]);
 
   const clearHideTimeout = () => {
     if (hideTimeoutRef.current) {
@@ -158,26 +176,18 @@ export function AnimatedCornerGuide() {
         onTouchEnd={() => setIsPressed(false)}
         onTouchStart={() => setIsPressed(true)}
       >
-        <span className="animated-guide-panel">
-          <span className="animated-guide-topbar">
-            <span className="animated-guide-lights" aria-hidden="true">
-              <span />
-              <span />
-              <span />
-            </span>
-            <span className="animated-guide-title">{guide.assistantName}</span>
-          </span>
-
-          <span className="animated-guide-screen">
-            <span className="animated-guide-face" aria-hidden="true">
-              <span className="animated-guide-eye" />
-              <span className="animated-guide-eye" />
-              <span className="animated-guide-mouth" />
-            </span>
-            <span className="animated-guide-copy">
-              <span className="animated-guide-status">{guide.statusLabel}</span>
-              <span className="animated-guide-hint">{guide.hintLabel}</span>
-            </span>
+        <span className="animated-guide-character">
+          <span className="animated-guide-lottie-shell" aria-label={guide.greetingLabel}>
+            <Lottie
+              lottieRef={lottieRef}
+              animationData={guideAnimation}
+              autoplay={!prefersReducedMotion}
+              loop={!prefersReducedMotion}
+              className="animated-guide-lottie"
+              rendererSettings={{
+                preserveAspectRatio: "xMaxYMax slice",
+              }}
+            />
           </span>
         </span>
       </button>
